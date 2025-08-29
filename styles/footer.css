@@ -1,0 +1,260 @@
+.footer {
+  background-color: #F0E9DF;
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  gap: 40px;
+}
+
+.footer-logo img {
+  width: 76px;
+  height: 76px;
+}
+
+.footer-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  list-style: none;
+  justify-content: center;
+}
+
+/* Footer Mobile Menu Toggle */
+.footer-mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+}
+
+.footer-mobile-menu-toggle .hamburger-line {
+  width: 24px;
+  height: 2px;
+  background-color: #050505;
+  margin: 2px 0;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.footer-mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.footer-mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.footer-mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Footer Mobile Menu */
+.footer-nav-list.mobile-menu-open {
+  max-height: 400px;
+  overflow-y: auto;
+  animation: expandMenu 0.3s ease;
+}
+
+.footer-nav-list.mobile-menu-collapsed {
+  max-height: 0;
+  overflow: hidden;
+  animation: collapseMenu 0.3s ease;
+}
+
+@keyframes expandMenu {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 400px;
+    opacity: 1;
+  }
+}
+
+@keyframes collapseMenu {
+  from {
+    max-height: 400px;
+    opacity: 1;
+  }
+  to {
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+.footer-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.17;
+  color: #050505;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav-link:hover {
+  color: #B0864A;
+}
+
+.footer-nav-link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .footer-nav-link svg {
+  transform: rotate(180deg);
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-contact-row {
+      gap: 40px;
+    display: flex;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.17;
+  color: #050505;
+}
+
+.footer-contact-item svg {
+  width: 24px;
+  height: 24px;
+  color: #050505;
+  flex-shrink: 0;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  color: #050505;
+  transition: all 0.3s ease;
+  background: rgba(176, 134, 74, 1);
+}
+
+.footer-social-link:hover {
+  color: #B0864A;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1250px) {
+  .footer {
+    padding: 10px 0;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-contacts {
+    display: none;
+  }
+
+  .footer-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+  
+  .footer-nav-list {
+    gap: 24px;
+  }
+  
+  .footer-contact-row {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 32px 0;
+  }
+  
+  .footer-content {
+    gap: 24px;
+  }
+  
+  .footer-nav-list {
+    flex-direction: column;
+    gap: 16px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .footer-contact-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .footer-nav-link,
+  .footer-contact-item {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 24px 0;
+  }
+  
+  .footer-logo img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .footer-nav-link,
+  .footer-contact-item {
+    font-size: 14px;
+  }
+}

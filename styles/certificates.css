@@ -1,0 +1,128 @@
+.certificates {
+  padding: 80px 0;
+}
+
+.certificate-card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-image {
+  width: 100%;
+  height: 282px;
+  overflow: hidden;
+}
+
+.certificate-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.certificate-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.certificate-title {
+  font-family: 'Poiret One', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.33;
+  color: #050505;
+  text-stroke: 0.3px #050505;
+}
+
+.certificate-price {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.price-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #050505;
+}
+
+.price-currency {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.33;
+  color: #050505;
+}
+
+@media (max-width: 1024px) {
+  .certificates {
+    padding: 60px 0;
+    padding-bottom: 0;
+  }
+  
+  .certificates-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .certificates {
+    padding: 40px 0;
+    padding-bottom: 0;
+  }
+  
+  .certificates-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .certificate-content {
+    padding: 20px;
+    gap: 24px;
+  }
+  
+  .certificate-title {
+    font-size: 16px;
+  }
+  
+  .price-amount {
+    font-size: 32px;
+  }
+  
+  .price-currency {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .certificate-image {
+    height: 200px;
+  }
+  
+  .certificate-content {
+    padding: 16px;
+    gap: 20px;
+  }
+  
+  .price-amount {
+    font-size: 28px;
+  }
+}

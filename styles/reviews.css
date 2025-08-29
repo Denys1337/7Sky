@@ -1,0 +1,146 @@
+.reviews {
+  padding: 80px 0;
+  padding-bottom: 0;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.review-card {
+  background: #FFFFFF;
+  border: 0.5px solid #DADADA;
+  border-radius: 12px;
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.review-rating {
+  display: flex;
+  gap: 8px;
+}
+
+.review-title {
+  font-family: 'Poiret One', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.17;
+  color: #050505;
+  text-stroke: 0.3px #050505;
+}
+
+.review-text {
+  font-family: 'Poiret One', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.17;
+  color: #050505;
+  max-height: 147px;
+  overflow-y: auto;
+  padding-right: 12px;
+}
+
+
+.review-text::-webkit-scrollbar {
+  width: 1px;
+}
+
+.review-text::-webkit-scrollbar-track {
+  background: rgba(218, 218, 218, 1);
+}
+
+.review-text::-webkit-scrollbar-thumb {
+  background: rgba(5, 5, 5, 1);
+  border-radius: 10px;
+}
+
+.review-text 
+.view-all-link {
+  display: flex;
+  justify-content: center;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.reviews .swiper {
+    display: none;
+  }
+
+@media (max-width: 1024px) {
+  .reviews {
+    padding: 60px 0;
+    padding-bottom: 0;
+  }
+  
+  .reviews-grid {
+    gap: 20px;
+  }
+  
+  .review-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews {
+    padding: 40px 0;
+     padding-bottom: 0;
+  }
+
+  .reviews .swiper {
+    display: block;
+  }
+
+  .reviews .swiper .swiper-slide {
+    width: 343px !important
+  }
+  
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    display: none;
+  }
+  
+  .review-card {
+    padding: 16px;
+  }
+  
+  .review-header {
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .review-title {
+    font-size: 20px;
+  }
+  
+  .review-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-title {
+    font-size: 18px;
+  }
+  
+  .review-text {
+    font-size: 14px;
+  }
+}
