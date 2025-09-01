@@ -124,13 +124,13 @@ if (mobileMenuToggles.length && nav) {
     });
   });
 
-  // CTA button functionality
-  const ctaButton = document.querySelector('.cta-button');
-  if (ctaButton) {
-    ctaButton.addEventListener('click', function() {
-      showNotification('Дякуємо за інтерес! Зв\'яжіться з нами для запису.');
-    });
-  }
+  // // CTA button functionality
+  // const ctaButton = document.querySelector('.cta-button');
+  // if (ctaButton) {
+  //   ctaButton.addEventListener('click', function() {
+  //     showNotification('Дякуємо за інтерес! Зв\'яжіться з нами для запису.');
+  //   });
+  // }
 
   // Carousel functionality
   const carouselControls = document.querySelectorAll('.carousel-controls');
@@ -336,4 +336,118 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const langEls = document.querySelectorAll(".language-selector .language");
+
+  langEls.forEach(function (langEl) {
+    langEl.addEventListener("click", function () {
+      const cur = langEl.textContent.trim();
+      langEl.textContent = cur === "EN" ? "UA" : "EN";
+    });
+  });
+});
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const title = document.querySelector(".about-title");
+
+    if (title) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              title.classList.add("visible");
+              observer.unobserve(title);
+            }
+          });
+        },
+        { threshold: 0.2 } 
+      );
+
+      observer.observe(title);
+    }
+  });
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("bookingForm");
+  const nameInput = document.getElementById("name");
+  const phoneInput = document.getElementById("phone");
+  const successMessage = document.getElementById("successMessage");
+  const closeBtn = document.getElementById("popupClose");
+  const popup = document.getElementById("popup");
+  const openBtn = document.querySelector(".cta-button");
+
+  openBtn.addEventListener("click", () => {
+    popup.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popup.classList.remove("active");
+  });
+
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.classList.remove("active");
+    }
+  });
+
+  nameInput.addEventListener("input", () => {
+    nameInput.value = nameInput.value.replace(/[^a-zA-Zа-яА-ЯїЇєЄіІґҐ\s]/g, "");
+  });
+
+  phoneInput.addEventListener("input", () => {
+    if (!phoneInput.value.startsWith("+380")) {
+      phoneInput.value = "+380";
+    }
+    phoneInput.value = phoneInput.value.replace(/(?!^\+380)\D/g, "");
+    if (phoneInput.value.length > 13) {
+      phoneInput.value = phoneInput.value.slice(0, 13);
+    }
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (nameInput.value.trim() !== "" && /^\+380\d{9}$/.test(phoneInput.value)) {
+      successMessage.style.display = "block";
+      setTimeout(()=> {
+        popup.classList.remove("active");
+        nameInput.value = "";
+        phoneInput.value = "";
+        successMessage.style.display = "none";
+      }, 4000);
+    } else {
+      successMessage.style.display = "none";
+      alert("Будь ласка, введіть коректні дані!");
+    }
+  });
+});
+
+
+function initMap() {
+      // Центр карти (Вінниця)
+      const vinnytsia = { lat: 49.2331, lng: 28.4682 };
+
+      // Створюємо карту
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 14,
+        center: vinnytsia,
+      });
+
+      // Масив точок
+      const locations = [
+        { position: { lat: 49.2336, lng: 28.4689 }, title: "м. Вінниця, вул. Соборна 58" },
+        { position: { lat: 49.2348, lng: 28.4705 }, title: "м. Вінниця, вул. Театральна 34" }
+      ];
+
+      // Додаємо мітки
+      locations.forEach(loc => {
+        new google.maps.Marker({
+          position: loc.position,
+          map: map,
+          title: loc.title,
+        });
+      });
+    }
 

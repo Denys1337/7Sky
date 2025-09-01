@@ -167,6 +167,21 @@
             <span class="value">Комфорт</span>
           </div>
           <button class="cta-button">Записатись</button>
+          <div class="popup" id="popup">
+  <div class="popup-content">
+    <span class="popup-close" id="popupClose">&times;</span>
+    <h2>ФОРМА</h2>
+    <form id="bookingForm">
+      <input type="text" id="name" placeholder="Ім'я" required />
+      <input type="tel" id="phone" placeholder="+380XXXXXXXXX" required />
+      <button type="submit">Записатись</button>
+      <p class="success-message" id="successMessage">
+        Ваш запис успішно прийнято.<br>
+        Менеджер зв’яжеться з вами найближчим часом.
+      </p>
+    </form>
+  </div>
+</div>
         </div>
       </div>
     </section>
@@ -176,7 +191,7 @@
       <div class="container">
         <h2 class="section-title">Послуги</h2>
         <div class="services-grid">
-          <article class="service-card service-card--large">
+          <a href="#" class="service-card service-card--large">
             <div class="service-image">
               <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-17/9k37wEohfj.png" alt="Масажі">
               <div class="service-overlay"></div>
@@ -185,9 +200,9 @@
               <h3 class="service-title">Масажі</h3>
               <p class="service-description">Lorem ipsum dolor sit amet consectetur. Tincidunt mi mauris sed morbi elit gravida.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="service-card">
+          <a href="#" class="service-card">
             <div class="service-image">
               <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-17/U8avk8sSHR.png" alt="Спа програми">
               <div class="service-overlay"></div>
@@ -196,9 +211,9 @@
               <h3 class="service-title">Спа програми</h3>
               <p class="service-description">Lorem ipsum dolor sit amet consectetur. Tincidunt mi mauris sed morbi elit gravida.</p>
             </div>
-          </article>
+          </a>
           <div class="wrapperServiceCard">
-            <article class="service-card">
+            <a href="#" class="service-card">
               <div class="service-image">
                 <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-17/PkuMPWVL7n.png" alt="VIP послуги">
                 <div class="service-overlay"></div>
@@ -207,9 +222,9 @@
                 <h3 class="service-title">VIP послуги</h3>
                 <p class="service-description">Lorem ipsum dolor sit amet consectetur. Tincidunt mi mauris sed morbi elit gravida.</p>
               </div>
-            </article>
+            </a>
 
-            <article class="service-card">
+            <a href="#" class="service-card">
               <div class="service-image">
                 <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-17/iSRpDkWU8n.png" alt="Цвʼяхостояння">
                 <div class="service-overlay"></div>
@@ -218,7 +233,7 @@
                 <h3 class="service-title">Цвʼяхостояння</h3>
                 <p class="service-description">Lorem ipsum dolor sit amet consectetur. Tincidunt mi mauris sed morbi elit gravida.</p>
               </div>
-            </article> 
+            </a> 
           </div>
         </div>
       </div>
@@ -693,7 +708,7 @@
             </div>
           </div>
           <div class="contact-map">
-            <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-17/0RRHcPthtn.png" alt="Карта розташування" class="map-image">
+            <div id="map" style="width: 100%; height: 100%;"></div>
           </div>
         </div>
       </div>
@@ -786,6 +801,7 @@
   </footer>
 
   <script src="js/main.js"></script>
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
   <!-- Підключення Swiper -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -794,6 +810,7 @@
   const swiper = new Swiper('.my-slider', {
     slidesPerView: "auto", 
     spaceBetween: 20,
+    loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -804,7 +821,7 @@
     },
     breakpoints: {
       0: {
-        navigation: false,
+        // navigation: false,
       }
     }
   });
