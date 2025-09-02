@@ -19,325 +19,6 @@
   <link rel="stylesheet" href="styles/contacts.css">
   <link rel="stylesheet" href="styles/footer.css">
   <link rel="stylesheet" href="styles/social.css">
-  <style>
-
-    .custom-select {
-      position: relative;
-      display: inline-block;
-      width: 180px;
-    }
-
-    .select-trigger {
-      padding: 8px 16px;
-      cursor: pointer;
-      background: rgba(240, 233, 223, 1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 18px;
-    }
-
-    .select-trigger img{
-        width: 16px;
-        height: 16px;
-    }
-
-    .options {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: rgba(240, 233, 223, 1);
-      display: none;
-      z-index: 100;
-      width: 205px;
-      padding: 8px 16px;
-      gap: 10px;
-    }
-
-    .options label {
-      display: flex;
-      align-items: center;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      cursor: pointer;
-      font-size: 18px;
-    }
-
-    .options input[type="checkbox"] {
-        appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-        accent-color: rgba(240, 233, 223, 1);
-          background-color: rgba(240, 233, 223, 1);
-          border: 0.5px solid rgba(5, 5, 5, 1);
-    }
-
-    .options input[type="checkbox"]:checked {
-        background-color: #B0864A;
-        border-color: #B0864A;
-        }
-
-      .options  input[type="checkbox"]:checked::after {
-        content: "✔";
-        color: white;
-        font-size: 14px;
-        position: relative;
-        top: -2px;
-        left: 3px;
-        }
-
-    .options input {
-      width: 16px;
-      height: 16px;
-      background: none;
-    }
-
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .chip {
-      display: flex;
-      align-items: center;
-      flex-direction: row-reverse;
-      gap: 8px;
-      font-size: 18px;
-      color: rgba(5, 5, 5, 1);
-      font-family: 'Poiret One', sans-serif;
-      
-    }
-
-    .chip img {
-      width: 21px;
-      height: 21px;
-    }
-
-    /* ---- Карточки ---- */
-    .cards {
-      display: grid;
-       grid-template-columns: repeat(auto-fill, 384px);
-      gap: 24px;
-      justify-content: center;
-    }
-
-    .card {
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .card img {
-      width: 100%;
-      height: 384px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-
-    .contentCard {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .card .titleCardMassage {
-      font-size: 18px;
-      font-family: 'Poiret One', sans-serif;
-      color: rgba(5, 5, 5, 1);
-      text-decoration: none;
-      line-height: normal;
-    }
-
-    .card span {
-        font-size: 40px;
-        font-family: 'Playfair Display', sans-serif;
-        font-weight: 400;
-        line-height: 100%;
-        color: rgba(5, 5, 5, 1);
-    }
-
-   
-
-    .linkDetailsCard {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        border-bottom: 0.3px solid rgba(176, 134, 74, 1);
-        color: rgba(176, 134, 74, 1);
-        font-size: 18px;
-        text-decoration: none;
-        font-family: 'Poiret One', sans-serif;
-        max-width: fit-content;
-    }
-
-    .linkDetailsCard img{
-        width: 16px;
-        height: 16px;
-    }
-    
-
-    /* ---- Пагінація ---- */
-    .pagination {
-      margin-top: 40px;
-      margin-bottom: 80px;
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .pagination button {
-      width: 32px;
-      height: 32px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 4px;
-      border: 1px solid rgba(176, 134, 74, 1);
-      background: #fff;
-      cursor: pointer;
-      color: rgba(176, 134, 74, 1);
-      font-size: 18px;
-      font-family: 'Poiret One', sans-serif;
-    }
-
-    .pagination button.active {
-      background: rgba(176, 134, 74, 1);
-      color: rgba(240, 233, 223, 1);
-    }
-
-    .bannerTop {
-        position: relative;
-        height: 229px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .bannerTop-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-}
-
-.bannerTop-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.bannerTop-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.bannerTop-content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-}
-
-.bannerTop-values h1 {
-    font-size: 36px;
-    color: rgba(240, 233, 223, 1);
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 400;
-}
-
-.wrapperCustomSelect {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    padding-top: 40px;
-    padding-bottom: 24px;
-}
-
-@media (max-width: 768px) {
-    .bannerTop-content {
-        gap: 16px;
-    }
-
-    .bannerTop-values h1 {
-        font-size: 28px;
-    }
-
-    .wrapperCustomSelect {
-        padding-top: 20px;
-        padding-bottom: 16px;
-        gap: 8px;
-    }
-
-    .custom-select {
-        width: 164px;
-    }
-
-    .cards {
-        gap: 16px;
-        grid-template-columns: repeat(auto-fill, 163px);
-    }
-
-    .card {
-        gap: 8px;
-    }
-
-    .contentCard {
-        gap: 8px;
-    }
-
-    .card img {
-        height: 164px;
-        border-radius: 8px;
-    }
-
-    .card span {
-        font-size: 28px;
-    }
-
-    .options label, .select-trigger, .chip, .timeSlot span, .linkDetailsCard, .titleCardMassage {
-        font-size: 16px !important;
-    }
-
-     .linkDetailsCard {
-        padding-top: 8px;
-     }
-
-    .linkDetailsCard img{
-        width: 16px;
-        height: 16px;
-    }
-
-    .card p {
-        font-size: 14px;
-    }
-
-    .pagination {
-        gap: 16px;
-        margin-top: 24px;
-        margin-bottom: 40px;
-    }
-
-    .pagination button {
-        width: 28px;
-        height: 28px;
-        border-radius: 3.5px;
-        font-size: 15.75px;
-    }
-}
-
-  </style>
 </head>
 <body>
   <!-- Social Media Sidebar -->
@@ -470,42 +151,78 @@
   </header>
 
   <main>
-    <section class="bannerTop containerMarginTop">
-      <div class="bannerTop-background">
-        <img src="images/bannerMassage.jpg" class="bannerTop-image">
-        <div class="bannerTop-overlay"></div>
-      </div>
-      <div class="container">
-        <div class="bannerTop-content">
-          <div class="bannerTop-values">
-            <h1>Масажі</h1>
-          </div>
-          <button class="cta-button">Записатись</button>
-        </div>
-      </div>
-    </section>
-    <div class="container">
-    <div class="wrapperCustomSelect">
-        <div class="custom-select">
-        <div class="select-trigger">Види <img src="images/arrowDown.svg" alt="arrow Down"/></div>
-        <div class="options">
-        <label><input type="checkbox" value="Massage"> Індивідуальний</label>
-        <label><input type="checkbox" value="Spa"> Парний</label>
-        <label><input type="checkbox" value="Relax"> Антистрес</label>
-        <label><input type="checkbox" value="Sauna"> VIP-меню</label>
-        </div>
-        </div>
+     <div class="container containerMarginTop">
+    <div class="service-header">
+      <!-- Ліва частина -->
+      <div class="service-info">
+        <h2>МАСАЖ</h2>
+        <div class="wrapperheaderOneMassage">
+          <img src="images/itemMassage.jpg" alt="Масаж">
+          <div class="my-sliderMessage swiper">
+            <div class="swiper-wrapper">
+              <!-- Slide -->
+                <div class="swiper-slide">
+                  <div><img src="images/itemMassage.jpg" alt="Масаж"></div>
+                  
+                </div>
 
-        <!-- Вибрані чіпи -->
-        <div class="chips"></div>
+              <div class="swiper-slide">
+                <div><img src="images/itemMassage.jpg" alt="Масаж"></div>
+              </div>
+            </div>  
+
+  <!-- Navigation buttons (тільки на десктопі) -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- Dots -->
+  <div class="swiper-pagination"></div>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur. Tincidunt mi mauris sed morbi elit gravida</p>
+        </div>
+        <div class="timeSlot oneMassageTimeSlot">
+                <span class="valueTime timeActive">40 хв</span>
+                <span class="separatorTime">|</span>
+                <span class="valueTime">60 хв</span>
+                <span class="separatorTime">|</span>
+                <span class="valueTime">100 хв</span>
+            </div>
+        <p class="priceMassage">1000 <span>грн</span></p>
+        <a href="#" class="btnMassage">Записатись</a>
+        <a href="#" class="btn-outline">Придбати сертифікат/абонемент ></a>
+      </div>
+
+      <!-- Права частина -->
+      <div class="service-img">
+        <img src="images/massagerightImg.jpg" alt="Масаж фото">
+      </div>
     </div>
 
-    <!-- Карточки -->
-    <div class="cards" id="cards-container"></div>
-
-    <!-- Пагінація -->
-    <div class="pagination" id="pagination"></div>
+    <!-- Опис -->
+    <div class="descriptionMassage">
+      <h3>ОПИС</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur. Neque hendrerit pulvinar nulla massa nisl dolor.
+        Orci eu viverra sit lacus. Donec nulla ullamcorper semper tortor purus diam lorem lacus,
+        id et vivamus cursus quis ac turpis interdum enim.
+      </p>
+      <p class="highlight">
+        Lorem ipsum dolor sit amet consectetur. Neque hendrerit pulvinar nulla massa nisl dolor.
+        Orci eu viverra sit lacus. Donec nulla ullamcorper semper tortor purus diam lorem lacus.
+      </p>
+      <div>
+        <p class="highlight">
+        Lorem ipsum dolor:
+      </p>
+        <ul>
+          <li>Lorem ipsum dolor</li>
+          <li>Lorem ipsum dolor sit amet consectetur</li>
+          <li>Lorem ipsum dolor sit amet</li>
+        </ul>
+      </div>
+    </div>
   </div>
+ 
   </main>
 
   <!-- Footer -->
@@ -594,104 +311,31 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script>
-    // --- Селект ---
-    const trigger = document.querySelector('.select-trigger');
-    const options = document.querySelector('.options');
-    const chipsContainer = document.querySelector('.chips');
+    <!-- Підключення Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    trigger.addEventListener('click', () => {
-      options.style.display = options.style.display === 'block' ? 'none' : 'block';
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.custom-select')) {
-        options.style.display = 'none';
-      }
-    });
-
-    options.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-      checkbox.addEventListener('change', () => {
-        if (checkbox.checked) {
-          const chip = document.createElement('div');
-          chip.className = 'chip';
-          chip.dataset.value = checkbox.value;
-          chip.innerHTML = checkbox.value + ' <img src="images/deleteFilterItem.svg"/>';
-          chipsContainer.appendChild(chip);
-
-          chip.querySelector('img').addEventListener('click', () => {
-            chip.remove();
-            checkbox.checked = false;
-          });
-        } else {
-          const chip = chipsContainer.querySelector(`.chip[data-value="${checkbox.value}"]`);
-          if (chip) chip.remove();
-        }
-      });
-    });
-
-    // --- Карточки + Пагінація ---
-    const products = Array.from({length: 15}, (_, i) => ({
-      id: i+1,
-      title: `Lorem ipsum dolor sit amet consectetur. Tincidunt mi mauris sed morbi elit gravida ${i+1}`,
-      img: "images/imageMassage.png",
-      price: (1000 + i*50) + " грн"
-    }));
-
-    const cardsContainer = document.getElementById('cards-container');
-    const pagination = document.getElementById('pagination');
-    const perPage = 6;
-    let currentPage = 1;
-
-    function renderCards(page = 1) {
-      cardsContainer.innerHTML = '';
-      const start = (page - 1) * perPage;
-      const end = start + perPage;
-      const items = products.slice(start, end);
-
-      items.forEach(p => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-          <img src="${p.img}" alt="${p.title}">
-          <div class="contentCard">
-            <a href="#" class="titleCardMassage">${p.title}</a>
-            <div class="timeSlot">
-                <span class="valueTime timeActive">40 хв</span>
-                <span class="separatorTime">|</span>
-                <span class="valueTime">60 хв</span>
-                <span class="separatorTime">|</span>
-                <span class="valueTime">100 хв</span>
-            </div>
-            <span>${p.price}</span>
-          </div>
-          <a href="#" class="linkDetailsCard">Детальніше <img src="images/arrowRight.svg" alt="arrowRight"/></a>
-        `;
-        cardsContainer.appendChild(card);
-      });
+<script>
+  const swiper = new Swiper('.my-sliderMessage', {
+  slidesPerView: 1, 
+  spaceBetween: 20,
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    768: { // від 768px і вище
+      slidesPerView: 4 // або "auto", якщо треба респонсивно
     }
+  }
+});
+</script>
 
-    
-
-    function renderPagination() {
-      pagination.innerHTML = '';
-      const pages = Math.ceil(products.length / perPage);
-
-      for (let i=1; i<=pages; i++) {
-        const btn = document.createElement('button');
-        btn.textContent = i;
-        if (i === currentPage) btn.classList.add('active');
-        btn.addEventListener('click', () => {
-          currentPage = i;
-          renderCards(i);
-          renderPagination();
-        });
-        pagination.appendChild(btn);
-      }
-    }
-
-    renderCards();
-    renderPagination();
-  </script>
+ 
 </body>
 </html>
