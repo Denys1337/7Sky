@@ -70,7 +70,7 @@
 @media (max-width: 1024px) {
   .certificates {
     padding: 60px 0;
-    padding-bottom: 0;
+    padding-bottom: 40px;
   }
   
   .certificates-grid {
@@ -82,7 +82,7 @@
 @media (max-width: 768px) {
   .certificates {
     padding: 40px 0;
-    padding-bottom: 0;
+    padding-bottom: 40px;
   }
   
   .certificates-grid {

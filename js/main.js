@@ -426,22 +426,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function initMap() {
-      // Центр карти (Вінниця)
       const vinnytsia = { lat: 49.2331, lng: 28.4682 };
-
-      // Створюємо карту
       const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 14,
         center: vinnytsia,
       });
 
-      // Масив точок
       const locations = [
         { position: { lat: 49.2336, lng: 28.4689 }, title: "м. Вінниця, вул. Соборна 58" },
         { position: { lat: 49.2348, lng: 28.4705 }, title: "м. Вінниця, вул. Театральна 34" }
       ];
 
-      // Додаємо мітки
       locations.forEach(loc => {
         new google.maps.Marker({
           position: loc.position,
@@ -450,4 +445,18 @@ function initMap() {
         });
       });
     }
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.timeSlot').forEach(slotGroup => {
+    const items = slotGroup.querySelectorAll('.valueTime');
+
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        items.forEach(el => el.classList.remove('timeActive'));
+        item.classList.add('timeActive');
+      });
+    });
+  });
+});
 

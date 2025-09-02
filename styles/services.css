@@ -122,15 +122,17 @@
   }
 }
 
+@media (max-width: 1040px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .services {
     padding: 40px 0;
      padding-bottom: 0;
-  }
-  
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
   }
   
   .service-card--large {

@@ -24,7 +24,7 @@ body {
 
 
 .containerMarginTop {
-      margin-top: 96px;
+      margin-top: 101px;
     }
 
 @media (max-width: 1250px) {
@@ -178,7 +178,7 @@ body {
 }
 
 .swiper-slide {
-  width: 282px !important;
+  width: 285px !important;
 }
 
 .product-card {
@@ -201,6 +201,11 @@ body {
   color: #050505;
   padding-top: 24px;
   padding-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-content-product {
@@ -416,3 +421,296 @@ body {
   font-family: 'Poiret One', sans-serif;
   color: rgba(5, 5, 5, 1);
 }
+
+
+
+    /* .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    } */
+
+    .service-header {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 24px;
+      align-items: start;
+      padding-top: 40px;
+    }
+
+    .service-header h2 {
+      font-family: 'Playfair Display', sans-serif;
+      font-size: 36px;
+      font-weight: 400;
+      color: rgba(5, 5, 5, 1);
+    }
+
+    .service-info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .service-info img {
+      width: 282px;
+      height: 282px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .service-img {
+      width: 100%;
+      height: 588px;
+      max-width: 588px;
+    }
+
+    .wrapperheaderOneMassage {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .wrapperheaderOneMassage p {
+      width: 282px;
+      text-transform: uppercase;
+      font-size: 24px;
+    }
+
+    .service-img img {
+      max-width: 100%;
+      border-radius: 12px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .durations {
+      color: #8a6f3c;
+      font-size: 14px;
+    }
+
+    .priceMassage {
+      font-family: 'Playfair Display', sans-serif;
+      font-size: 40px;
+      font-weight: bold;
+      color: rgba(5, 5, 5, 1);
+      line-height: normal;
+      margin-top: -16px;
+    }
+
+    .priceMassage span{
+      font-family: 'Playfair Display', sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: rgba(5, 5, 5, 1);
+    }
+
+    .btnMassage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+      background: rgba(176, 134, 74, 1);
+      color: rgba(5, 5, 5, 1);
+      text-decoration: none;
+      border-radius: 4px;
+      text-align: center;
+      font-family: 'Poiret One', sans-serif;
+      font-size: 18px;
+      max-width: 282px;
+      transition: background 0.3s;
+    }
+
+    .btnMassage:hover {
+  background: none;
+  color: #F0E9DF;
+  border: 1px solid #F0E9DF;
+  box-sizing: border-box;
+}
+
+    .btn-outline {
+      display: inline-block;
+      font-size: 18px;
+      font-family: 'Poiret One', sans-serif;
+      color: rgba(176, 134, 74, 1);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(176, 134, 74, 1);
+      padding-bottom: 3px;
+      max-width: 282px;
+      transition: color 0.3s, border-color 0.3s;
+      white-space: nowrap;
+      margin-top: -8px;
+    }
+
+    .btn-outline:hover {
+      color: #9c6e3b;
+      border-color: #9c6e3b;
+    }
+
+    .descriptionMassage {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 80px;
+    }
+
+    .descriptionMassage h3 {
+       font-size: 24px;
+      font-family: 'Playfair Display', sans-serif;
+      color: rgba(5, 5, 5, 1);
+      font-weight: 400;
+    }
+
+    .descriptionMassage p {
+      font-size: 18px;
+      font-family: 'Poiret One', sans-serif;
+      color: rgba(5, 5, 5, 1);
+      font-weight: 400;
+    }
+
+    .descriptionMassage p.highlight {
+      color: rgba(176, 134, 74, 1);
+    }
+
+    .descriptionMassage ul {
+      padding-left: 20px;
+      list-style-type: "- ";
+    }
+
+    .descriptionMassage ul li {
+      margin-bottom: 4px;
+      font-size: 18px;
+      font-family: 'Poiret One', sans-serif;
+      color: rgba(5, 5, 5, 1);
+      font-weight: 400;
+    }
+
+     .timeSlot {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .timeSlot span {
+        font-family: 'Poiret One', sans-serif !important;
+        font-size: 18px !important;
+        color: rgba(5, 5, 5, 1);
+    }
+
+    .oneMassageTimeSlot span {
+      font-size: 24px !important;
+    }
+
+    .timeActive {
+        color: rgba(176, 134, 74, 1) !important;
+    }
+
+    .my-sliderMessage {
+      display: none !important;
+    }
+
+    @media (max-width: 1150px) {
+      .wrapperheaderOneMassage {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .service-img {
+        display: none;
+      }
+
+      .service-header {
+        grid-template-columns: 1fr;
+      }
+
+      .btnMassage {
+        max-width: 100%;
+      }
+
+      .btn-outline {
+        width: 256px;
+        margin: 0 auto;
+        font-size: 16px;
+        margin-top: -4px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .my-sliderMessage {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+       max-width: 343px;
+    }
+
+    .service-info img {
+      width: 343px;
+      height: 343px;
+    }
+
+    .my-sliderMessage .swiper-slide{
+      width: 100% !important;
+      padding-bottom: 26px;
+    }
+
+    .my-sliderMessage .swiper-pagination {
+      bottom: -6px !important;
+    }
+
+    .wrapperheaderOneMassage > img {
+      display: none;
+    }
+      .service-header {
+        grid-template-columns: 1fr;
+        padding-top: 20px;
+      }
+
+      .service-header h2 {
+        font-size: 28px;
+      }
+
+      .service-info {
+      gap: 16px;
+    }
+
+    .wrapperheaderOneMassage p {
+      font-size: 18px;
+    }
+
+    .priceMassage {
+      font-size: 28px;
+    }
+
+    .priceMassage span {
+      font-size: 14px;
+    }
+
+    .btnMassage {
+      font-size: 16px;
+    }
+
+    .oneMassageTimeSlot span {
+      font-size: 18px !important;
+    }
+
+      .timeSlot {
+        gap: 4px;
+    }
+
+     .timeSlot span{
+        font-size: 16px !important;
+    }
+
+    .descriptionMassage {
+      gap: 8px;
+      padding-top: 16px;
+      margin-bottom: 40px;
+    }
+
+    .descriptionMassage ul li, .descriptionMassage p, .descriptionMassage h3 {
+      font-size: 16px;
+    }
+    }
+
