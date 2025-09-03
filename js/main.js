@@ -377,7 +377,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const successMessage = document.getElementById("successMessage");
   const closeBtn = document.getElementById("popupClose");
   const popup = document.getElementById("popup");
-  const openBtn = document.querySelector(".cta-button");
+  const openBtn = document.querySelector(".openPopup");
 
   openBtn.addEventListener("click", () => {
     popup.classList.add("active");
@@ -459,4 +459,34 @@ function initMap() {
     });
   });
 });
+
+
+document.querySelectorAll(".nav-item").forEach(item => {
+  const link = item.querySelector(".nav-link");
+  const submenuLinks = item.querySelectorAll(".dropdown-menu a");
+
+  link.addEventListener("click", (e) => {
+    document.querySelectorAll(".nav-link").forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
+    localStorage.setItem("activeMenu", link.textContent.trim());
+  });
+
+  submenuLinks.forEach(sublink => {
+    sublink.addEventListener("click", (e) => {
+      document.querySelectorAll(".nav-link").forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+      localStorage.setItem("activeMenu", link.textContent.trim());
+    });
+  });
+});
+
+const activeMenu = localStorage.getItem("activeMenu");
+if (activeMenu) {
+  document.querySelectorAll(".nav-link").forEach(l => {
+    if (l.textContent.trim() === activeMenu) {
+      l.classList.add("active");
+    }
+  });
+}
+
 

@@ -33,6 +33,10 @@ body {
 } 
 }
 
+.nav-link.active {
+  color: #8B5E3C;
+}
+
 /* Typography */
 .section-title {
   font-family: 'Playfair Display', serif;
@@ -519,13 +523,13 @@ body {
       font-size: 18px;
       max-width: 282px;
       transition: background 0.3s;
+      box-sizing: border-box;
+      border: 1px solid rgba(176, 134, 74, 1);
     }
 
     .btnMassage:hover {
-  background: none;
-  color: #F0E9DF;
-  border: 1px solid #F0E9DF;
-  box-sizing: border-box;
+  background: #fff;
+  color: rgba(176, 134, 74, 1);
 }
 
     .btn-outline {
@@ -714,3 +718,443 @@ body {
     }
     }
 
+
+.custom-select {
+      position: relative;
+      display: inline-block;
+      width: 180px;
+    }
+
+    .select-trigger {
+      padding: 8px 16px;
+      cursor: pointer;
+      background: rgba(240, 233, 223, 1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+    }
+
+    .select-trigger img{
+        width: 16px;
+        height: 16px;
+    }
+
+    .options {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(240, 233, 223, 1);
+      display: none;
+      z-index: 100;
+      width: 205px;
+      padding: 8px 16px;
+      gap: 10px;
+    }
+
+    .options label {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .options input[type="checkbox"] {
+        appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+        accent-color: rgba(240, 233, 223, 1);
+          background-color: rgba(240, 233, 223, 1);
+          border: 0.5px solid rgba(5, 5, 5, 1);
+    }
+
+    .options input[type="checkbox"]:checked {
+        background-color: #B0864A;
+        border-color: #B0864A;
+        }
+
+      .options  input[type="checkbox"]:checked::after {
+        content: "✔";
+        color: white;
+        font-size: 14px;
+        position: relative;
+        top: -2px;
+        left: 3px;
+        }
+
+    .options input {
+      width: 16px;
+      height: 16px;
+      background: none;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .chip {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      gap: 8px;
+      font-size: 18px;
+      color: rgba(5, 5, 5, 1);
+      font-family: 'Poiret One', sans-serif;
+      
+    }
+
+    .chip img {
+      width: 21px;
+      height: 21px;
+    }
+
+    /* ---- Карточки ---- */
+    .cards {
+      display: grid;
+       grid-template-columns: repeat(auto-fill, 384px);
+      gap: 24px;
+      justify-content: center;
+    }
+
+    .card {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 384px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .contentCard {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card .titleCardMassage {
+      font-size: 18px;
+      font-family: 'Poiret One', sans-serif;
+      color: rgba(5, 5, 5, 1);
+      text-decoration: none;
+      line-height: normal;
+    }
+
+    .card span {
+        font-size: 40px;
+        font-family: 'Playfair Display', sans-serif;
+        font-weight: 400;
+        line-height: 100%;
+        color: rgba(5, 5, 5, 1);
+    }
+
+   
+
+    .linkDetailsCard {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 0.3px solid rgba(176, 134, 74, 1);
+        color: rgba(176, 134, 74, 1);
+        font-size: 18px;
+        text-decoration: none;
+        font-family: 'Poiret One', sans-serif;
+        max-width: fit-content;
+    }
+
+    .linkDetailsCard img{
+        width: 16px;
+        height: 16px;
+    }
+    
+
+    /* ---- Пагінація ---- */
+    .pagination {
+      margin-top: 40px;
+      margin-bottom: 80px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .pagination button {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      border: 1px solid rgba(176, 134, 74, 1);
+      background: #fff;
+      cursor: pointer;
+      color: rgba(176, 134, 74, 1);
+      font-size: 18px;
+      font-family: 'Poiret One', sans-serif;
+    }
+
+    .pagination button.active {
+      background: rgba(176, 134, 74, 1);
+      color: rgba(240, 233, 223, 1);
+    }
+
+    .bannerTop {
+        position: relative;
+        height: 229px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .bannerTop-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.bannerTop-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bannerTop-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.bannerTop-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.bannerTop-values h1 {
+    font-size: 36px;
+    color: rgba(240, 233, 223, 1);
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+}
+
+.wrapperCustomSelect {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-top: 40px;
+    padding-bottom: 24px;
+}
+
+.wrapperSelectFilters {
+  display: flex;
+  gap: 20px;
+}
+
+.cardsCosmetics {
+      display: grid;
+    grid-template-columns: repeat(auto-fill, 282px);
+    gap: 24px;
+    justify-content: center;
+}
+
+.cardCosmetic img {
+  width: 282px;
+  height: 282px;
+  border-radius: 8px;
+}
+
+.titleCosmetic {
+  font-family: 'Poiret One', sans-serif;
+  font-style: 18px;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardCosmetic {
+  display: flex;
+  flex-direction: column;
+}
+
+.contentCosmetic {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 24px;
+  padding-bottom: 30px;
+}
+
+.Cosmetic-price {
+  font-size: 40px;
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+  line-height: normal;
+}
+
+.Cosmetic-price span{
+  font-size: 20px;
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+}
+
+.Cosmetic-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  color: rgba(5, 5, 5, 1);
+  font-size: 18px;
+  font-family: 'Poiret One';
+  font-weight: 400;
+  box-sizing: border-box;
+  border: 1px solid rgba(176, 134, 74, 1);
+  background: rgba(176, 134, 74, 1);
+  border-radius: 4px;
+}
+
+.Cosmetic-btn:hover {
+  background: #fff;
+  color: rgba(176, 134, 74, 1);
+}
+
+.valueTime {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .cardCosmetic img {
+      width: 164px;
+      height: 164px;
+    }
+
+    .cardsCosmetics {
+      grid-template-columns: repeat(auto-fill, 163px);
+      gap: 16px;
+    }
+
+    .cosmeticFilterWrapper {
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .cosmeticFilterWrapper .chips {
+      width: 344px;
+    }
+
+    .contentCosmetic {
+      gap: 8px;
+      padding-top: 8px;
+      padding-bottom: 16px;
+    }
+
+    .bannerTop-content {
+        gap: 16px;
+    }
+
+    .bannerTop-values h1 {
+        font-size: 28px;
+    }
+
+    .wrapperCustomSelect {
+        padding-top: 20px;
+        padding-bottom: 16px;
+        gap: 8px;
+    }
+
+    .titleCosmetic {
+      font-size: 16px;
+    }
+
+    .Cosmetic-price {
+      font-size: 28px;
+    }
+
+    .Cosmetic-price span{
+      font-size: 14px;
+    }
+
+    .Cosmetic-btn {
+      font-size: 16px;
+    }
+
+    .custom-select {
+        width: 164px;
+    }
+
+    .cards {
+        gap: 16px;
+        grid-template-columns: repeat(auto-fill, 163px);
+    }
+
+    .card {
+        gap: 8px;
+    }
+
+    .contentCard {
+        gap: 8px;
+    }
+
+    .card img {
+        height: 164px;
+        border-radius: 8px;
+    }
+
+    .card span {
+        font-size: 28px;
+    }
+
+    .options label, .select-trigger, .chip, .timeSlot span, .linkDetailsCard, .titleCardMassage {
+        font-size: 16px !important;
+    }
+
+     .linkDetailsCard {
+        padding-top: 8px;
+     }
+
+    .linkDetailsCard img{
+        width: 16px;
+        height: 16px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .pagination {
+        gap: 16px;
+        margin-top: 24px;
+        margin-bottom: 40px;
+    }
+
+    .pagination button {
+        width: 28px;
+        height: 28px;
+        border-radius: 3.5px;
+        font-size: 15.75px;
+    }
+}
