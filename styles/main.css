@@ -29,7 +29,7 @@ body {
 
 @media (max-width: 1250px) {
     .containerMarginTop {
-    margin-top: 80px;
+    margin-top: 73px;
 } 
 }
 
@@ -556,6 +556,7 @@ body {
       flex-direction: column;
       gap: 16px;
       margin-bottom: 80px;
+      padding-top: 24px;
     }
 
     .descriptionMassage h3 {
@@ -733,6 +734,7 @@ body {
       justify-content: space-between;
       align-items: center;
       font-size: 18px;
+      border-radius: 4px;
     }
 
     .select-trigger img{
@@ -1044,6 +1046,13 @@ body {
 
 .valueTime {
   cursor: pointer;
+}
+
+@media (max-width: 1231px) {
+  .cosmeticFilterWrapper {
+      justify-content: center;
+      flex-direction: column;
+    }
 }
 
 @media (max-width: 768px) {
