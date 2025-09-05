@@ -1225,7 +1225,7 @@ body {
   font-size: 20px;
   color: rgba(5, 5, 5, 1);
   font-family: "Poiret One", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .product-price {
@@ -1359,6 +1359,13 @@ body {
   border-radius: 8px;
 }
 
+.my-sliderMessage img {
+  width: 343px;
+  height: 343px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 @media (max-width: 970px) {
   .product-page {
     flex-direction: column;
@@ -1369,5 +1376,67 @@ body {
     font-size: 28px;
     padding-top: 20px;
     padding-bottom: 16px;
+  }
+
+  .product-info h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .product-meta {
+    padding-bottom: 16px;
+    gap: 78px;
+  }
+
+  .product-meta p {
+    font-size: 16px;
+  }
+
+  .product-meta p span {
+    font-size: 16px;
+  }
+
+  .product-price {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .product-price span {
+    font-size: 18px;
+  }
+
+  .add-to-cart {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .tabs {
+    margin-bottom: 16px;
+    gap: 24px;
+  }
+
+  .tab {
+    font-size: 16px;
+  }
+
+  .tab-content {
+    font-size: 16px;
+    gap: 8px;
+    max-height: 275px;
+  }
+
+  .productContent {
+    padding-bottom: 40px;
+  }
+
+  .product-gallery {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-gallery {
+    display: none;
   }
 }
