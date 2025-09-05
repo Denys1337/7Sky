@@ -10,10 +10,10 @@ html {
 }
 
 body {
-  font-family: 'Poiret One', sans-serif;
+  font-family: "Poiret One", sans-serif;
   line-height: 1.6;
   color: #050505;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .container {
@@ -22,24 +22,23 @@ body {
   padding: 0 16px;
 }
 
-
 .containerMarginTop {
-      margin-top: 101px;
-    }
+  margin-top: 101px;
+}
 
 @media (max-width: 1250px) {
-    .containerMarginTop {
+  .containerMarginTop {
     margin-top: 73px;
-} 
+  }
 }
 
 .nav-link.active {
-  color: #8B5E3C;
+  color: #8b5e3c;
 }
 
 /* Typography */
 .section-title {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 1.33;
@@ -53,12 +52,12 @@ body {
 /* Buttons */
 .cta-button,
 .add-to-cart-btn {
-  background-color: #B0864A;
-  color: #F0E9DF;
+  background-color: #b0864a;
+  color: #f0e9df;
   border: none;
   border-radius: 4px;
   padding: 8px 40px;
-  font-family: 'Poiret One', sans-serif;
+  font-family: "Poiret One", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.17;
@@ -88,13 +87,13 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Poiret One', sans-serif;
+  font-family: "Poiret One", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.17;
-  color: #B0864A;
+  color: #b0864a;
   text-decoration: none;
-  border-bottom: 0.5px solid #B0864A;
+  border-bottom: 0.5px solid #b0864a;
   padding-bottom: 4px;
   transition: all 0.3s ease;
   max-width: fit-content;
@@ -109,8 +108,8 @@ body {
 }
 
 .about-link {
-  color: #F0E9DF;
-  border-bottom-color: #F0E9DF;
+  color: #f0e9df;
+  border-bottom-color: #f0e9df;
 }
 
 .about-link:hover {
@@ -141,8 +140,8 @@ body {
 }
 
 .carousel-btn:hover {
-  background-color: #B0864A;
-  color: #F0E9DF;
+  background-color: #b0864a;
+  color: #f0e9df;
 }
 
 /* Responsive Design */
@@ -150,12 +149,12 @@ body {
   .container {
     padding: 0 16px;
   }
-  
+
   .section-title {
     font-size: 28px;
     margin-bottom: 32px;
   }
-  
+
   .carousel-controls {
     margin-top: 32px;
   }
@@ -166,15 +165,13 @@ body {
     font-size: 24px;
     margin-bottom: 16px;
   }
-  
+
   .cta-button,
   .add-to-cart-btn {
     padding: 8px 24px;
     font-size: 16px;
   }
 }
-
-
 
 .my-slider {
   width: 100%;
@@ -189,7 +186,7 @@ body {
   width: 282px;
   display: flex;
   flex-direction: column;
-  height: 100%; 
+  height: 100%;
 }
 
 .product-card img {
@@ -201,7 +198,7 @@ body {
 
 .product-card h3 {
   font-size: 18px;
-  font-family: 'Poiret One', sans-serif;
+  font-family: "Poiret One", sans-serif;
   color: #050505;
   padding-top: 24px;
   padding-bottom: 10px;
@@ -218,22 +215,22 @@ body {
 
 .price {
   font-size: 40px;
-  font-family: 'Playfair Display', sans-serif;
+  font-family: "Playfair Display", sans-serif;
   color: #050505;
   padding-bottom: 30px;
 }
 
 .price span {
   font-size: 20px;
-  font-family: 'Playfair Display', sans-serif;
+  font-family: "Playfair Display", sans-serif;
   color: #050505;
 }
 
 .btn {
-  background: #B0864A;
+  background: #b0864a;
   color: #050505;
   font-size: 18px;
-  font-family: 'Poiret One', sans-serif;
+  font-family: "Poiret One", sans-serif;
   display: flex;
   justify-content: center;
   border: none;
@@ -253,31 +250,31 @@ body {
 
 @media (max-width: 768px) {
   .swiper-slide {
-  width: 204px !important;
-}
+    width: 204px !important;
+  }
 
-.product-card {
-  width: 204px;
-}
+  .product-card {
+    width: 204px;
+  }
 
-.product-card img {
-  height: 204px;
-}
+  .product-card img {
+    height: 204px;
+  }
 
-.product-card h3 {
-  font-size: 16px;
-  padding-top: 8px;
-  padding-bottom: 0px;
-}
+  .product-card h3 {
+    font-size: 16px;
+    padding-top: 8px;
+    padding-bottom: 0px;
+  }
 
-.price {
-  font-size: 32px;
-  padding-bottom: 16px;
-}
+  .price {
+    font-size: 32px;
+    padding-bottom: 16px;
+  }
 
-.price span{
-  font-size: 16px;
-}
+  .price span {
+    font-size: 16px;
+  }
 }
 
 .swiper-slide {
@@ -285,21 +282,23 @@ body {
   padding-bottom: 45px;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
   width: 40px !important;
   height: 40px !important;
-  background: #B0864A80;
+  background: #b0864a80;
   border-radius: 4px;
   top: 45% !important;
 }
 
-.swiper-button-next:after, .swiper-button-prev:after {
+.swiper-button-next:after,
+.swiper-button-prev:after {
   color: #050505;
   font-size: 16px !important;
 }
 
 .swiper-pagination-bullet {
-  border: 0.5px solid #B0864A;
+  border: 0.5px solid #b0864a;
   width: 10px !important;
   height: 10px !important;
   box-sizing: border-box;
@@ -307,14 +306,13 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-  background: #B0864A !important;
+  background: #b0864a !important;
 }
 
 .wrapperServiceCard {
   display: flex;
   gap: 24px;
 }
-
 
 .aboutContainer {
   height: 100%;
@@ -324,18 +322,19 @@ body {
   width: 100%;
 }
 
- .about-title {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
-  }
-  .about-title.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.about-title {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.about-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 @media (max-width: 768px) {
-  .swiper-button-next, .swiper-button-prev {
+  .swiper-button-next,
+  .swiper-button-prev {
     display: none !important;
   }
 
@@ -345,14 +344,13 @@ body {
   }
 }
 
-
 .popup {
   position: fixed;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease;
@@ -371,12 +369,12 @@ body {
   width: 100%;
   text-align: center;
   position: relative;
-  border: 0.5px solid rgba(218, 218, 218, 1)
+  border: 0.5px solid rgba(218, 218, 218, 1);
 }
 
 .popup-content h2 {
   font-size: 24px;
-  font-family: 'Poiret One', sans-serif;
+  font-family: "Poiret One", sans-serif;
   font-weight: 400;
   color: rgba(5, 5, 5, 1);
   padding-bottom: 24px;
@@ -411,7 +409,7 @@ body {
   border: none;
   color: rgba(5, 5, 5, 1);
   font-size: 18px;
-  font-family: 'Poiret One',sans-serif;
+  font-family: "Poiret One", sans-serif;
   font-weight: 400;
   cursor: pointer;
   border-radius: 4px;
@@ -422,502 +420,497 @@ body {
   display: none;
   font-size: 16px;
   font-weight: 400;
-  font-family: 'Poiret One', sans-serif;
+  font-family: "Poiret One", sans-serif;
   color: rgba(5, 5, 5, 1);
 }
 
-
-
-    /* .container {
+/* .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
     } */
 
-    .service-header {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 24px;
-      align-items: start;
-      padding-top: 40px;
-    }
+.service-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  align-items: start;
+  padding-top: 40px;
+}
 
-    .service-header h2 {
-      font-family: 'Playfair Display', sans-serif;
-      font-size: 36px;
-      font-weight: 400;
-      color: rgba(5, 5, 5, 1);
-    }
+.service-header h2 {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+}
 
-    .service-info {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
+.service-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
-    .service-info img {
-      width: 282px;
-      height: 282px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
+.service-info img {
+  width: 282px;
+  height: 282px;
+  object-fit: cover;
+  border-radius: 12px;
+}
 
-    .service-img {
-      width: 100%;
-      height: 588px;
-      max-width: 588px;
-    }
+.service-img {
+  width: 100%;
+  height: 588px;
+  max-width: 588px;
+}
 
-    .wrapperheaderOneMassage {
-      display: flex;
-      gap: 24px;
-      align-items: flex-start;
-    }
+.wrapperheaderOneMassage {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
 
-    .wrapperheaderOneMassage p {
-      width: 282px;
-      text-transform: uppercase;
-      font-size: 24px;
-    }
+.wrapperheaderOneMassage p {
+  width: 282px;
+  text-transform: uppercase;
+  font-size: 24px;
+}
 
-    .service-img img {
-      max-width: 100%;
-      border-radius: 12px;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.service-img img {
+  max-width: 100%;
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    .durations {
-      color: #8a6f3c;
-      font-size: 14px;
-    }
+.durations {
+  color: #8a6f3c;
+  font-size: 14px;
+}
 
-    .priceMassage {
-      font-family: 'Playfair Display', sans-serif;
-      font-size: 40px;
-      font-weight: bold;
-      color: rgba(5, 5, 5, 1);
-      line-height: normal;
-      margin-top: -16px;
-    }
+.priceMassage {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgba(5, 5, 5, 1);
+  line-height: normal;
+  margin-top: -16px;
+}
 
-    .priceMassage span{
-      font-family: 'Playfair Display', sans-serif;
-      font-size: 20px;
-      font-weight: bold;
-      color: rgba(5, 5, 5, 1);
-    }
+.priceMassage span {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(5, 5, 5, 1);
+}
 
-    .btnMassage {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 8px;
-      background: rgba(176, 134, 74, 1);
-      color: rgba(5, 5, 5, 1);
-      text-decoration: none;
-      border-radius: 4px;
-      text-align: center;
-      font-family: 'Poiret One', sans-serif;
-      font-size: 18px;
-      max-width: 282px;
-      transition: background 0.3s;
-      box-sizing: border-box;
-      border: 1px solid rgba(176, 134, 74, 1);
-    }
+.btnMassage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background: rgba(176, 134, 74, 1);
+  color: rgba(5, 5, 5, 1);
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  font-family: "Poiret One", sans-serif;
+  font-size: 18px;
+  max-width: 282px;
+  transition: background 0.3s;
+  box-sizing: border-box;
+  border: 1px solid rgba(176, 134, 74, 1);
+}
 
-    .btnMassage:hover {
+.btnMassage:hover {
   background: #fff;
   color: rgba(176, 134, 74, 1);
 }
 
-    .btn-outline {
-      display: inline-block;
-      font-size: 18px;
-      font-family: 'Poiret One', sans-serif;
-      color: rgba(176, 134, 74, 1);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(176, 134, 74, 1);
-      padding-bottom: 3px;
-      max-width: 282px;
-      transition: color 0.3s, border-color 0.3s;
-      white-space: nowrap;
-      margin-top: -8px;
-    }
+.btn-outline {
+  display: inline-block;
+  font-size: 18px;
+  font-family: "Poiret One", sans-serif;
+  color: rgba(176, 134, 74, 1);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(176, 134, 74, 1);
+  padding-bottom: 3px;
+  max-width: 282px;
+  transition: color 0.3s, border-color 0.3s;
+  white-space: nowrap;
+  margin-top: -8px;
+}
 
-    .btn-outline:hover {
-      color: #9c6e3b;
-      border-color: #9c6e3b;
-    }
+.btn-outline:hover {
+  color: #9c6e3b;
+  border-color: #9c6e3b;
+}
 
-    .descriptionMassage {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin-bottom: 80px;
-      padding-top: 24px;
-    }
+.descriptionMassage {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 80px;
+  padding-top: 24px;
+}
 
-    .descriptionMassage h3 {
-       font-size: 24px;
-      font-family: 'Playfair Display', sans-serif;
-      color: rgba(5, 5, 5, 1);
-      font-weight: 400;
-    }
+.descriptionMassage h3 {
+  font-size: 24px;
+  font-family: "Playfair Display", sans-serif;
+  color: rgba(5, 5, 5, 1);
+  font-weight: 400;
+}
 
-    .descriptionMassage p {
-      font-size: 18px;
-      font-family: 'Poiret One', sans-serif;
-      color: rgba(5, 5, 5, 1);
-      font-weight: 400;
-    }
+.descriptionMassage p {
+  font-size: 18px;
+  font-family: "Poiret One", sans-serif;
+  color: rgba(5, 5, 5, 1);
+  font-weight: 400;
+}
 
-    .descriptionMassage p.highlight {
-      color: rgba(176, 134, 74, 1);
-    }
+.descriptionMassage p.highlight {
+  color: rgba(176, 134, 74, 1);
+}
 
-    .descriptionMassage ul {
-      padding-left: 20px;
-      list-style-type: "- ";
-    }
+.descriptionMassage ul {
+  padding-left: 20px;
+  list-style-type: "- ";
+}
 
-    .descriptionMassage ul li {
-      margin-bottom: 4px;
-      font-size: 18px;
-      font-family: 'Poiret One', sans-serif;
-      color: rgba(5, 5, 5, 1);
-      font-weight: 400;
-    }
+.descriptionMassage ul li {
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-family: "Poiret One", sans-serif;
+  color: rgba(5, 5, 5, 1);
+  font-weight: 400;
+}
 
-     .timeSlot {
-        display: flex;
-        gap: 8px;
-        align-items: center;
-    }
+.timeSlot {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
 
-    .timeSlot span {
-        font-family: 'Poiret One', sans-serif !important;
-        font-size: 18px !important;
-        color: rgba(5, 5, 5, 1);
-    }
+.timeSlot span {
+  font-family: "Poiret One", sans-serif !important;
+  font-size: 18px !important;
+  color: rgba(5, 5, 5, 1);
+}
 
-    .oneMassageTimeSlot span {
-      font-size: 24px !important;
-    }
+.oneMassageTimeSlot span {
+  font-size: 24px !important;
+}
 
-    .timeActive {
-        color: rgba(176, 134, 74, 1) !important;
-    }
+.timeActive {
+  color: rgba(176, 134, 74, 1) !important;
+}
 
-    .my-sliderMessage {
-      display: none !important;
-    }
+.my-sliderMessage {
+  display: none !important;
+}
 
-    @media (max-width: 1150px) {
-      .wrapperheaderOneMassage {
-        flex-direction: column;
-      }
-    }
+@media (max-width: 1150px) {
+  .wrapperheaderOneMassage {
+    flex-direction: column;
+  }
+}
 
-    @media (max-width: 800px) {
-      .service-img {
-        display: none;
-      }
+@media (max-width: 800px) {
+  .service-img {
+    display: none;
+  }
 
-      .service-header {
-        grid-template-columns: 1fr;
-      }
+  .service-header {
+    grid-template-columns: 1fr;
+  }
 
-      .btnMassage {
-        max-width: 100%;
-      }
+  .btnMassage {
+    max-width: 100%;
+  }
 
-      .btn-outline {
-        width: 256px;
-        margin: 0 auto;
-        font-size: 16px;
-        margin-top: -4px;
-      }
-    }
+  .btn-outline {
+    width: 256px;
+    margin: 0 auto;
+    font-size: 16px;
+    margin-top: -4px;
+  }
+}
 
-    @media (max-width: 768px) {
-      .my-sliderMessage {
-      display: flex !important;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-       max-width: 343px;
-    }
+@media (max-width: 768px) {
+  .my-sliderMessage {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 343px;
+  }
 
-    .service-info img {
-      width: 343px;
-      height: 343px;
-    }
+  .service-info img {
+    width: 343px;
+    height: 343px;
+  }
 
-    .my-sliderMessage .swiper-slide{
-      width: 100% !important;
-      padding-bottom: 26px;
-    }
+  .my-sliderMessage .swiper-slide {
+    width: 100% !important;
+    padding-bottom: 26px;
+  }
 
-    .my-sliderMessage .swiper-pagination {
-      bottom: -6px !important;
-    }
+  .my-sliderMessage .swiper-pagination {
+    bottom: -6px !important;
+  }
 
-    .wrapperheaderOneMassage > img {
-      display: none;
-    }
-      .service-header {
-        grid-template-columns: 1fr;
-        padding-top: 20px;
-      }
+  .wrapperheaderOneMassage > img {
+    display: none;
+  }
+  .service-header {
+    grid-template-columns: 1fr;
+    padding-top: 20px;
+  }
 
-      .service-header h2 {
-        font-size: 28px;
-      }
+  .service-header h2 {
+    font-size: 28px;
+  }
 
-      .service-info {
-      gap: 16px;
-    }
+  .service-info {
+    gap: 16px;
+  }
 
-    .wrapperheaderOneMassage p {
-      font-size: 18px;
-    }
+  .wrapperheaderOneMassage p {
+    font-size: 18px;
+  }
 
-    .priceMassage {
-      font-size: 28px;
-    }
+  .priceMassage {
+    font-size: 28px;
+  }
 
-    .priceMassage span {
-      font-size: 14px;
-    }
+  .priceMassage span {
+    font-size: 14px;
+  }
 
-    .btnMassage {
-      font-size: 16px;
-    }
+  .btnMassage {
+    font-size: 16px;
+  }
 
-    .oneMassageTimeSlot span {
-      font-size: 18px !important;
-    }
+  .oneMassageTimeSlot span {
+    font-size: 18px !important;
+  }
 
-      .timeSlot {
-        gap: 4px;
-    }
+  .timeSlot {
+    gap: 4px;
+  }
 
-     .timeSlot span{
-        font-size: 16px !important;
-    }
+  .timeSlot span {
+    font-size: 16px !important;
+  }
 
-    .descriptionMassage {
-      gap: 8px;
-      padding-top: 16px;
-      margin-bottom: 40px;
-    }
+  .descriptionMassage {
+    gap: 8px;
+    padding-top: 16px;
+    margin-bottom: 40px;
+  }
 
-    .descriptionMassage ul li, .descriptionMassage p, .descriptionMassage h3 {
-      font-size: 16px;
-    }
-    }
-
+  .descriptionMassage ul li,
+  .descriptionMassage p,
+  .descriptionMassage h3 {
+    font-size: 16px;
+  }
+}
 
 .custom-select {
-      position: relative;
-      display: inline-block;
-      width: 180px;
-    }
+  position: relative;
+  display: inline-block;
+  width: 180px;
+}
 
-    .select-trigger {
-      padding: 8px 16px;
-      cursor: pointer;
-      background: rgba(240, 233, 223, 1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 18px;
-      border-radius: 4px;
-    }
+.select-trigger {
+  padding: 8px 16px;
+  cursor: pointer;
+  background: rgba(240, 233, 223, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 4px;
+}
 
-    .select-trigger img{
-        width: 16px;
-        height: 16px;
-    }
+.select-trigger img {
+  width: 16px;
+  height: 16px;
+}
 
-    .options {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: rgba(240, 233, 223, 1);
-      display: none;
-      z-index: 100;
-      width: 205px;
-      padding: 8px 16px;
-      gap: 10px;
-    }
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(240, 233, 223, 1);
+  display: none;
+  z-index: 100;
+  width: 205px;
+  padding: 8px 16px;
+  gap: 10px;
+}
 
-    .options label {
-      display: flex;
-      align-items: center;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      cursor: pointer;
-      font-size: 18px;
-    }
+.options label {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 18px;
+}
 
-    .options input[type="checkbox"] {
-        appearance: none;
+.options input[type="checkbox"] {
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-        accent-color: rgba(240, 233, 223, 1);
-          background-color: rgba(240, 233, 223, 1);
-          border: 0.5px solid rgba(5, 5, 5, 1);
-    }
+  accent-color: rgba(240, 233, 223, 1);
+  background-color: rgba(240, 233, 223, 1);
+  border: 0.5px solid rgba(5, 5, 5, 1);
+}
 
-    .options input[type="checkbox"]:checked {
-        background-color: #B0864A;
-        border-color: #B0864A;
-        }
+.options input[type="checkbox"]:checked {
+  background-color: #b0864a;
+  border-color: #b0864a;
+}
 
-      .options  input[type="checkbox"]:checked::after {
-        content: "✔";
-        color: white;
-        font-size: 14px;
-        position: relative;
-        top: -2px;
-        left: 3px;
-        }
+.options input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 14px;
+  position: relative;
+  top: -2px;
+  left: 3px;
+}
 
-    .options input {
-      width: 16px;
-      height: 16px;
-      background: none;
-    }
+.options input {
+  width: 16px;
+  height: 16px;
+  background: none;
+}
 
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
 
-    .chip {
-      display: flex;
-      align-items: center;
-      flex-direction: row-reverse;
-      gap: 8px;
-      font-size: 18px;
-      color: rgba(5, 5, 5, 1);
-      font-family: 'Poiret One', sans-serif;
-      
-    }
+.chip {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 8px;
+  font-size: 18px;
+  color: rgba(5, 5, 5, 1);
+  font-family: "Poiret One", sans-serif;
+}
 
-    .chip img {
-      width: 21px;
-      height: 21px;
-    }
+.chip img {
+  width: 21px;
+  height: 21px;
+}
 
-    /* ---- Карточки ---- */
-    .cards {
-      display: grid;
-       grid-template-columns: repeat(auto-fill, 384px);
-      gap: 24px;
-      justify-content: center;
-    }
+/* ---- Карточки ---- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 384px);
+  gap: 24px;
+  justify-content: center;
+}
 
-    .card {
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
+.card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
-    .card img {
-      width: 100%;
-      height: 384px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
+.card img {
+  width: 100%;
+  height: 384px;
+  object-fit: cover;
+  border-radius: 12px;
+}
 
-    .contentCard {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
+.contentCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-    .card .titleCardMassage {
-      font-size: 18px;
-      font-family: 'Poiret One', sans-serif;
-      color: rgba(5, 5, 5, 1);
-      text-decoration: none;
-      line-height: normal;
-    }
+.card .titleCardMassage {
+  font-size: 18px;
+  font-family: "Poiret One", sans-serif;
+  color: rgba(5, 5, 5, 1);
+  text-decoration: none;
+  line-height: normal;
+}
 
-    .card span {
-        font-size: 40px;
-        font-family: 'Playfair Display', sans-serif;
-        font-weight: 400;
-        line-height: 100%;
-        color: rgba(5, 5, 5, 1);
-    }
+.card span {
+  font-size: 40px;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  line-height: 100%;
+  color: rgba(5, 5, 5, 1);
+}
 
-   
+.linkDetailsCard {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 0.3px solid rgba(176, 134, 74, 1);
+  color: rgba(176, 134, 74, 1);
+  font-size: 18px;
+  text-decoration: none;
+  font-family: "Poiret One", sans-serif;
+  max-width: fit-content;
+}
 
-    .linkDetailsCard {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        border-bottom: 0.3px solid rgba(176, 134, 74, 1);
-        color: rgba(176, 134, 74, 1);
-        font-size: 18px;
-        text-decoration: none;
-        font-family: 'Poiret One', sans-serif;
-        max-width: fit-content;
-    }
+.linkDetailsCard img {
+  width: 16px;
+  height: 16px;
+}
 
-    .linkDetailsCard img{
-        width: 16px;
-        height: 16px;
-    }
-    
+/* ---- Пагінація ---- */
+.pagination {
+  margin-top: 40px;
+  margin-bottom: 80px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
 
-    /* ---- Пагінація ---- */
-    .pagination {
-      margin-top: 40px;
-      margin-bottom: 80px;
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-    }
+.pagination button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid rgba(176, 134, 74, 1);
+  background: #fff;
+  cursor: pointer;
+  color: rgba(176, 134, 74, 1);
+  font-size: 18px;
+  font-family: "Poiret One", sans-serif;
+}
 
-    .pagination button {
-      width: 32px;
-      height: 32px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 4px;
-      border: 1px solid rgba(176, 134, 74, 1);
-      background: #fff;
-      cursor: pointer;
-      color: rgba(176, 134, 74, 1);
-      font-size: 18px;
-      font-family: 'Poiret One', sans-serif;
-    }
+.pagination button.active {
+  background: rgba(176, 134, 74, 1);
+  color: rgba(240, 233, 223, 1);
+}
 
-    .pagination button.active {
-      background: rgba(176, 134, 74, 1);
-      color: rgba(240, 233, 223, 1);
-    }
+.bannerTop {
+  position: relative;
+  height: 229px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
-    .bannerTop {
-        position: relative;
-        height: 229px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .bannerTop-background {
+.bannerTop-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -951,18 +944,18 @@ body {
 }
 
 .bannerTop-values h1 {
-    font-size: 36px;
-    color: rgba(240, 233, 223, 1);
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 400;
+  font-size: 36px;
+  color: rgba(240, 233, 223, 1);
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
 }
 
 .wrapperCustomSelect {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    padding-top: 40px;
-    padding-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-top: 40px;
+  padding-bottom: 24px;
 }
 
 .wrapperSelectFilters {
@@ -971,10 +964,10 @@ body {
 }
 
 .cardsCosmetics {
-      display: grid;
-    grid-template-columns: repeat(auto-fill, 282px);
-    gap: 24px;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 282px);
+  gap: 24px;
+  justify-content: center;
 }
 
 .cardCosmetic img {
@@ -984,7 +977,7 @@ body {
 }
 
 .titleCosmetic {
-  font-family: 'Poiret One', sans-serif;
+  font-family: "Poiret One", sans-serif;
   font-style: 18px;
   font-weight: 400;
   color: rgba(5, 5, 5, 1);
@@ -1010,15 +1003,15 @@ body {
 
 .Cosmetic-price {
   font-size: 40px;
-  font-family: 'Playfair Display', sans-serif;
+  font-family: "Playfair Display", sans-serif;
   font-weight: 400;
   color: rgba(5, 5, 5, 1);
   line-height: normal;
 }
 
-.Cosmetic-price span{
+.Cosmetic-price span {
   font-size: 20px;
-  font-family: 'Playfair Display', sans-serif;
+  font-family: "Playfair Display", sans-serif;
   font-weight: 400;
   color: rgba(5, 5, 5, 1);
 }
@@ -1031,7 +1024,7 @@ body {
   padding: 8px 0;
   color: rgba(5, 5, 5, 1);
   font-size: 18px;
-  font-family: 'Poiret One';
+  font-family: "Poiret One";
   font-weight: 400;
   box-sizing: border-box;
   border: 1px solid rgba(176, 134, 74, 1);
@@ -1050,120 +1043,331 @@ body {
 
 @media (max-width: 1231px) {
   .cosmeticFilterWrapper {
-      justify-content: center;
-      flex-direction: column;
-    }
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 768px) {
-    .cardCosmetic img {
-      width: 164px;
-      height: 164px;
-    }
+  .cardCosmetic img {
+    width: 164px;
+    height: 164px;
+  }
 
-    .cardsCosmetics {
-      grid-template-columns: repeat(auto-fill, 163px);
-      gap: 16px;
-    }
+  .cardsCosmetics {
+    grid-template-columns: repeat(auto-fill, 163px);
+    gap: 16px;
+  }
 
-    .cosmeticFilterWrapper {
-      justify-content: center;
-      flex-direction: column;
-    }
+  .cosmeticFilterWrapper {
+    justify-content: center;
+    flex-direction: column;
+  }
 
-    .cosmeticFilterWrapper .chips {
-      width: 344px;
-    }
+  .cosmeticFilterWrapper .chips {
+    width: 344px;
+  }
 
-    .contentCosmetic {
-      gap: 8px;
-      padding-top: 8px;
-      padding-bottom: 16px;
-    }
+  .contentCosmetic {
+    gap: 8px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+  }
 
-    .bannerTop-content {
-        gap: 16px;
-    }
+  .bannerTop-content {
+    gap: 16px;
+  }
 
-    .bannerTop-values h1 {
-        font-size: 28px;
-    }
+  .bannerTop-values h1 {
+    font-size: 28px;
+  }
 
-    .wrapperCustomSelect {
-        padding-top: 20px;
-        padding-bottom: 16px;
-        gap: 8px;
-    }
+  .wrapperCustomSelect {
+    padding-top: 20px;
+    padding-bottom: 16px;
+    gap: 8px;
+  }
 
-    .titleCosmetic {
-      font-size: 16px;
-    }
+  .titleCosmetic {
+    font-size: 16px;
+  }
 
-    .Cosmetic-price {
-      font-size: 28px;
-    }
+  .Cosmetic-price {
+    font-size: 28px;
+  }
 
-    .Cosmetic-price span{
-      font-size: 14px;
-    }
+  .Cosmetic-price span {
+    font-size: 14px;
+  }
 
-    .Cosmetic-btn {
-      font-size: 16px;
-    }
+  .Cosmetic-btn {
+    font-size: 16px;
+  }
 
-    .custom-select {
-        width: 164px;
-    }
+  .custom-select {
+    width: 164px;
+  }
 
-    .cards {
-        gap: 16px;
-        grid-template-columns: repeat(auto-fill, 163px);
-    }
+  .cards {
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, 163px);
+  }
 
-    .card {
-        gap: 8px;
-    }
+  .card {
+    gap: 8px;
+  }
 
-    .contentCard {
-        gap: 8px;
-    }
+  .contentCard {
+    gap: 8px;
+  }
 
-    .card img {
-        height: 164px;
-        border-radius: 8px;
-    }
+  .card img {
+    height: 164px;
+    border-radius: 8px;
+  }
 
-    .card span {
-        font-size: 28px;
-    }
+  .card span {
+    font-size: 28px;
+  }
 
-    .options label, .select-trigger, .chip, .timeSlot span, .linkDetailsCard, .titleCardMassage {
-        font-size: 16px !important;
-    }
+  .options label,
+  .select-trigger,
+  .chip,
+  .timeSlot span,
+  .linkDetailsCard,
+  .titleCardMassage {
+    font-size: 16px !important;
+  }
 
-     .linkDetailsCard {
-        padding-top: 8px;
-     }
+  .linkDetailsCard {
+    padding-top: 8px;
+  }
 
-    .linkDetailsCard img{
-        width: 16px;
-        height: 16px;
-    }
+  .linkDetailsCard img {
+    width: 16px;
+    height: 16px;
+  }
 
-    .card p {
-        font-size: 14px;
-    }
+  .card p {
+    font-size: 14px;
+  }
 
-    .pagination {
-        gap: 16px;
-        margin-top: 24px;
-        margin-bottom: 40px;
-    }
+  .pagination {
+    gap: 16px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+  }
 
-    .pagination button {
-        width: 28px;
-        height: 28px;
-        border-radius: 3.5px;
-        font-size: 15.75px;
-    }
+  .pagination button {
+    width: 28px;
+    height: 28px;
+    border-radius: 3.5px;
+    font-size: 15.75px;
+  }
+}
+
+.product-page {
+  display: flex;
+  gap: 24px;
+}
+
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.product-gallery .main-img img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.product-thumbs {
+  display: flex;
+  gap: 24px;
+}
+
+.product-thumbs img {
+  width: 146px;
+  height: 146px;
+  border-radius: 8px;
+}
+
+.product-info h2 {
+  font-size: 24px;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  margin-bottom: 36px;
+  color: rgba(5, 5, 5, 1);
+}
+
+.product-info h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.product-meta {
+  display: flex;
+  align-items: center;
+  gap: 108px;
+  padding-bottom: 44px;
+}
+
+.product-meta p {
+  font-size: 20px;
+  color: rgba(5, 5, 5, 1);
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+}
+
+.product-meta p span {
+  font-size: 20px;
+  color: rgba(5, 5, 5, 1);
+  font-family: "Poiret One", sans-serif;
+  font-weight: 500;
+}
+
+.product-price {
+  font-size: 40px;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+  margin-bottom: 36px;
+  line-height: normal;
+}
+
+.product-price span {
+  font-size: 20px;
+}
+
+.add-to-cart {
+  background: rgba(176, 134, 74, 1);
+  color: rgba(5, 5, 5, 1);
+  font-family: "Poiret One", sans-serif;
+  border: 1px solid rgba(176, 134, 74, 1);
+  box-sizing: border-box;
+  padding: 8px 0px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 60px;
+  transition: 0.3s;
+  border-radius: 4px;
+  width: 282px;
+}
+
+.add-to-cart:hover {
+  background: none;
+  color: rgba(176, 134, 74, 1);
+}
+
+.tabs {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.tab {
+  padding: 4px 8px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "Poiret One", sans-serif;
+  color: rgba(5, 5, 5, 1);
+  position: relative;
+}
+
+.tab.active {
+  color: rgba(176, 134, 74, 1);
+  border-bottom: 1px solid rgba(176, 134, 74, 1);
+}
+
+.tab-content {
+  display: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+  font-family: "Poiret One", sans-serif;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 258px;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(5, 5, 5, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(176, 134, 74, 1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(176, 134, 74, 1);
+}
+
+.tab-content .textOtherColor {
+  color: rgba(176, 134, 74, 1);
+}
+
+.tab-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tab-content li::before {
+  content: "- ";
+}
+
+.tab-content ul li {
+  font-family: "Poiret One", sans-serif;
+  font-size: 18px;
+  color: rgba(5, 5, 5, 1);
+}
+
+.tab-content.active {
+  display: flex;
+}
+
+.productContent {
+  padding-bottom: 80px;
+}
+
+.productContent h1 {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 36px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 400;
+  padding-top: 40px;
+  padding-bottom: 24px;
+}
+
+.product-gallery .main-img {
+  width: 486px;
+  height: 486px;
+}
+
+.product-gallery .main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 970px) {
+  .product-page {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .productContent h1 {
+    font-size: 28px;
+    padding-top: 20px;
+    padding-bottom: 16px;
+  }
 }
