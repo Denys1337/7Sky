@@ -196,7 +196,7 @@
               <div class="product-thumbs">
                 <img src="../images/oneProductImg.jpg" alt="" />
                 <img src="../images/oneProductImg.jpg" alt="" />
-                <img src="../images/oneProductImg.jpg" alt="" />
+                <img src="../images/logo.png" alt="" />
               </div>
             </div>
             <div class="my-sliderMessage productSlider swiper">
@@ -224,9 +224,9 @@
               <h2>ГЕЛЬ ДЛЯ ДУШУ З ОЛИВКОВОЮ ОЛІЄЮ ТА МАСЛОМ ШИ</h2>
               <div class="product-meta">
                 <div class="timeSlot">
-                  <span class="valueTime timeActive">200 ml</span>
+                  <span class="valueTime timeActive" data-size="200">200 ml</span>
                   <span class="separatorTime">|</span>
-                  <span class="valueTime">500 ml</span>
+                  <span class="valueTime" data-size="500">500 ml</span>
                 </div>
                 <p><span>Бренд:</span> Lorem ipsum</p>
               </div>
@@ -441,5 +441,41 @@
         },
       });
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+  const priceMap = {
+    "200": { regular: 680, discount: 500 },
+    "500": { regular: 1200, discount: 950 },
+  };
+
+  const timeButtons = document.querySelectorAll(".valueTime");
+  const priceEl = document.querySelector(".product-price");
+  const discountEl = document.querySelector(".discount-price");
+
+  timeButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // зняти активний клас
+      timeButtons.forEach((b) => b.classList.remove("timeActive"));
+      btn.classList.add("timeActive");
+
+      const size = btn.getAttribute("data-size");
+      priceEl.innerHTML = priceMap[size].regular + ' <span>грн</span>';
+      discountEl.innerHTML = priceMap[size].discount + ' <span>грн</span>';
+    });
+  });
+});
+    </script>
+    <script>
+const mainImg = document.querySelector('.main-img img');
+const thumbs = document.querySelectorAll('.product-thumbs img');
+
+thumbs.forEach(thumb => {
+  thumb.addEventListener('click', () => {
+    const mainSrc = mainImg.src;
+    mainImg.src = thumb.src;
+    thumb.src = mainSrc;
+  });
+});
+</script>
   </body>
 </html>
