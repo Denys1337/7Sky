@@ -351,6 +351,11 @@ body {
 .wrapperServiceCard {
   display: flex;
   gap: 24px;
+  width: 100%;
+}
+
+.wrapperServiceCard .service-card {
+  width: 50%;
 }
 
 .aboutContainer {
@@ -1230,6 +1235,11 @@ body {
   width: 146px;
   height: 146px;
   border-radius: 8px;
+  cursor: pointer;
+}
+
+.discountPricePadding {
+  padding-top: 5px;
 }
 
 .product-info h2 {
@@ -1466,6 +1476,13 @@ body {
 }
 
 @media (max-width: 768px) {
+  .wrapperheaderOneMassage p {
+    width: 100%;
+  }
+
+  .discountPricePadding {
+    padding-top: 8px;
+  }
   .product-price {
     font-size: 28px;
     margin-bottom: 24px;
