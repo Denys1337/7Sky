@@ -1415,6 +1415,10 @@ body {
   border-radius: 12px;
 }
 
+#cardsNews-container {
+  margin-top: 40px;
+}
+
 @media (max-width: 970px) {
   .productContent h1 {
     font-size: 28px;
@@ -1494,6 +1498,10 @@ body {
 
   .product-gallery {
     display: none;
+  }
+
+  #cardsNews-container {
+    margin-top: 20px;
   }
 }
 
