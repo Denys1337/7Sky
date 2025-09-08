@@ -185,40 +185,21 @@
     <main>
       <section class="bannerTop containerMarginTop">
         <div class="bannerTop-background">
-          <img src="../images/bannerMassage.jpg" class="bannerTop-image" />
+          <img src="../images/bannerMasters.jpg" class="bannerTop-image" />
           <div class="bannerTop-overlay"></div>
         </div>
         <div class="container">
           <div class="bannerTop-content">
             <div class="bannerTop-values">
-              <h1>Масажі</h1>
+              <h1>Майстри</h1>
             </div>
             <button class="cta-button openPopup">Записатись</button>
           </div>
         </div>
       </section>
       <div class="container">
-        <div class="wrapperCustomSelect">
-          <div class="custom-select">
-            <div class="select-trigger">
-              Види <img src="../images/arrowDown.svg" alt="arrow Down" />
-            </div>
-            <div class="options">
-              <label
-                ><input type="checkbox" value="Massage" /> Індивідуальний</label
-              >
-              <label><input type="checkbox" value="Spa" /> Парний</label>
-              <label><input type="checkbox" value="Relax" /> Антистрес</label>
-              <label><input type="checkbox" value="Sauna" /> VIP-меню</label>
-            </div>
-          </div>
-
-          <!-- Вибрані чіпи -->
-          <div class="chips"></div>
-        </div>
-
         <!-- Карточки -->
-        <div class="cards" id="cards-container"></div>
+        <div class="cardsMasters" id="cardsMasters-container"></div>
 
         <!-- Пагінація -->
         <div class="pagination" id="pagination"></div>
@@ -342,119 +323,58 @@
 
     <script src="../js/main.js"></script>
     <script>
-      // --- Селект ---
-      const trigger = document.querySelector(".select-trigger");
-      const options = document.querySelector(".options");
-      const chipsContainer = document.querySelector(".chips");
-
-      trigger.addEventListener("click", () => {
-        options.style.display =
-          options.style.display === "block" ? "none" : "block";
-      });
-
-      document.addEventListener("click", (e) => {
-        if (!e.target.closest(".custom-select")) {
-          options.style.display = "none";
-        }
-      });
-
-      options.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
-        checkbox.addEventListener("change", () => {
-          if (checkbox.checked) {
-            const chip = document.createElement("div");
-            chip.className = "chip";
-            chip.dataset.value = checkbox.value;
-            chip.innerHTML =
-              checkbox.value + ' <img src="../images/deleteFilterItem.svg"/>';
-            chipsContainer.appendChild(chip);
-
-            chip.querySelector("img").addEventListener("click", () => {
-              chip.remove();
-              checkbox.checked = false;
-            });
-          } else {
-            const chip = chipsContainer.querySelector(
-              `.chip[data-value="${checkbox.value}"]`
-            );
-            if (chip) chip.remove();
-          }
-        });
-      });
-
-      // --- Карточки + Пагінація ---
-      const products = Array.from({ length: 15 }, (_, i) => ({
+      // --- Дані співробітників + Пагінація ---
+      const people = Array.from({ length: 15 }, (_, i) => ({
         id: i + 1,
-        title: `Lorem ipsum dolor sit amet consectetur. Tincidunt mi mauris sed morbi elit gravida ${
-          i + 1
-        }`,
+        name: i % 2 === 0 ? "Ірина Вакулюк" : "Костянтин Джанченко",
+        role: i % 2 === 0 ? "Старший масажист" : "Масажист",
+        experience: i % 2 === 0 ? "6 років" : "3 роки",
+        services: [
+          "Lorem ipsum dolor sit amet consectetur",
+          "Lorem ipsum dolor",
+        ],
+        description:
+          "Lorem ipsum dolor sit amet consectetur. Neque hendrerit pulvinar nulla massa nisl dolor. Orci eu viverra sit lacus. Donec nulla ullamcorper semper tortor purus diam lorem lacus. Id et vivamus cursus quis ac turpis. Lorem ipsum dolor sit amet consectetur. Neque hendrerit pulvinar nulla massa nisl dolor.",
         img: "../images/imageMassage.png",
-        prices: {
-          "40 хв": { regular: 1000, discount: 900 },
-          "60 хв": { regular: 1500, discount: 1350 },
-          "100 хв": { regular: 2000, discount: 1800 },
-        },
       }));
 
-      const cardsContainer = document.getElementById("cards-container");
+      const cardsContainer = document.getElementById("cardsMasters-container");
       const pagination = document.getElementById("pagination");
-      const perPage = 6;
+      const perPage = 3;
       let currentPage = 1;
 
       function renderCards(page = 1) {
         cardsContainer.innerHTML = "";
         const start = (page - 1) * perPage;
         const end = start + perPage;
-        const items = products.slice(start, end);
+        const items = people.slice(start, end);
 
         items.forEach((p) => {
           const card = document.createElement("div");
-          card.className = "card";
+          card.className = "employee-card";
           card.innerHTML = `
-      <img src="${p.img}" alt="${p.title}">
-      <div class="contentCard">
-        <a href="#" class="titleCardMassage">${p.title}</a>
-        <div class="timeSlot">
-            <span class="valueTime timeActive" data-time="40 хв">40 хв</span>
-            <span class="separatorTime">|</span>
-            <span class="valueTime" data-time="60 хв">60 хв</span>
-            <span class="separatorTime">|</span>
-            <span class="valueTime" data-time="100 хв">100 хв</span>
-        </div>
-        <div class="prices">
-          <div class="price">${p.prices["40 хв"].regular} <span>грн</span></div>
-          <div class="discount-price">${p.prices["40 хв"].discount} <span>грн</span></div>
+      <div class="employee-card__left">
+        <p><strong>Стаж роботи</strong> – ${p.experience}</p>
+        <p><strong>Перелік послуг:</strong><br/>- ${p.services.join(
+          "<br/>- "
+        )}</p>
+        <p><strong>Опис</strong><br/>${p.description}</p>
+      </div>
+      <div class="employee-card__right">
+        <img src="${p.img}" alt="${p.name}">
+        <div class="employee-card__info">
+          <p class="name">${p.name}</p>
+          <p class="role">${p.role}</p>
         </div>
       </div>
-      <a href="#" class="linkDetailsCard">Детальніше 
-        <img src="../images/arrowRight.svg" alt="arrowRight"/>
-      </a>
     `;
-
-          const timeButtons = card.querySelectorAll(".valueTime");
-          const priceEl = card.querySelector(".price");
-          const discountPriceEl = card.querySelector(".discount-price");
-
-          timeButtons.forEach((btn) => {
-            btn.addEventListener("click", () => {
-              timeButtons.forEach((b) => b.classList.remove("timeActive"));
-
-              btn.classList.add("timeActive");
-
-              const selectedTime = btn.getAttribute("data-time");
-              priceEl.innerHTML =
-                p.prices[selectedTime].regular + " <span>грн</span>";
-              discountPriceEl.innerHTML =
-                p.prices[selectedTime].discount + " <span>грн</span>";
-            });
-          });
-
           cardsContainer.appendChild(card);
         });
       }
 
       function renderPagination() {
         pagination.innerHTML = "";
-        const pages = Math.ceil(products.length / perPage);
+        const pages = Math.ceil(people.length / perPage);
 
         for (let i = 1; i <= pages; i++) {
           const btn = document.createElement("button");

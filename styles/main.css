@@ -217,13 +217,40 @@ body {
   font-size: 40px;
   font-family: "Playfair Display", sans-serif;
   color: #050505;
-  padding-bottom: 30px;
+}
+
+.prices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 4px;
+}
+
+.discount-price {
+  color: rgba(176, 134, 74, 1);
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  text-decoration: line-through;
+}
+
+.discount-price span {
+  font-size: 16px !important;
+  color: rgba(176, 134, 74, 1) !important;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .price span {
-  font-size: 20px;
+  font-size: 20px !important;
   font-family: "Playfair Display", sans-serif;
-  color: #050505;
+  color: #050505 !important;
+}
+
+.productPrices {
+  display: flex;
+  gap: 60px;
 }
 
 .btn {
@@ -249,6 +276,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  .productPrices {
+    gap: 24px;
+  }
+
   .swiper-slide {
     width: 204px !important;
   }
@@ -268,12 +299,20 @@ body {
   }
 
   .price {
-    font-size: 32px;
-    padding-bottom: 16px;
+    font-size: 28px;
   }
 
   .price span {
-    font-size: 16px;
+    font-size: 14px !important;
+  }
+
+  .discount-price {
+    font-size: 18px;
+    padding-top: 6px;
+  }
+
+  .discount-price span {
+    font-size: 10px !important;
   }
 }
 
@@ -1439,4 +1478,57 @@ body {
   .product-gallery {
     display: none;
   }
+}
+
+.cardsMasters {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  padding-top: 40px;
+}
+
+.employee-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background: #fff;
+  border-radius: 12px;
+  border: 0.5px solid rgba(218, 218, 218, 1);
+}
+
+.employee-card__left {
+  flex: 2;
+  padding-right: 20px;
+}
+
+.employee-card__left p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.employee-card__right {
+  flex: 1;
+  text-align: center;
+}
+
+.employee-card__right img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.employee-card__info {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.employee-card__info .name {
+  font-weight: bold;
+}
+
+.employee-card__info .role {
+  font-size: 14px;
+  color: #555;
 }
