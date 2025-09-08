@@ -354,11 +354,9 @@
           card.className = "employee-card";
           card.innerHTML = `
       <div class="employee-card__left">
-        <p><strong>Стаж роботи</strong> – ${p.experience}</p>
-        <p><strong>Перелік послуг:</strong><br/>- ${p.services.join(
-          "<br/>- "
-        )}</p>
-        <p><strong>Опис</strong><br/>${p.description}</p>
+        <p><span>Стаж роботи –</span> ${p.experience}</p>
+        <p><span>Перелік послуг:</span><br/>- ${p.services.join("<br/>- ")}</p>
+        <p><span>Опис</span><br/>${p.description}</p>
       </div>
       <div class="employee-card__right">
         <img src="${p.img}" alt="${p.name}">

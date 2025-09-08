@@ -1511,41 +1511,111 @@ body {
   align-items: stretch;
   background: #fff;
   border-radius: 12px;
+  gap: 24px;
   border: 0.5px solid rgba(218, 218, 218, 1);
 }
 
 .employee-card__left {
   flex: 2;
-  padding-right: 20px;
+  padding: 89px 24px 24px 24px;
 }
 
 .employee-card__left p {
-  margin-bottom: 10px;
-  line-height: 1.5;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Poiret One", sans-serif;
+  color: rgba(38, 38, 38, 1);
 }
 
 .employee-card__right {
   flex: 1;
   text-align: center;
+  position: relative;
+  width: 282px;
+  max-width: 282px;
+  display: flex;
+  justify-content: center;
+}
+
+.employee-card__left span {
+  font-family: "Poiret One", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(176, 134, 74, 1);
 }
 
 .employee-card__right img {
   width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .employee-card__info {
-  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  background: rgba(240, 233, 223, 0.8);
   border-radius: 8px;
-  padding: 5px;
+  bottom: 16px;
+  padding: 9px;
+  width: 100%;
+  max-width: 250px;
 }
 
 .employee-card__info .name {
+  font-family: "Poiret One", sans-serif;
+  font-size: 18px;
   font-weight: bold;
+  color: rgba(38, 38, 38, 1);
 }
 
 .employee-card__info .role {
-  font-size: 14px;
-  color: #555;
+  font-family: "Poiret One", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: rgba(38, 38, 38, 1);
+}
+
+@media (max-width: 930px) {
+  .employee-card {
+    flex-direction: column-reverse;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .employee-card__right {
+    width: 263px;
+    max-width: 263px;
+    height: 308px;
+    min-height: 308px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .employee-card__info {
+    max-width: 227px;
+    padding: 8;
+  }
+
+  .employee-card__right img {
+    min-height: 100%;
+    height: auto;
+  }
+
+  .employee-card__left {
+    padding: 0;
+  }
+
+  .employee-card__left span,
+  .employee-card__left p,
+  .employee-card__info .role,
+  .employee-card__info .name {
+    font-size: 16px;
+  }
+
+  .cardsMasters {
+    gap: 16px;
+    padding-top: 20px;
+  }
 }
