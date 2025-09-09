@@ -196,7 +196,7 @@ body {
   border-radius: 8px;
 }
 
-.product-card h3 {
+.product-card a {
   font-size: 18px;
   font-family: "Poiret One", sans-serif;
   color: #050505;
@@ -207,6 +207,8 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .card-content-product {
@@ -232,20 +234,37 @@ body {
   font-family: "Playfair Display", sans-serif;
   font-weight: 400;
   font-size: 32px;
-  text-decoration: line-through;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.discount-price p {
+  position: relative;
+  display: inline-block;
+}
+
+.discount-price p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 60%;
+  height: 2px;
+  background-color: rgba(176, 134, 74, 1);
 }
 
 .discount-price span {
   font-size: 16px !important;
   color: rgba(176, 134, 74, 1) !important;
   text-decoration: none;
-  display: inline-block;
+  padding-top: 10px;
 }
 
 .price span {
   font-size: 20px !important;
   font-family: "Playfair Display", sans-serif;
-  color: #050505 !important;
 }
 
 .productPrices {
@@ -276,6 +295,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  .discount-price span {
+    padding-top: 5px;
+  }
+
   .productPrices {
     gap: 24px;
   }
@@ -540,6 +563,7 @@ body {
   color: rgba(5, 5, 5, 1);
   line-height: normal;
   margin-top: -16px;
+  text-wrap: nowrap;
 }
 
 .priceMassage span {
@@ -1022,14 +1046,16 @@ body {
 
 .titleCosmetic {
   font-family: "Poiret One", sans-serif;
-  font-style: 18px;
+  font-size: 18px;
   font-weight: 400;
   color: rgba(5, 5, 5, 1);
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  text-decoration: none;
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: pointer;
 }
 
 .cardCosmetic {

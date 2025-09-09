@@ -219,16 +219,17 @@
               </p>
             </div>
             <div class="timeSlot oneMassageTimeSlot">
-              <span class="valueTime timeActive">40 хв</span>
+              <span class="valueTime timeActive" data-size="40">40 хв</span>
               <span class="separatorTime">|</span>
-              <span class="valueTime">60 хв</span>
+              <span class="valueTime" data-size="60">60 хв</span>
               <span class="separatorTime">|</span>
-              <span class="valueTime">100 хв</span>
+              <span class="valueTime" data-size="100">100 хв</span>
             </div>
             <div class="productPrices priceMassage">
               <p>1000 <span>грн</span></p>
               <div class="discount-price discountPricePadding">
-                500 <span>грн</span>
+                <p>500</p>
+                <span>грн</span>
               </div>
             </div>
 
@@ -420,7 +421,7 @@
         };
 
         const timeButtons = document.querySelectorAll(".valueTime");
-        const priceEl = document.querySelector(".priceMassage");
+        const priceEl = document.querySelector(".priceMassage p");
         const discountEl = document.querySelector(".discount-price");
 
         timeButtons.forEach((btn) => {
@@ -429,9 +430,10 @@
             btn.classList.add("timeActive");
 
             const size = btn.getAttribute("data-size");
-            priceEl.innerHTML = priceMap[size].regular + " <span>грн</span>";
+            priceEl.innerHTML =
+              "<p>" + priceMap[size].regular + " <span>грн</span>" + "</p>";
             discountEl.innerHTML =
-              priceMap[size].discount + " <span>грн</span>";
+              "<p>" + priceMap[size].discount + "</p>" + " <span>грн</span>";
           });
         });
       });

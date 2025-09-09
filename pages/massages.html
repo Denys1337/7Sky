@@ -389,9 +389,9 @@
         }`,
         img: "../images/imageMassage.png",
         prices: {
-          "40 хв": { regular: 1000, discount: 900 },
-          "60 хв": { regular: 1500, discount: 1350 },
-          "100 хв": { regular: 2000, discount: 1800 },
+          40: { regular: 1000, discount: 900 },
+          60: { regular: 1500, discount: 1350 },
+          100: { regular: 2000, discount: 1800 },
         },
       }));
 
@@ -410,28 +410,28 @@
           const card = document.createElement("div");
           card.className = "card";
           card.innerHTML = `
-      <img src="${p.img}" alt="${p.title}">
-      <div class="contentCard">
-        <a href="#" class="titleCardMassage">${p.title}</a>
-        <div class="timeSlot">
-            <span class="valueTime timeActive" data-time="40 хв">40 хв</span>
-            <span class="separatorTime">|</span>
-            <span class="valueTime" data-time="60 хв">60 хв</span>
-            <span class="separatorTime">|</span>
-            <span class="valueTime" data-time="100 хв">100 хв</span>
+        <img src="${p.img}" alt="${p.title}">
+        <div class="contentCard">
+          <a href="#" class="titleCardMassage">${p.title}</a>
+          <div class="timeSlot">
+              <span class="valueTime timeActive" data-time="40">40 хв</span>
+              <span class="separatorTime">|</span>
+              <span class="valueTime" data-time="60">60 хв</span>
+              <span class="separatorTime">|</span>
+              <span class="valueTime" data-time="100">100 хв</span>
+          </div>
+          <div class="prices price">
+            <p>${p.prices["40"].regular} <span>грн</span></p>
+            <div class="discount-price"><p>${p.prices["40"].discount}</p> <span>грн</span></div>
+          </div>
         </div>
-        <div class="prices">
-          <div class="price">${p.prices["40 хв"].regular} <span>грн</span></div>
-          <div class="discount-price">${p.prices["40 хв"].discount} <span>грн</span></div>
-        </div>
-      </div>
-      <a href="#" class="linkDetailsCard">Детальніше 
-        <img src="../images/arrowRight.svg" alt="arrowRight"/>
-      </a>
-    `;
+        <a href="#" class="linkDetailsCard">Детальніше
+          <img src="../images/arrowRight.svg" alt="arrowRight"/>
+        </a>
+      `;
 
           const timeButtons = card.querySelectorAll(".valueTime");
-          const priceEl = card.querySelector(".price");
+          const priceEl = card.querySelector(".price p");
           const discountPriceEl = card.querySelector(".discount-price");
 
           timeButtons.forEach((btn) => {
@@ -442,9 +442,15 @@
 
               const selectedTime = btn.getAttribute("data-time");
               priceEl.innerHTML =
-                p.prices[selectedTime].regular + " <span>грн</span>";
+                "<p>" +
+                p.prices[selectedTime].regular +
+                " <span>грн</span>" +
+                "</p>";
               discountPriceEl.innerHTML =
-                p.prices[selectedTime].discount + " <span>грн</span>";
+                "<p>" +
+                p.prices[selectedTime].discount +
+                "</p>" +
+                " <span>грн</span>";
             });
           });
 
