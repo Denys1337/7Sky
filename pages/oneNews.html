@@ -185,8 +185,10 @@
     <main>
       <div class="container containerMarginTop">
         <div class="productContent">
-          <h1>новини</h1>
-
+          <div class="wrapperHeaderProductContent">
+            <h1>новини</h1>
+            <button class="newsButtonPopup openPopup">Записатись на масаж</button>
+          </div>
           <div class="product-page">
             <!-- Галерея -->
             <div class="product-gallery">
@@ -220,17 +222,11 @@
   <div class="swiper-pagination"></div>
           </div>
             <!-- Інформація -->
-            <div class="product-info">
+            <div class="product-info newsInfo">
+              <span class="dateNewsAdd">25 вересня 2025</span>
               <h2>ГЕЛЬ ДЛЯ ДУШУ З ОЛИВКОВОЮ ОЛІЄЮ ТА МАСЛОМ ШИ</h2>
 
-              <!-- Вкладки -->
-              <div class="tabs">
-                <div class="tab active" data-tab="desc">Опис</div>
-                <div class="tab" data-tab="composition">Склад</div>
-                <div class="tab" data-tab="usage">Застосування</div>
-              </div>
-
-              <div class="tab-content active" id="desc">
+              <div class="tab-content active newsTextInfo" id="desc">
                 <p>
                   Lorem ipsum dolor sit amet consectetur. Neque hendrerit
                   pulvinar nulla massa nisl dolor. Orci eu viverra sit lacus.
@@ -259,13 +255,8 @@
                   consectetur.
                 </p>
               </div>
-              <div class="tab-content" id="composition">
-                Склад: Lorem ipsum dolor sit amet consectetur.
-              </div>
-              <div class="tab-content" id="usage">
-                Використання: Lorem ipsum dolor sit amet consectetur.
-              </div>
             </div>
+            <button class="newsButtonPopup openPopup newsMobileButton">Записатись на масаж</button>
           </div>
         </div>
       </div>
@@ -394,20 +385,6 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script>
-      const tabs = document.querySelectorAll(".tab");
-      const contents = document.querySelectorAll(".tab-content");
-
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          tabs.forEach((t) => t.classList.remove("active"));
-          contents.forEach((c) => c.classList.remove("active"));
-
-          tab.classList.add("active");
-          document.getElementById(tab.dataset.tab).classList.add("active");
-        });
-      });
-    </script>
     <script>
       const swiper = new Swiper(".my-sliderMessage", {
         slidesPerView: 1,

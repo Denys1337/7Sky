@@ -1653,3 +1653,95 @@ body {
     padding-top: 20px;
   }
 }
+
+.wrapperHeaderProductContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 24px;
+}
+
+.wrapperHeaderProductContent h1 {
+  padding: 0;
+}
+
+.newsInfo {
+  border: 0.5px solid rgba(218, 218, 218, 1);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.newsInfo h2 {
+  margin-bottom: 24px;
+}
+
+.dateNewsAdd {
+  font-size: 16px;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+  padding-bottom: 16px;
+}
+
+.newsTextInfo {
+  max-height: 493px;
+  height: 493px;
+}
+
+.newsMobileButton {
+  display: none;
+}
+
+.newsButtonPopup {
+  background-color: #b0864a;
+  border: 1px solid #b0864a;
+  color: rgba(5, 5, 5, 1);
+  border: none;
+  border-radius: 4px;
+  padding: 8px 40px;
+  font-family: "Poiret One", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.36px;
+  cursor: pointer;
+  height: 37px;
+  box-sizing: border-box;
+}
+
+.newsButtonPopup:hover {
+  color: rgba(176, 134, 74, 1);
+  background: none;
+}
+
+@media (max-width: 970px) {
+  .wrapperHeaderProductContent {
+    padding-top: 20px;
+    padding-bottom: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapperHeaderProductContent button {
+    display: none;
+  }
+
+  .newsMobileButton {
+    display: block;
+  }
+
+  .newsInfo {
+    border-radius: 8px;
+    padding: 16px;
+  }
+
+  .dateNewsAdd {
+    font-size: 12px;
+    padding-bottom: 8px;
+  }
+
+  .newsInfo h2 {
+    margin-bottom: 16px;
+  }
+}

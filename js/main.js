@@ -1,54 +1,64 @@
 // Smooth scrolling for navigation links
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Mobile menu functionality
-  const mobileMenuToggles = document.querySelectorAll('.mobile-menu-toggle');
-const nav = document.querySelector('.nav');
+  const mobileMenuToggles = document.querySelectorAll(".mobile-menu-toggle");
+  const nav = document.querySelector(".nav");
 
-if (mobileMenuToggles.length && nav) {
-  mobileMenuToggles.forEach(toggle => {
-    toggle.addEventListener('click', function() {
-      // Перемикаємо клас активності для цього toggle
-      toggle.classList.toggle('active');
+  if (mobileMenuToggles.length && nav) {
+    mobileMenuToggles.forEach((toggle) => {
+      toggle.addEventListener("click", function () {
+        // Перемикаємо клас активності для цього toggle
+        toggle.classList.toggle("active");
 
-      // Відкриваємо/закриваємо меню
-      nav.classList.toggle('mobile-menu-open');
+        // Відкриваємо/закриваємо меню
+        nav.classList.toggle("mobile-menu-open");
 
-      // Блокування скролу
-      document.body.style.overflow = nav.classList.contains('mobile-menu-open') ? 'hidden' : '';
-      
-      // Якщо потрібно, зняти активність з інших toggle
-      mobileMenuToggles.forEach(otherToggle => {
-        if (otherToggle !== toggle) otherToggle.classList.remove('active');
+        // Блокування скролу
+        document.body.style.overflow = nav.classList.contains(
+          "mobile-menu-open"
+        )
+          ? "hidden"
+          : "";
+
+        // Якщо потрібно, зняти активність з інших toggle
+        mobileMenuToggles.forEach((otherToggle) => {
+          if (otherToggle !== toggle) otherToggle.classList.remove("active");
+        });
       });
     });
-  });
 
-  // Закрити меню при кліку на nav links
-  const navLinks = nav.querySelectorAll('.nav-link');
-  navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      mobileMenuToggles.forEach(toggle => toggle.classList.remove('active'));
-      nav.classList.remove('mobile-menu-open');
-      document.body.style.overflow = '';
+    // Закрити меню при кліку на nav links
+    const navLinks = nav.querySelectorAll(".nav-link");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        mobileMenuToggles.forEach((toggle) =>
+          toggle.classList.remove("active")
+        );
+        nav.classList.remove("mobile-menu-open");
+        document.body.style.overflow = "";
+      });
     });
-  });
 
-  // Закрити меню при кліку поза ним
-  document.addEventListener('click', function(e) {
-    if (!nav.contains(e.target) && ![...mobileMenuToggles].some(t => t.contains(e.target))) {
-      mobileMenuToggles.forEach(toggle => toggle.classList.remove('active'));
-      nav.classList.remove('mobile-menu-open');
-      document.body.style.overflow = '';
-    }
-  });
-}
+    // Закрити меню при кліку поза ним
+    document.addEventListener("click", function (e) {
+      if (
+        !nav.contains(e.target) &&
+        ![...mobileMenuToggles].some((t) => t.contains(e.target))
+      ) {
+        mobileMenuToggles.forEach((toggle) =>
+          toggle.classList.remove("active")
+        );
+        nav.classList.remove("mobile-menu-open");
+        document.body.style.overflow = "";
+      }
+    });
+  }
 
-  
   // Footer mobile menu
   // if (footerMobileMenuToggle && footerNavList) {
   //   footerMobileMenuToggle.addEventListener('click', function() {
   //     footerMobileMenuToggle.classList.toggle('active');
-      
+
   //     if (footerNavList.classList.contains('mobile-menu-open')) {
   //       footerNavList.classList.remove('mobile-menu-open');
   //       footerNavList.classList.add('mobile-menu-collapsed');
@@ -63,21 +73,21 @@ if (mobileMenuToggles.length && nav) {
 
   // Handle navigation clicks
   const navLinks = document.querySelectorAll('a[href^="#"]');
-  
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
       e.preventDefault();
-      
-      const targetId = this.getAttribute('href');
+
+      const targetId = this.getAttribute("href");
       const targetSection = document.querySelector(targetId);
-      
+
       if (targetSection) {
-        const headerHeight = document.querySelector('.header').offsetHeight;
+        const headerHeight = document.querySelector(".header").offsetHeight;
         const targetPosition = targetSection.offsetTop - headerHeight;
-        
+
         window.scrollTo({
           top: targetPosition,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
     });
@@ -89,7 +99,7 @@ if (mobileMenuToggles.length && nav) {
 
   // window.addEventListener('scroll', function() {
   //   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
+
   //   if (scrollTop > lastScrollTop && scrollTop > 100) {
   //     // Scrolling down
   //     header.style.transform = 'translateY(-100%)';
@@ -97,30 +107,30 @@ if (mobileMenuToggles.length && nav) {
   //     // Scrolling up
   //     header.style.transform = 'translateY(0)';
   //   }
-    
+
   //   lastScrollTop = scrollTop;
   // });
 
   // Cart functionality
-  const cartBtn = document.querySelector('.cart-btn');
-  const cartCount = document.querySelector('.cart-count');
-  const addToCartBtns = document.querySelectorAll('.add-to-cart-btn');
-  
+  const cartBtn = document.querySelector(".cart-btn");
+  const cartCount = document.querySelector(".cart-count");
+  const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
+
   let cartItems = 1; // Initial cart count
 
-  addToCartBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
+  addToCartBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
       cartItems++;
       cartCount.textContent = cartItems;
-      
+
       // Add animation
-      cartCount.style.transform = 'scale(1.3)';
+      cartCount.style.transform = "scale(1.3)";
       setTimeout(() => {
-        cartCount.style.transform = 'scale(1)';
+        cartCount.style.transform = "scale(1)";
       }, 200);
-      
+
       // Show success message
-      showNotification('Товар додано до кошика!');
+      showNotification("Товар додано до кошика!");
     });
   });
 
@@ -133,20 +143,20 @@ if (mobileMenuToggles.length && nav) {
   // }
 
   // Carousel functionality
-  const carouselControls = document.querySelectorAll('.carousel-controls');
-  
-  carouselControls.forEach(controls => {
-    const prevBtn = controls.querySelector('.carousel-btn--prev');
-    const nextBtn = controls.querySelector('.carousel-btn--next');
-    const section = controls.closest('section');
-    const grid = section.querySelector('.certificates-grid, .masters-grid');
-    
+  const carouselControls = document.querySelectorAll(".carousel-controls");
+
+  carouselControls.forEach((controls) => {
+    const prevBtn = controls.querySelector(".carousel-btn--prev");
+    const nextBtn = controls.querySelector(".carousel-btn--next");
+    const section = controls.closest("section");
+    const grid = section.querySelector(".certificates-grid, .masters-grid");
+
     if (grid) {
       let currentIndex = 0;
       const items = grid.children;
       const itemsPerView = getItemsPerView();
       const maxIndex = Math.max(0, items.length - itemsPerView);
-      
+
       function getItemsPerView() {
         const width = window.innerWidth;
         if (width <= 480) return 1;
@@ -154,31 +164,31 @@ if (mobileMenuToggles.length && nav) {
         if (width <= 1024) return 3;
         return 4;
       }
-      
+
       function updateCarousel() {
         const translateX = -(currentIndex * (100 / itemsPerView));
         grid.style.transform = `translateX(${translateX}%)`;
-        
+
         prevBtn.disabled = currentIndex === 0;
         nextBtn.disabled = currentIndex >= maxIndex;
       }
-      
-      prevBtn.addEventListener('click', () => {
+
+      prevBtn.addEventListener("click", () => {
         if (currentIndex > 0) {
           currentIndex--;
           updateCarousel();
         }
       });
-      
-      nextBtn.addEventListener('click', () => {
+
+      nextBtn.addEventListener("click", () => {
         if (currentIndex < maxIndex) {
           currentIndex++;
           updateCarousel();
         }
       });
-      
+
       // Update on window resize
-      window.addEventListener('resize', () => {
+      window.addEventListener("resize", () => {
         const newItemsPerView = getItemsPerView();
         const newMaxIndex = Math.max(0, items.length - newItemsPerView);
         if (currentIndex > newMaxIndex) {
@@ -186,7 +196,7 @@ if (mobileMenuToggles.length && nav) {
         }
         updateCarousel();
       });
-      
+
       updateCarousel();
     }
   });
@@ -194,38 +204,38 @@ if (mobileMenuToggles.length && nav) {
   // Intersection Observer for animations
   const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: "0px 0px -50px 0px",
   };
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
       }
     });
   }, observerOptions);
 
   // Observe sections for scroll animations
-  const sections = document.querySelectorAll('section');
-  sections.forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(30px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  const sections = document.querySelectorAll("section");
+  sections.forEach((section) => {
+    section.style.opacity = "0";
+    section.style.transform = "translateY(30px)";
+    section.style.transition = "opacity 0.6s ease, transform 0.6s ease";
     observer.observe(section);
   });
 
   // Notification system
   function showNotification(message) {
     // Remove existing notification
-    const existingNotification = document.querySelector('.notification');
+    const existingNotification = document.querySelector(".notification");
     if (existingNotification) {
       existingNotification.remove();
     }
 
     // Create notification
-    const notification = document.createElement('div');
-    notification.className = 'notification';
+    const notification = document.createElement("div");
+    notification.className = "notification";
     notification.textContent = message;
     notification.style.cssText = `
       position: fixed;
@@ -247,12 +257,12 @@ if (mobileMenuToggles.length && nav) {
 
     // Animate in
     setTimeout(() => {
-      notification.style.transform = 'translateX(0)';
+      notification.style.transform = "translateX(0)";
     }, 100);
 
     // Animate out and remove
     setTimeout(() => {
-      notification.style.transform = 'translateX(100%)';
+      notification.style.transform = "translateX(100%)";
       setTimeout(() => {
         if (notification.parentNode) {
           notification.remove();
@@ -262,35 +272,37 @@ if (mobileMenuToggles.length && nav) {
   }
 
   // Form handling (if forms are added later)
-  const forms = document.querySelectorAll('form');
-  forms.forEach(form => {
-    form.addEventListener('submit', function(e) {
+  const forms = document.querySelectorAll("form");
+  forms.forEach((form) => {
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
-      showNotification('Форму відправлено! Ми зв\'яжемося з вами найближчим часом.');
+      showNotification(
+        "Форму відправлено! Ми зв'яжемося з вами найближчим часом."
+      );
     });
   });
 
   // Lazy loading for images
-  const images = document.querySelectorAll('img[src]');
+  const images = document.querySelectorAll("img[src]");
   const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target;
-        img.style.opacity = '0';
-        img.style.transition = 'opacity 0.3s ease';
-        
+        img.style.opacity = "0";
+        img.style.transition = "opacity 0.3s ease";
+
         const newImg = new Image();
         newImg.onload = () => {
-          img.style.opacity = '1';
+          img.style.opacity = "1";
         };
         newImg.src = img.src;
-        
+
         imageObserver.unobserve(img);
       }
     });
   });
 
-  images.forEach(img => {
+  images.forEach((img) => {
     imageObserver.observe(img);
   });
 });
@@ -309,22 +321,26 @@ function debounce(func, wait) {
 }
 
 // Handle window resize
-window.addEventListener('resize', debounce(() => {
-  if (window.innerWidth > 768) {
-    const mobileMenuToggles = document.querySelectorAll('.mobile-menu-toggle');
-    const nav = document.querySelector('.nav');
+window.addEventListener(
+  "resize",
+  debounce(() => {
+    if (window.innerWidth > 768) {
+      const mobileMenuToggles = document.querySelectorAll(
+        ".mobile-menu-toggle"
+      );
+      const nav = document.querySelector(".nav");
 
-    // Закриваємо меню
-    mobileMenuToggles.forEach(toggle => toggle.classList.remove('active'));
+      // Закриваємо меню
+      mobileMenuToggles.forEach((toggle) => toggle.classList.remove("active"));
 
-    if (nav) {
-      nav.classList.remove('mobile-menu-open');
+      if (nav) {
+        nav.classList.remove("mobile-menu-open");
+      }
+
+      document.body.style.overflow = "";
     }
-
-    document.body.style.overflow = '';
-  }
-}, 250));
-
+  }, 250)
+);
 
 document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = document.querySelector(".iconCloseBurgerMenu");
@@ -337,8 +353,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const langEls = document.querySelectorAll(".language-selector .language");
 
   langEls.forEach(function (langEl) {
@@ -349,38 +364,39 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const title = document.querySelector(".about-title");
+document.addEventListener("DOMContentLoaded", function () {
+  const title = document.querySelector(".about-title");
 
-    if (title) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              title.classList.add("visible");
-              observer.unobserve(title);
-            }
-          });
-        },
-        { threshold: 0.2 } 
-      );
+  if (title) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            title.classList.add("visible");
+            observer.unobserve(title);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
 
-      observer.observe(title);
-    }
-  });
+    observer.observe(title);
+  }
+});
 
-
-  document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("bookingForm");
   const nameInput = document.getElementById("name");
   const phoneInput = document.getElementById("phone");
   const successMessage = document.getElementById("successMessage");
   const closeBtn = document.getElementById("popupClose");
   const popup = document.getElementById("popup");
-  const openBtn = document.querySelector(".openPopup");
+  const openBtns = document.querySelectorAll(".openPopup");
 
-  openBtn.addEventListener("click", () => {
-    popup.classList.add("active");
+  openBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      popup.classList.add("active");
+    });
   });
 
   closeBtn.addEventListener("click", () => {
@@ -409,9 +425,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (nameInput.value.trim() !== "" && /^\+380\d{9}$/.test(phoneInput.value)) {
+    if (
+      nameInput.value.trim() !== "" &&
+      /^\+380\d{9}$/.test(phoneInput.value)
+    ) {
       successMessage.style.display = "block";
-      setTimeout(()=> {
+      setTimeout(() => {
         popup.classList.remove("active");
         nameInput.value = "";
         phoneInput.value = "";
@@ -424,56 +443,63 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
 function initMap() {
-      const vinnytsia = { lat: 49.2331, lng: 28.4682 };
-      const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 14,
-        center: vinnytsia,
-      });
+  const vinnytsia = { lat: 49.2331, lng: 28.4682 };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 14,
+    center: vinnytsia,
+  });
 
-      const locations = [
-        { position: { lat: 49.2336, lng: 28.4689 }, title: "м. Вінниця, вул. Соборна 58" },
-        { position: { lat: 49.2348, lng: 28.4705 }, title: "м. Вінниця, вул. Театральна 34" }
-      ];
+  const locations = [
+    {
+      position: { lat: 49.2336, lng: 28.4689 },
+      title: "м. Вінниця, вул. Соборна 58",
+    },
+    {
+      position: { lat: 49.2348, lng: 28.4705 },
+      title: "м. Вінниця, вул. Театральна 34",
+    },
+  ];
 
-      locations.forEach(loc => {
-        new google.maps.Marker({
-          position: loc.position,
-          map: map,
-          title: loc.title,
-        });
-      });
-    }
+  locations.forEach((loc) => {
+    new google.maps.Marker({
+      position: loc.position,
+      map: map,
+      title: loc.title,
+    });
+  });
+}
 
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".timeSlot").forEach((slotGroup) => {
+    const items = slotGroup.querySelectorAll(".valueTime");
 
-    document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('.timeSlot').forEach(slotGroup => {
-    const items = slotGroup.querySelectorAll('.valueTime');
-
-    items.forEach(item => {
-      item.addEventListener('click', () => {
-        items.forEach(el => el.classList.remove('timeActive'));
-        item.classList.add('timeActive');
+    items.forEach((item) => {
+      item.addEventListener("click", () => {
+        items.forEach((el) => el.classList.remove("timeActive"));
+        item.classList.add("timeActive");
       });
     });
   });
 });
 
-
-document.querySelectorAll(".nav-item").forEach(item => {
+document.querySelectorAll(".nav-item").forEach((item) => {
   const link = item.querySelector(".nav-link");
   const submenuLinks = item.querySelectorAll(".dropdown-menu a");
 
   link.addEventListener("click", (e) => {
-    document.querySelectorAll(".nav-link").forEach(l => l.classList.remove("active"));
+    document
+      .querySelectorAll(".nav-link")
+      .forEach((l) => l.classList.remove("active"));
     link.classList.add("active");
     localStorage.setItem("activeMenu", link.textContent.trim());
   });
 
-  submenuLinks.forEach(sublink => {
+  submenuLinks.forEach((sublink) => {
     sublink.addEventListener("click", (e) => {
-      document.querySelectorAll(".nav-link").forEach(l => l.classList.remove("active"));
+      document
+        .querySelectorAll(".nav-link")
+        .forEach((l) => l.classList.remove("active"));
       link.classList.add("active");
       localStorage.setItem("activeMenu", link.textContent.trim());
     });
@@ -482,11 +508,9 @@ document.querySelectorAll(".nav-item").forEach(item => {
 
 const activeMenu = localStorage.getItem("activeMenu");
 if (activeMenu) {
-  document.querySelectorAll(".nav-link").forEach(l => {
+  document.querySelectorAll(".nav-link").forEach((l) => {
     if (l.textContent.trim() === activeMenu) {
       l.classList.add("active");
     }
   });
 }
-
-
