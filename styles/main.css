@@ -1919,3 +1919,64 @@ body {
     width: auto !important;
   }
 }
+
+.wrapperNoPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.wrapperNoPage img {
+  max-width: 666px;
+  width: 100%;
+}
+
+.wrapperNoPage p {
+  font-size: 24px;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+}
+
+.wrapperNoPage a {
+  font-size: 18px;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+  margin-top: 20px;
+  padding: 8px;
+  width: 375px;
+  border-radius: 4px;
+  border: 1px solid rgba(176, 134, 74, 1);
+  background: rgba(176, 134, 74, 1);
+  text-decoration: none;
+  text-align: center;
+}
+
+.wrapperNoPage a:hover {
+  font-size: 16px;
+  margin-top: 28px;
+  padding: 9px;
+  width: 343px;
+  background: none;
+}
+
+@media (max-width: 768px) {
+  .wrapperNoPage {
+    gap: 32px;
+    padding-top: 87px;
+    padding-bottom: 87px;
+  }
+
+  .wrapperNoPage p {
+    font-size: 20px;
+  }
+
+  .wrapperNoPage img {
+    max-width: 280px;
+    width: 100%;
+  }
+}
