@@ -1016,6 +1016,7 @@ body {
   color: rgba(240, 233, 223, 1);
   font-family: "Playfair Display", sans-serif;
   font-weight: 400;
+  text-align: center;
 }
 
 .wrapperCustomSelect {
@@ -1664,6 +1665,10 @@ body {
 
 .wrapperHeaderProductContent h1 {
   padding: 0;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
 }
 
 .newsInfo {
@@ -1694,10 +1699,9 @@ body {
 }
 
 .newsButtonPopup {
-  background-color: #b0864a;
-  border: 1px solid #b0864a;
+  background-color: rgba(176, 134, 74, 1);
+  border: 1px solid rgba(176, 134, 74, 1);
   color: rgba(5, 5, 5, 1);
-  border: none;
   border-radius: 4px;
   padding: 8px 40px;
   font-family: "Poiret One", sans-serif;
@@ -1712,6 +1716,7 @@ body {
 
 .newsButtonPopup:hover {
   color: rgba(176, 134, 74, 1);
+  border: 1px solid rgba(176, 134, 74, 1);
   background: none;
 }
 
@@ -1723,12 +1728,16 @@ body {
 }
 
 @media (max-width: 768px) {
+  .wrapperHeaderProductContent h1 {
+    font-size: 28px;
+  }
   .wrapperHeaderProductContent button {
     display: none;
   }
 
   .newsMobileButton {
-    display: block;
+    display: block !important;
+    width: 100%;
   }
 
   .newsInfo {
@@ -1743,5 +1752,170 @@ body {
 
   .newsInfo h2 {
     margin-bottom: 16px;
+  }
+}
+
+.textAboutUs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 40px 0 24px 0;
+}
+
+.textAboutUs p {
+  font-size: 18px;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+}
+
+.addresses {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.addressItem {
+  border: 0.5px solid rgba(218, 218, 218, 1);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.workTime {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px;
+}
+
+.workTimeitem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.secondLineWorkTime {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.addressInfo {
+  max-width: 564px;
+}
+
+.addressInfo p {
+  font-size: 18px;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+  max-height: 173px;
+  height: 173px;
+  margin-bottom: 24px;
+  overflow: auto;
+}
+
+.buttonsContactUs {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.my-sliderContactUs {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  width: 564px !important;
+  min-width: 564px;
+}
+
+.my-sliderContactUs .swiper-slide {
+  max-width: 564px !important;
+  width: 100% !important;
+}
+
+.my-sliderContactUs img {
+  max-width: 100%;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.wrapperinfoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.workTimeitem span {
+  font-family: "Poiret One", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+}
+
+@media (max-width: 1070px) {
+  .addressItem {
+    flex-direction: column-reverse;
+    gap: 16px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .textAboutUs {
+    display: none;
+  }
+
+  .workTimeitem span {
+    font-size: 16px;
+  }
+
+  .secondLineWorkTime {
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+  }
+
+  .wrapperinfoText {
+    flex-direction: column-reverse;
+  }
+
+  .addresses {
+    margin-top: 20px;
+  }
+
+  .newsButtonPopup {
+    display: none;
+  }
+
+  .addressInfo .workTime {
+    padding-bottom: 16px;
+  }
+
+  .buttonsContactUs {
+    padding-bottom: 16px;
+  }
+
+  .addressInfo p {
+    height: 100%;
+    max-height: 100%;
+    margin-bottom: 16px;
+  }
+
+  .addresses {
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 650px) {
+  .my-sliderContactUs {
+    min-width: 100%;
+    width: auto !important;
   }
 }
