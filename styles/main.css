@@ -1014,9 +1014,10 @@ body {
 .bannerTop-values h1 {
   font-size: 36px;
   color: rgba(240, 233, 223, 1);
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Poiret One", sans-serif;
   font-weight: 400;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .wrapperCustomSelect {
@@ -1416,11 +1417,12 @@ body {
 
 .productContent h1 {
   font-family: "Playfair Display", sans-serif;
-  font-size: 36px;
+  font-size: 36px !important;
   color: rgba(0, 0, 0, 1);
   font-weight: 400;
   padding-top: 40px;
   padding-bottom: 24px;
+  text-transform: uppercase;
 }
 
 .product-gallery .main-img {
@@ -1958,9 +1960,6 @@ body {
 
 .wrapperNoPage a:hover {
   font-size: 16px;
-  margin-top: 28px;
-  padding: 9px;
-  width: 343px;
   background: none;
 }
 
