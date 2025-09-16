@@ -1979,3 +1979,223 @@ body {
     width: 100%;
   }
 }
+
+.contactsInRewiews {
+  flex: 1;
+  padding-top: 82px;
+}
+.contactsInRewiews p {
+  color: rgba(5, 5, 5, 1);
+  font-size: 18px;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  gap: 16px;
+}
+
+.addressBottomRow {
+  display: flex;
+  gap: 24px;
+}
+
+.address-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wrapperContactForm {
+  display: flex;
+  gap: 24px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.titleReviews {
+  font-size: 24px;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+  padding-bottom: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form-box {
+  flex: 1;
+  border: 0.5px solid rgba(218, 218, 218, 1);
+  padding: 24px;
+  box-sizing: border-box;
+  width: 588px;
+  max-width: 588px;
+  border-radius: 12px;
+}
+.form-box h3 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: rgba(5, 5, 5, 1);
+  font-size: 24px;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+}
+.form-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rowInputForm {
+  display: flex;
+  gap: 24px;
+}
+
+#feedbackForm input,
+#feedbackForm textarea {
+  width: 100%;
+  padding: 8px 16px;
+  border: 0.5px solid rgba(218, 218, 218, 1);
+  border-radius: 4px;
+  color: rgba(5, 5, 5, 1);
+  font-family: "Poiret One", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  box-sizing: border-box;
+  outline: none;
+}
+
+#feedbackForm textarea::placeholder {
+  color: rgba(110, 110, 110, 1);
+}
+
+#feedbackForm input::placeholder {
+  color: rgba(110, 110, 110, 1);
+}
+
+#feedbackForm textarea {
+  resize: none;
+  height: 179px;
+}
+
+.feedbackButton {
+  margin-top: 8px;
+  padding: 8px;
+  background: #b8894d;
+  color: rgba(5, 5, 5, 1);
+  font-size: 18px;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  border: 1px solid rgba(176, 134, 74, 1);
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.feedbackButton:hover {
+  background: none;
+}
+
+.success-message {
+  display: none;
+  margin-top: 16px;
+  text-align: center;
+  color: rgba(5, 5, 5, 1);
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "Poiret One", sans-serif;
+}
+
+.reviews-grid-page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1024px) {
+  .reviews-grid-page {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapperContactForm {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .wrapperContactForm {
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
+
+  .contactsInRewiews {
+    padding-top: 0;
+  }
+
+  .contactsInRewiews p {
+    font-size: 16px;
+  }
+
+  .contactItem {
+    padding-top: 16px;
+  }
+
+  .form-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px 8px;
+  }
+
+  .form-box h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  #feedbackForm input,
+  #feedbackForm textarea {
+    font-size: 16px;
+    padding: 9px 8px;
+    border-radius: 4px;
+  }
+
+  #feedbackForm textarea {
+    height: 170px;
+  }
+
+  #feedbackForm {
+    gap: 8px;
+  }
+
+  .feedbackButton {
+    font-size: 16px;
+  }
+
+  .success-message {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+
+  .titleReviews {
+    padding-bottom: 16px;
+  }
+
+  .reviews-grid-page {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .reviewsPage {
+    max-height: 171px !important;
+  }
+
+  .review-rating img {
+    width: 14px;
+    height: 20px;
+  }
+}

@@ -514,3 +514,21 @@ if (activeMenu) {
     }
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("feedbackForm");
+  const successMessage = document.getElementById("successMessage");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    if (form.checkValidity()) {
+      successMessage.style.display = "block";
+
+      form.reset();
+      setTimeout(() => {
+        successMessage.style.display = "none";
+      }, 5000);
+    }
+  });
+});
