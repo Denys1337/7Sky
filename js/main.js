@@ -272,15 +272,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Form handling (if forms are added later)
-  const forms = document.querySelectorAll("form");
-  forms.forEach((form) => {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      showNotification(
-        "Форму відправлено! Ми зв'яжемося з вами найближчим часом."
-      );
-    });
-  });
+  // const forms = document.querySelectorAll("form");
+  // forms.forEach((form) => {
+  //   form.addEventListener("submit", function (e) {
+  //     e.preventDefault();
+
+  //   });
+  // });
 
   // Lazy loading for images
   const images = document.querySelectorAll("img[src]");
@@ -353,7 +351,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const langEls = document.querySelectorAll(".language-selector .language");
 
   langEls.forEach(function (langEl) {
@@ -386,8 +384,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("bookingForm");
-  const nameInput = document.getElementById("name");
-  const phoneInput = document.getElementById("phone");
+  const nameInput = document.getElementById("nameBooking");
+  const phoneInput = document.getElementById("phoneBooking");
   const successMessage = document.getElementById("successMessage");
   const closeBtn = document.getElementById("popupClose");
   const popup = document.getElementById("popup");
@@ -413,32 +411,62 @@ document.addEventListener("DOMContentLoaded", () => {
     nameInput.value = nameInput.value.replace(/[^a-zA-Zа-яА-ЯїЇєЄіІґҐ\s]/g, "");
   });
 
-  phoneInput.addEventListener("input", () => {
-    if (!phoneInput.value.startsWith("+380")) {
-      phoneInput.value = "+380";
+  function formatPhoneMask(value) {
+    let digits = value.replace(/[^\d]/g, "").replace(/^380/, "");
+    digits = digits.slice(0, 9);
+    return "+380" + digits;
+  }
+
+  phoneInput.addEventListener("focus", () => {
+    if (phoneInput.value === "" || phoneInput.value === "+380") {
+      phoneInput.value = formatPhoneMask("");
+      setTimeout(() => {
+        phoneInput.setSelectionRange(
+          phoneInput.value.length,
+          phoneInput.value.length
+        );
+      }, 0);
     }
-    phoneInput.value = phoneInput.value.replace(/(?!^\+380)\D/g, "");
-    if (phoneInput.value.length > 13) {
-      phoneInput.value = phoneInput.value.slice(0, 13);
+  });
+
+  phoneInput.addEventListener("input", () => {
+    let digits = phoneInput.value.replace(/[^\d]/g, "").replace(/^380/, "");
+    phoneInput.value = formatPhoneMask(digits);
+    if (phoneInput.value.length < 4) {
+      phoneInput.value = formatPhoneMask("");
+    }
+  });
+
+  phoneInput.addEventListener("keydown", (e) => {
+    if (
+      phoneInput.selectionStart <= 4 &&
+      (e.key === "Backspace" || e.key === "Delete")
+    ) {
+      e.preventDefault();
     }
   });
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (
-      nameInput.value.trim() !== "" &&
-      /^\+380\d{9}$/.test(phoneInput.value)
-    ) {
+    const digits = phoneInput.value.replace(/[^\d]/g, "").replace(/^380/, "");
+    if (nameInput.value.trim() !== "" && digits.length === 9) {
+      successMessage.innerHTML =
+        "Ваш запис успішно прийнято.<br>Менеджер звяжеться з вами найближчим часом.";
       successMessage.style.display = "block";
+      successMessage.style.color = "rgba(5, 5, 5, 1)";
       setTimeout(() => {
         popup.classList.remove("active");
         nameInput.value = "";
-        phoneInput.value = "";
+        phoneInput.value = formatPhoneMask("");
         successMessage.style.display = "none";
       }, 4000);
     } else {
-      successMessage.style.display = "none";
-      alert("Будь ласка, введіть коректні дані!");
+      successMessage.textContent = "Будь ласка, заповніть всі поля коректно.";
+      successMessage.style.display = "block";
+      successMessage.style.color = "red";
+      setTimeout(() => {
+        successMessage.style.display = "none";
+      }, 4000);
     }
   });
 });
@@ -516,19 +544,116 @@ if (activeMenu) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("feedbackForm");
-  const successMessage = document.getElementById("successMessage");
+  const feedbackForm = document.getElementById("feedbackForm");
+  const nameInputFeedback = document.getElementById("nameFeedback");
+  const surnameInputFeedback = document.getElementById("surnameFeedback");
+  const DateGoingFeedback = document.getElementById("DateGoing");
+  const messageFeedback = document.getElementById("message");
+  const phoneInputFeedback = document.getElementById("phoneFeedback");
+  const successMessageFeedback = document.getElementById(
+    "successMessageFeedback"
+  );
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+  nameInputFeedback.addEventListener("input", () => {
+    nameInputFeedback.value = nameInputFeedback.value.replace(
+      /[^a-zA-Zа-яА-ЯїЇєЄіІґҐ\s]/g,
+      ""
+    );
+  });
 
-    if (form.checkValidity()) {
-      successMessage.style.display = "block";
+  surnameInputFeedback.addEventListener("input", () => {
+    surnameInputFeedback.value = surnameInputFeedback.value.replace(
+      /[^a-zA-Zа-яА-ЯїЇєЄіІґҐ\s]/g,
+      ""
+    );
+  });
 
-      form.reset();
+  function formatPhoneMask(value) {
+    let digits = value.replace(/[^\d]/g, "").replace(/^380/, "");
+    digits = digits.slice(0, 9);
+    return "+380" + digits;
+  }
+
+  phoneInputFeedback.addEventListener("focus", () => {
+    if (
+      phoneInputFeedback.value === "" ||
+      phoneInputFeedback.value === "+380"
+    ) {
+      phoneInputFeedback.value = formatPhoneMask("");
       setTimeout(() => {
-        successMessage.style.display = "none";
-      }, 5000);
+        phoneInputFeedback.setSelectionRange(
+          phoneInputFeedback.value.length,
+          phoneInputFeedback.value.length
+        );
+      }, 0);
+    }
+  });
+
+  phoneInputFeedback.addEventListener("input", () => {
+    let digitsFeedback = phoneInputFeedback.value
+      .replace(/[^\d]/g, "")
+      .replace(/^380/, "");
+    phoneInputFeedback.value = formatPhoneMask(digitsFeedback);
+    if (phoneInputFeedback.value.length < 4) {
+      phoneInputFeedback.value = formatPhoneMask("");
+    }
+  });
+
+  phoneInputFeedback.addEventListener("keydown", (e) => {
+    if (
+      phoneInputFeedback.selectionStart <= 4 &&
+      (e.key === "Backspace" || e.key === "Delete")
+    ) {
+      e.preventDefault();
+    }
+  });
+
+  DateGoingFeedback.addEventListener("input", () => {
+    let val = DateGoingFeedback.value.replace(/[^\d]/g, "");
+    if (val.length > 2) val = val.slice(0, 2) + "." + val.slice(2);
+    if (val.length > 5) val = val.slice(0, 5) + "." + val.slice(5);
+    val = val.slice(0, 10);
+    DateGoingFeedback.value = val;
+  });
+
+  feedbackForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const digits = phoneInputFeedback.value
+      .replace(/[^\d]/g, "")
+      .replace(/^380/, "");
+    const dateVal = DateGoingFeedback.value;
+    const messageVal = messageFeedback.value.trim();
+    let valid = true;
+    let errorMsg = "";
+    if (nameInputFeedback.value.trim() === "" || digits.length !== 9) {
+      valid = false;
+      errorMsg = "Будь ласка, заповніть всі поля коректно.";
+    } else if (!/^\d{2}\.\d{2}\.\d{4}$/.test(dateVal)) {
+      valid = false;
+      errorMsg = "Введіть дату у форматі ДД.ММ.РРРР.";
+    } else if (messageVal === "") {
+      valid = false;
+      errorMsg = "Поле повідомлення обов'язкове.";
+    }
+    console.log(valid);
+    if (valid) {
+      successMessageFeedback.textContent = "Відгук відправлено";
+      successMessageFeedback.style.display = "block";
+      successMessageFeedback.style.color = "rgba(5, 5, 5, 1)";
+      setTimeout(() => {
+        nameInputFeedback.value = "";
+        phoneInputFeedback.value = formatPhoneMask("");
+        DateGoingFeedback.value = "";
+        messageFeedback.value = "";
+        successMessageFeedback.style.display = "none";
+      }, 4000);
+    } else {
+      successMessageFeedback.textContent = errorMsg;
+      successMessageFeedback.style.display = "block";
+      successMessageFeedback.style.color = "red";
+      setTimeout(() => {
+        successMessageFeedback.style.display = "none";
+      }, 4000);
     }
   });
 });

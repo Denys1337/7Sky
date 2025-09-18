@@ -11,8 +11,8 @@
 }
 
 .review-card {
-  background: #FFFFFF;
-  border: 0.5px solid #DADADA;
+  background: #ffffff;
+  border: 0.5px solid #dadada;
   border-radius: 12px;
   padding: 24px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -36,7 +36,7 @@
 }
 
 .review-title {
-  font-family: 'Poiret One', sans-serif;
+  font-family: "Poiret One", sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.17;
@@ -45,7 +45,7 @@
 }
 
 .review-text {
-  font-family: 'Poiret One', sans-serif;
+  font-family: "Poiret One", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.17;
@@ -54,7 +54,6 @@
   overflow-y: auto;
   padding-right: 12px;
 }
-
 
 .review-text::-webkit-scrollbar {
   width: 1px;
@@ -65,12 +64,15 @@
 }
 
 .review-text::-webkit-scrollbar-thumb {
-  background: rgba(5, 5, 5, 1);
+  background: rgba(176, 134, 74, 1);
   border-radius: 10px;
 }
 
-.review-text 
-.view-all-link {
+.review-text::-webkit-scrollbar-thumb:hover {
+  background: rgba(176, 134, 74, 1);
+}
+
+.review-text .view-all-link {
   display: flex;
   justify-content: center;
   max-width: fit-content;
@@ -78,19 +80,19 @@
 }
 
 .reviews .swiper {
-    display: none;
-  }
+  display: none;
+}
 
 @media (max-width: 1024px) {
   .reviews {
     padding: 60px 0;
     padding-bottom: 0;
   }
-  
+
   .reviews-grid {
     gap: 20px;
   }
-  
+
   .review-card {
     padding: 20px;
   }
@@ -99,7 +101,7 @@
 @media (max-width: 768px) {
   .reviews {
     padding: 40px 0;
-     padding-bottom: 0;
+    padding-bottom: 0;
   }
 
   .reviews .swiper {
@@ -107,29 +109,29 @@
   }
 
   .reviews .swiper .swiper-slide {
-    width: 343px !important
+    width: 343px !important;
   }
-  
+
   .reviews-grid {
     grid-template-columns: 1fr;
     gap: 16px;
     display: none;
   }
-  
+
   .review-card {
     padding: 16px;
   }
-  
+
   .review-header {
     align-items: flex-start;
     gap: 16px;
     margin-bottom: 12px;
   }
-  
+
   .review-title {
     font-size: 20px;
   }
-  
+
   .review-text {
     font-size: 16px;
   }
@@ -139,7 +141,7 @@
   .review-title {
     font-size: 18px;
   }
-  
+
   .review-text {
     font-size: 14px;
   }
