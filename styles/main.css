@@ -465,7 +465,17 @@ body {
   padding: 8px 16px;
   border: 0.5px solid rgba(218, 218, 218, 1);
   border-radius: 4px;
+  font-family: "Poiret One", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
 }
+
+#bookingForm input::placeholder {
+  color: rgba(110, 110, 110, 1);
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+}
+
 #bookingForm button {
   width: 100%;
   padding: 8px;
@@ -2080,10 +2090,14 @@ body {
 
 #feedbackForm textarea::placeholder {
   color: rgba(110, 110, 110, 1);
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
 }
 
 #feedbackForm input::placeholder {
   color: rgba(110, 110, 110, 1);
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
 }
 
 #feedbackForm textarea {
@@ -2115,7 +2129,7 @@ body {
   text-align: center;
   color: rgba(5, 5, 5, 1);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Poiret One", sans-serif;
 }
 
