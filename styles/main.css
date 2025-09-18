@@ -1134,11 +1134,16 @@ body {
   .cardsCosmetics {
     grid-template-columns: repeat(auto-fill, 163px);
     gap: 16px;
+    max-width: 342px;
+    margin: 0 auto;
   }
 
   .cosmeticFilterWrapper {
     justify-content: center;
+    align-items: start;
     flex-direction: column;
+    max-width: 342px;
+    margin: 0 auto;
   }
 
   .cosmeticFilterWrapper .chips {
