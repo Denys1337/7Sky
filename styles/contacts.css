@@ -10,8 +10,8 @@
 }
 
 .contact-info {
-  background: #FFFFFF;
-  border: 0.5px solid #DADADA;
+  background: #ffffff;
+  border: 0.5px solid #dadada;
   border-radius: 12px;
   padding: 24px;
 }
@@ -21,7 +21,7 @@
   align-items: center;
   gap: 8px;
   margin-bottom: 20px;
-  font-family: 'Poiret One', sans-serif;
+  font-family: "Poiret One", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.17;
@@ -57,7 +57,7 @@
 }
 
 .social-link:hover {
-  color: #B0864A;
+  color: #b0864a;
   transform: translateY(-2px);
 }
 
@@ -77,7 +77,7 @@
   .contacts {
     padding: 60px 0;
   }
-  
+
   .contacts-content {
     grid-template-columns: 320px 1fr;
     gap: 20px;
@@ -88,21 +88,21 @@
   .contacts {
     padding: 40px 0;
   }
-  
+
   .contacts-content {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-  
+
   .contact-info {
     padding: 20px;
   }
-  
+
   .contact-item {
     font-size: 16px;
     margin-bottom: 16px;
   }
-  
+
   .contact-item:last-of-type {
     margin-bottom: 24px;
   }
@@ -112,16 +112,16 @@
   .contact-info {
     padding: 16px;
   }
-  
+
   .contact-item {
     font-size: 14px;
     margin-bottom: 12px;
   }
-  
+
   .contact-item:last-of-type {
     margin-bottom: 20px;
   }
-  
+
   .contact-map {
     height: 200px;
   }
