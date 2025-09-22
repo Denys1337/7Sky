@@ -23,341 +23,6 @@
     <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/social.css" />
   </head>
-  <style>
-    .wrapperCerteficateInfo .product {
-      display: flex;
-      gap: 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .wrapperCerteficateInfo .product-image img {
-      max-width: 588px;
-      height: 358px;
-      width: 588px;
-      border-radius: 8px;
-      display: block;
-      object-fit: cover;
-    }
-
-    .wrapperCerteficateInfo .product-content {
-      flex: 1;
-    }
-
-    .wrapperCerteficateInfo .product-title {
-      font-family: "Poiret One", sans-serif;
-      color: rgba(5, 5, 5, 1);
-      font-weight: 400;
-      font-size: 24px;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-
-    .wrapperCerteficateInfo .product-desc {
-      font-size: 15px;
-      color: #444;
-      margin-bottom: 15px;
-    }
-
-    .wrapperCerteficateInfo .product-price {
-      font-size: 40px;
-      color: rgba(5, 5, 5, 1);
-      font-family: "Playfair Display", sans-serif;
-      font-weight: bold;
-      margin-bottom: 24px;
-      margin-top: 0;
-    }
-
-    .wrapperCerteficateInfo .discount {
-      color: rgba(176, 134, 74, 1);
-      font-family: "Playfair Display", sans-serif;
-      font-size: 24px;
-      font-weight: 400;
-      margin-left: 40px;
-    }
-
-    .wrapperCerteficateInfo .selectors {
-      display: flex;
-      gap: 24px;
-      margin-bottom: 16px;
-      flex-wrap: wrap;
-    }
-
-    .note {
-      font-size: 18px;
-      font-family: "Poiret One", sans-serif;
-      font-weight: 400;
-      color: rgba(5, 5, 5, 1);
-      margin-top: 24px;
-      line-height: 100%;
-    }
-
-    .desc {
-      margin: 40px 0 80px 0;
-      padding: 24px 20px;
-      border: 0.5px solid rgba(218, 218, 218, 1);
-      border-radius: 12px;
-    }
-
-    .wrapperCerteficateInfo .custom-select {
-      position: relative;
-    }
-
-    .wrapperCerteficateInfo .select-header {
-      border: 0.5px solid rgba(176, 134, 74, 1);
-      border-radius: 4px;
-      padding: 8px 12px;
-      background: #fff;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .wrapperCerteficateInfo .select-header span {
-      font-family: "Poiret One", sans-serif;
-      font-size: 18px;
-      font-weight: 400;
-      color: rgba(5, 5, 5, 1);
-    }
-
-    .wrapperCerteficateInfo .arrow svg {
-      width: 20px;
-      height: 17px;
-      color: rgba(176, 134, 74, 1);
-      display: flex;
-      width: 100%;
-    }
-
-    .wrapperCerteficateInfo .select-options {
-      position: absolute;
-      top: 110%;
-      left: 0;
-      right: 0;
-      border: 0.5px solid rgba(176, 134, 74, 1);
-      border-radius: 4px;
-      padding: 8px 16px;
-      background: #fff;
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 10;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .wrapperCerteficateInfo .option {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      color: rgba(5, 5, 5, 1);
-      font-family: "Poiret One", sans-serif;
-      font-size: 18px;
-      font-weight: 400;
-    }
-
-    .wrapperCerteficateInfo .option .custom-checkbox {
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      border: 0.5px solid rgba(176, 134, 74, 1);
-      border-radius: 2px;
-      background: #fff;
-      transition: 0.2s;
-      position: relative;
-    }
-    .wrapperCerteficateInfo .option input {
-      display: none;
-    }
-    .wrapperCerteficateInfo .option input:checked + .custom-checkbox {
-      background: rgba(176, 134, 74, 1);
-      border-color: rgba(176, 134, 74, 1);
-    }
-    .wrapperCerteficateInfo .option input:checked + .custom-checkbox::after {
-      content: "✓";
-      position: absolute;
-      left: 3px;
-      top: -3.5px;
-      font-size: 14px;
-      color: #fff;
-      font-weight: bold;
-    }
-
-    /* активне */
-    .wrapperCerteficateInfo .option.active {
-      font-weight: bold;
-      color: rgba(176, 134, 74, 1);
-    }
-
-    /* чекбокси під селектами */
-    .wrapperCerteficateInfo .extra-checkboxes {
-      margin-bottom: 16px;
-      display: flex;
-      gap: 20px;
-    }
-
-    .wrapperCerteficateInfo .extra-checkboxes label {
-      position: relative;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      color: rgba(5, 5, 5, 1);
-      font-family: "Poiret One", sans-serif;
-      font-size: 18px;
-      font-weight: 400;
-    }
-
-    .wrapperCerteficateInfo .extra-checkboxes label input {
-      display: none;
-    }
-
-    .wrapperCerteficateInfo .extra-checkboxes .custom-checkbox {
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      border: 0.5px solid rgba(176, 134, 74, 1);
-      border-radius: 2px;
-      background: #fff;
-      transition: 0.2s;
-      position: relative;
-    }
-
-    .wrapperCerteficateInfo
-      .extra-checkboxes
-      label
-      input:checked
-      + .custom-checkbox {
-      background: rgba(176, 134, 74, 1);
-      border-color: rgba(176, 134, 74, 1);
-    }
-
-    .wrapperCerteficateInfo
-      .extra-checkboxes
-      label
-      input:checked
-      + .custom-checkbox::after {
-      content: "✓";
-      position: absolute;
-      left: 3px;
-      top: -3.5px;
-      font-size: 14px;
-      color: #fff;
-      font-weight: bold;
-    }
-
-    .oneCertificateDescription {
-      margin: 0;
-      padding: 0;
-      max-height: 467px;
-      overflow: auto;
-      padding-right: 12px;
-    }
-
-    .desc h3 {
-      font-size: 24px;
-      font-family: "Playfair Display", sans-serif;
-      color: rgba(5, 5, 5, 1);
-      font-weight: 400;
-      padding-bottom: 24px;
-    }
-
-    .wrapperCerteficateInfo {
-      padding-top: 40px;
-    }
-
-    .wrapperCerteficateInfo h1 {
-      font-size: 36px;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-      font-family: "Playfair Display", sans-serif;
-      color: rgba(5, 5, 5, 1);
-      font-weight: 400;
-    }
-
-    .carrency {
-      font-size: 20px;
-      font-family: "Playfair Display", sans-serif;
-      color: rgba(5, 5, 5, 1) !important;
-      font-weight: 400;
-    }
-
-    .quantitySelect {
-      width: 180px;
-    }
-
-    .serviceSelect {
-      width: 282px;
-    }
-
-    .addCertificateButton {
-      width: 212px;
-    }
-
-    .stepper {
-      width: 50px;
-      height: 37px;
-      border: 0.5px solid rgba(176, 134, 74, 1);
-      border-radius: 4px;
-      padding: 8px;
-      box-sizing: border-box;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: transparent;
-    }
-
-    .value {
-      font-size: 18px;
-      font-family: "Poiret One", sans-serif;
-      color: rgba(5, 5, 5, 1);
-      user-select: none;
-      transform: translateY(-2px);
-      padding-top: 5px;
-    }
-
-    .controls {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .btnQuantity {
-      width: 12px;
-      height: 12px;
-      display: grid;
-      place-items: center;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .chev {
-      width: 10px;
-      height: 6px;
-      display: block;
-      stroke: rgba(176, 134, 74, 1);
-      stroke-width: 1;
-      fill: none;
-    }
-
-    .btnQuantity:active svg {
-      transform: translateY(1px);
-    }
-
-    .btnQuantity[tabindex] {
-      touch-action: manipulation;
-    }
-
-    .wrapperButtonCertificate {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-  </style>
   <body>
     <!-- Social Media Sidebar -->
     <aside class="social-sidebar">
@@ -642,12 +307,12 @@
                   <label>
                     <input type="checkbox" />
                     <span class="custom-checkbox"></span>
-                    <span>Доставка поштою</span>
+                    <span>Онлайн</span>
                   </label>
                   <label>
                     <input type="checkbox" />
                     <span class="custom-checkbox"></span>
-                    <span>Подарункове пакування</span>
+                    <span>Офлайн</span>
                   </label>
                 </div>
               </div>
@@ -973,6 +638,38 @@
         },
         { passive: false }
       );
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function wrapBlocks() {
+          const selectors = document.querySelector(".selectors");
+          const quantity = document.querySelector(".quantitySelect");
+          const extras = document.querySelector(".extra-checkboxes");
+
+          // якщо умова виконується і ще не обгорнуті
+          if (
+            window.innerWidth <= 830 &&
+            quantity &&
+            extras &&
+            !document.querySelector(".wrapperSelectsCheckbox")
+          ) {
+            const wrapper = document.createElement("div");
+            wrapper.classList.add("wrapperSelectsCheckbox");
+
+            // вставляємо wrapper перед quantitySelect
+            selectors.insertBefore(wrapper, quantity);
+            // переносимо обидва блоки всередину
+            wrapper.appendChild(quantity);
+            wrapper.appendChild(extras);
+          }
+        }
+
+        // запуск при завантаженні
+        wrapBlocks();
+
+        // запуск при зміні розміру
+        window.addEventListener("resize", wrapBlocks);
+      });
     </script>
   </body>
 </html>
