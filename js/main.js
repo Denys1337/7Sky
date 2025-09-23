@@ -657,3 +657,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+document.querySelectorAll(".faq-question").forEach((item) => {
+  item.addEventListener("click", () => {
+    const faqItem = item.closest(".faq-item");
+    faqItem.classList.toggle("active");
+    const icon = item.querySelector(".toggle-icon");
+    if (faqItem.classList.contains("active")) {
+      icon.textContent = "-";
+    } else {
+      icon.textContent = "+";
+    }
+  });
+});

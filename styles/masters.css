@@ -1,6 +1,6 @@
 .masters {
   padding: 80px 0;
-   padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 .masters-grid {
@@ -51,17 +51,18 @@
 }
 
 .master-name {
-  font-family: 'Poiret One', sans-serif;
+  font-family: "Poiret One", sans-serif;
   font-size: 18px;
   font-weight: 600;
   line-height: 1.17;
   color: rgba(38, 38, 38, 1);
   text-stroke: 0.3px #262626;
   margin-bottom: 4px;
+  white-space: nowrap;
 }
 
 .master-profession {
-  font-family: 'Poiret One', sans-serif;
+  font-family: "Poiret One", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.17;
@@ -72,20 +73,20 @@
   display: flex;
   justify-content: center;
   max-width: fit-content;
-    margin: 0 auto;
+  margin: 0 auto;
   margin-top: 40px;
 }
 
 .masters .swiper {
-    display: none;
-  }
+  display: none;
+}
 
 @media (max-width: 1024px) {
   .masters {
     padding: 60px 0;
     padding-bottom: 0;
   }
-  
+
   .masters-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -93,31 +94,30 @@
 }
 
 @media (max-width: 768px) {
-
   .masters {
     padding: 40px 0;
-     padding-bottom: 0;
+    padding-bottom: 0;
   }
 
   .masters .swiper {
     display: block;
   }
-  
+
   .masters-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     display: none;
   }
-  
+
   .master-image {
     height: 280px;
   }
-  
+
   .master-info {
     padding: 0 20px;
     height: 50px;
   }
-  
+
   .master-name,
   .master-profession {
     font-size: 16px;
@@ -132,7 +132,7 @@
   .masters-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .master-image {
     height: 300px;
   }
