@@ -269,7 +269,7 @@ body {
 
 .productPrices {
   display: flex;
-  gap: 60px;
+  justify-content: space-between;
 }
 
 .btn {
@@ -2310,11 +2310,6 @@ body {
 
 .wrapperContactButtons .btn:hover {
   background: none;
-}
-
-.social-links a {
-  display: inline-block;
-  margin-right: 10px;
 }
 
 .social-links img {
