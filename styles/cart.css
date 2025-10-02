@@ -1,0 +1,377 @@
+.widget-area {
+  display: none;
+}
+
+.entry-header {
+  display: none;
+}
+
+.site-main {
+  margin-top: 103px;
+}
+
+.wc-block-components-sidebar-layout {
+  max-width: 1232px;
+  margin: 0 auto;
+  padding: 0 16px;
+  padding-bottom: 80px;
+  padding-top: 40px;
+}
+
+.wc-block-cart-items thead {
+  display: none;
+}
+
+.wc-block-cart table.wc-block-cart-items {
+  margin: 0;
+}
+
+.wc-block-cart__main .wc-block-cart-items td {
+  border-top: none;
+}
+
+.wc-block-cart-item__total-price-and-sale-badge-wrapper
+  .wc-block-components-sale-badge {
+  display: none;
+}
+
+.wc-block-cart__main .wc-block-cart-items td {
+  padding: 0;
+  padding-right: 24px;
+}
+
+table.wc-block-cart-items
+  .wc-block-cart-items__row
+  .wc-block-cart-item__image
+  img {
+  width: 180px;
+  height: 180px;
+  min-width: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.is-medium table.wc-block-cart-items .wc-block-cart-items__row {
+  grid-template-columns: auto;
+}
+
+/* table.wc-block-cart-items .wc-block-cart-items__row {
+  padding-bottom: 40px;
+} */
+
+table.wc-block-cart-items
+  .wc-block-cart-items__row
+  .wc-block-components-product-name {
+  font-size: 18px;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+  line-height: 100%;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.wc-block-cart-item__prices {
+  margin-bottom: 20px;
+}
+
+table.wc-block-cart-items
+  .wc-block-cart-items__row
+  .wc-block-components-product-price__regular {
+  font-size: 32px;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+  line-height: 100%;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.wc-block-components-product-price__value.is-discounted {
+  font-size: 32px;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+  line-height: 100%;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  margin-left: 40px;
+}
+
+.wc-block-components-product-badge {
+  padding: 4px 12px;
+  border-radius: 4px;
+  border: 0.5px solid rgba(5, 5, 5, 1);
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+  line-height: 100%;
+  text-align: center;
+}
+
+.wc-block-components-formatted-money-amount {
+  font-size: 16px;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+  line-height: 100%;
+  text-align: center;
+}
+
+.wc-block-components-product-metadata {
+  font-size: 18px;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+  line-height: 100%;
+  margin-bottom: 20px;
+}
+
+.wc-block-cart__main .wc-block-components-product-details__name {
+  font-weight: 400 !important;
+}
+
+.wc-block-components-quantity-selector {
+  border: 0.5px solid rgba(176, 134, 74, 1);
+  margin-bottom: 24px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  width: 78px;
+}
+
+.wc-block-components-quantity-selector
+  .wc-block-components-quantity-selector__button,
+.wc-block-components-quantity-selector
+  .wc-block-components-quantity-selector__button {
+  color: rgba(176, 134, 74, 1);
+  font-family: "Poiret One", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+  min-width: auto;
+}
+
+.wc-block-components-quantity-selector
+  input.wc-block-components-quantity-selector__input {
+  color: rgba(5, 5, 5, 1);
+  font-family: "Poiret One", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+  min-width: auto;
+  padding: 0;
+}
+
+table.wc-block-cart-items
+  .wc-block-cart-items__row
+  .wc-block-cart-item__quantity
+  .wc-block-cart-item__remove-link {
+  color: rgba(5, 5, 5, 1);
+  font-family: "Poiret One", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+  text-decoration: underline;
+  padding-bottom: 40px;
+}
+
+.wc-block-components-formatted-money-amount {
+  color: rgba(176, 134, 74, 1);
+  font-family: "Playfair Display", sans-serif;
+  font-size: 18px !important;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.wc-block-cart .wc-block-cart__totals-title {
+  display: none !important;
+}
+
+.wc-block-components-totals-wrapper {
+  border-top: none;
+  padding: 16px 12px;
+  border-bottom: 0.5px solid rgba(218, 218, 218, 1);
+}
+
+.wp-block-woocommerce-cart-order-summary-totals-block {
+  display: none;
+}
+
+.wc-block-components-totals-coupon .wc-block-components-panel__button {
+  color: rgba(5, 5, 5, 1);
+  font-family: "Poiret One", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.wc-block-components-totals-footer-item
+  .wc-block-components-totals-item__label {
+  color: rgba(5, 5, 5, 1);
+  font-family: "Poiret One", sans-serif;
+  font-size: 18px;
+  font-weight: 400 !important;
+  line-height: 100%;
+}
+
+.wc-block-components-totals-item__value {
+  color: rgba(5, 5, 5, 1);
+  font-family: "Playfair Display", sans-serif;
+  font-size: 32px;
+  font-weight: 400 !important;
+  line-height: 100%;
+}
+
+.wc-block-cart .wp-block-woocommerce-cart-order-summary-block {
+  margin-bottom: 24px;
+}
+
+body:not(.woocommerce-block-theme-has-button-styles)
+  .wc-block-components-button:not(.is-link) {
+  min-height: auto;
+  color: rgba(176, 134, 74, 1);
+  font-family: "Poiret One", sans-serif;
+  font-size: 16px;
+  font-weight: 400 !important;
+  line-height: 100%;
+  text-decoration: underline;
+}
+
+@media (max-width: 1250px) {
+  .site-main {
+    margin-top: 76px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .wc-block-components-sidebar-layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .wc-block-components-sidebar-layout .wc-block-components-main {
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .wc-block-cart table.wc-block-cart-items {
+    padding-right: 0;
+  }
+
+  .wc-block-components-sidebar {
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .wc-block-components-sidebar-layout {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .wc-block-cart-items__row {
+    border-bottom: 0.5px solid rgba(218, 218, 218, 1);
+    padding-bottom: 16px;
+  }
+
+  table.wc-block-cart-items
+    .wc-block-cart-items__row
+    .wc-block-cart-item__image
+    img {
+    width: 82px;
+    height: 82px;
+    min-width: 82px;
+    border-radius: 4px;
+  }
+
+  .is-medium
+    table.wc-block-cart-items
+    .wc-block-cart-items__row
+    .wc-block-cart-item__image {
+    padding-right: 8px;
+  }
+
+  .is-medium table.wc-block-cart-items .wc-block-cart-items__row {
+    padding: 0;
+    grid-template-columns: max-content;
+  }
+
+  table.wc-block-cart-items
+    .wc-block-cart-items__row
+    .wc-block-components-product-name {
+    font-size: 14px;
+  }
+
+  .wc-block-components-product-price__regular {
+    font-size: 28px;
+  }
+
+  .wc-block-cart-item__prices {
+    margin-bottom: 16px;
+  }
+
+  .wc-block-components-product-price__value.is-discounted {
+    margin-left: 26px;
+  }
+
+  .wc-block-components-product-badge.wc-block-components-sale-badge {
+    font-size: 14px;
+  }
+
+  .wc-block-components-product-metadata {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .wc-block-components-quantity-selector {
+    margin-bottom: 16px;
+  }
+
+  .wc-block-components-quantity-selector
+    input.wc-block-components-quantity-selector__input {
+    font-size: 16px;
+  }
+
+  .wc-block-components-quantity-selector
+    .wc-block-components-quantity-selector__button,
+  .wc-block-components-quantity-selector
+    .wc-block-components-quantity-selector__button {
+    font-size: 16px;
+  }
+
+  .wc-block-cart-item__remove-link {
+    font-size: 16px;
+    padding-bottom: 0px;
+  }
+
+  .wc-block-components-totals-wrapper {
+    padding: 14.5px 12px;
+  }
+
+  .wc-block-components-totals-coupon .wc-block-components-panel__button {
+    font-size: 16px;
+  }
+  .wc-block-components-totals-footer-item
+    .wc-block-components-totals-item__label {
+    font-size: 16px;
+  }
+
+  .wc-block-components-totals-item__value {
+    font-size: 28px !important;
+  }
+
+  .wc-block-cart__sidebar {
+    margin-bottom: 0;
+  }
+
+  .wc-block-cart .wp-block-woocommerce-cart-order-summary-block {
+    margin-bottom: 20px;
+  }
+
+  .wc-block-cart__submit {
+    margin: 0;
+  }
+}

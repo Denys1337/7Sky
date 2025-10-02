@@ -1,0 +1,608 @@
+.widget-area {
+  display: none;
+}
+
+.entry-header {
+  display: none;
+}
+
+.site-main {
+  margin-top: 103px;
+}
+
+.wp-block-woocommerce-checkout {
+  max-width: 1232px;
+  margin: 0 auto;
+  padding: 0 16px;
+  padding-bottom: 80px;
+  padding-top: 40px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.wc-block-components-title.wc-block-components-title {
+  font-size: 20px;
+  font-family: "Poiret One", sans-serif;
+  text-transform: uppercase;
+  color: rgba(5, 5, 5, 1);
+  font-weight: 400;
+  line-height: 100%;
+  padding-bottom: 20px;
+}
+
+.wc-block-components-checkout-step__heading {
+  margin-bottom: 20px;
+}
+
+.wc-block-components-title.wc-block-components-checkout-step__title {
+  font-size: 20px;
+  font-family: "Poiret One", sans-serif;
+  text-transform: uppercase;
+  color: rgba(5, 5, 5, 1);
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.wc-block-checkout__contact-fields .wc-block-components-checkout-step__heading {
+  margin: 0;
+}
+
+.wc-block-components-checkout-step__description {
+  display: none;
+}
+
+#wc-guest-checkout-notice {
+  display: none;
+}
+
+.wc-block-components-form .wc-block-components-checkout-step {
+  margin-bottom: 20px;
+}
+
+#contact .wc-block-components-form .wc-block-components-text-input,
+.wc-block-components-text-input {
+  margin-top: 0px;
+}
+
+.wc-block-checkout__shipping-fields .wc-block-components-address-form {
+  gap: 0 24px;
+}
+
+.wc-block-components-form .wc-block-components-text-input input[type="email"],
+.wc-block-components-form .wc-block-components-text-input input[type="number"],
+.wc-block-components-form
+  .wc-block-components-text-input
+  input[type="password"],
+.wc-block-components-form .wc-block-components-text-input input[type="tel"],
+.wc-block-components-form .wc-block-components-text-input input[type="text"],
+.wc-block-components-form .wc-block-components-text-input input[type="url"],
+.wc-block-components-text-input input[type="email"],
+.wc-block-components-text-input input[type="number"],
+.wc-block-components-text-input input[type="password"],
+.wc-block-components-text-input input[type="tel"],
+.wc-block-components-text-input input[type="text"],
+.wc-block-components-text-input input[type="url"] {
+  padding: 8px 16px;
+  font-family: "Poiret One", sans-serif;
+  border: 0.5px solid rgba(218, 218, 218, 1);
+  font-size: 18px;
+}
+
+input::placeholder {
+  font-family: "Poiret One", sans-serif;
+}
+
+.wc-blocks-components-select .wc-blocks-components-select__select {
+  border: 0.5px solid rgba(218, 218, 218, 1);
+  font-family: "Poiret One", sans-serif;
+  font-size: 18px;
+}
+
+.wc-block-components-checkbox label {
+  font-size: 18px;
+  font-family: "Poiret One", sans-serif;
+  color: rgba(5, 5, 5, 1);
+  font-weight: 400;
+  line-height: 100%;
+  align-items: center;
+}
+
+.wc-block-components-checkbox
+  .wc-block-components-checkbox__input[type="checkbox"] {
+  margin-right: 8px;
+  max-width: 16px;
+  max-height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+  border-radius: 2px;
+  border: 0.5px solid rgba(176, 134, 74, 1);
+}
+
+.wc-block-components-checkbox .wc-block-components-checkbox__mark {
+  margin-left: 0;
+  margin-top: 0;
+  width: 16px;
+}
+
+.wc-block-components-checkout-step__content .wc-block-components-checkbox {
+  margin-bottom: 20px !important;
+}
+
+.wc-block-components-radio-control--highlight-checked
+  label.wc-block-components-radio-control__option--checked-option-highlighted {
+  box-shadow: none;
+  border: 0.5px solid rgba(218, 218, 218, 1);
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.wc-block-components-form
+  .wc-block-checkout__order-notes.wc-block-components-checkout-step {
+  margin-bottom: 40px;
+}
+
+.wc-block-checkout__terms.wc-block-checkout__terms--with-separator {
+  padding-top: 40px;
+  border-top: 0.5px solid rgba(218, 218, 218, 1);
+}
+
+.wc-block-checkout__terms {
+  margin-bottom: 33px;
+}
+
+.wc-block-components-checkbox__label {
+  font-size: 16px;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+  line-height: 100%;
+}
+
+.wc-block-components-checkout-return-to-cart-button {
+  color: rgba(176, 134, 74, 1);
+  font-family: "Poiret One", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  text-decoration: underline;
+}
+
+.wp-block-woocommerce-checkout-actions-block
+  .wc-block-checkout__actions_row
+  .wc-block-components-checkout-place-order-button {
+  background: rgba(176, 134, 74, 1);
+  width: 282px;
+  padding: 8px;
+  border: 1px solid rgba(176, 134, 74, 1);
+  box-sizing: border-box;
+  color: rgba(5, 5, 5, 1);
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  border-radius: 4px;
+  min-height: auto !important;
+}
+
+.wp-block-woocommerce-checkout-actions-block
+  .wc-block-checkout__actions_row
+  .wc-block-components-checkout-place-order-button:hover {
+  background: none;
+  color: rgba(176, 134, 74, 1);
+}
+
+.wc-block-components-sidebar-layout .wc-block-components-main {
+  padding-right: 126px;
+}
+
+.wc-block-components-sidebar {
+  padding-left: 0;
+  width: 45%;
+}
+
+.wc-block-components-sidebar-layout .wc-block-components-main {
+  width: 55%;
+}
+
+.wp-block-woocommerce-checkout-order-summary-block {
+  border: 0.5px solid rgba(218, 218, 218, 1);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.wp-block-woocommerce-checkout-order-summary-block
+  .wc-block-components-checkout-order-summary__title {
+  margin-top: 0;
+}
+
+.wp-block-woocommerce-checkout-order-summary-block
+  .wc-block-components-checkout-order-summary__title
+  .wc-block-components-checkout-order-summary__title-text {
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+
+.wc-block-components-totals-wrapper {
+  padding-top: 4px;
+  padding-bottom: 20px;
+}
+
+.wc-block-components-order-summary {
+  padding: 0;
+}
+
+.wc-block-components-order-summary
+  .wc-block-components-order-summary-item__image
+  > img {
+  width: 54px;
+  height: 54px;
+  border-radius: 4px;
+}
+
+.wc-block-components-order-summary
+  .wc-block-components-order-summary-item__quantity {
+  background: rgba(176, 134, 74, 1);
+  border: none;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  color: rgba(255, 255, 255, 1);
+}
+
+.wc-block-components-product-name {
+  font-family: "Poiret One", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+}
+
+.wc-block-components-order-summary-item__individual-prices.price.wc-block-components-product-price {
+  font-size: 32px;
+  font-family: "Playfair Display", sans-serif;
+  color: rgba(5, 5, 5, 1);
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.wc-block-components-product-details.wc-block-components-product-details {
+  font-family: "Poiret One", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+}
+
+.wc-block-components-product-price .wc-block-formatted-money-amount {
+  color: rgba(176, 134, 74, 1);
+  font-weight: 400;
+  font-size: 24px;
+  font-family: "Playfair Display", sans-serif;
+}
+
+.wc-block-components-panel__button {
+  font-family: "Poiret One", sans-serif;
+  color: rgba(5, 5, 5, 1);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.wc-block-components-totals-wrapper {
+  padding: 16px 0;
+}
+
+.wp-block-woocommerce-checkout-order-summary-coupon-form-block.wc-block-components-totals-wrapper {
+  padding: 16px 0;
+}
+
+.wc-block-components-totals-footer-item
+  .wc-block-components-totals-item__label {
+  font-family: "Poiret One", sans-serif;
+  font-size: 18px;
+  color: rgba(176, 134, 74, 1);
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.wc-block-formatted-money-amount.wc-block-components-formatted-money-amount.wc-block-components-totals-item__value {
+  font-size: 24px;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  line-height: 100%;
+  color: rgba(5, 5, 5, 1);
+}
+
+.wc-block-formatted-money-amount.wc-block-components-formatted-money-amount.wc-block-components-totals-footer-item-tax-value {
+  font-size: 32px;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  line-height: 100%;
+  color: rgba(176, 134, 74, 1);
+}
+
+.wp-block-woocommerce-checkout-order-summary-shipping-block.wc-block-components-totals-wrapper {
+  display: none;
+}
+
+.wc-block-components-sidebar .slot-wrapper .wc-block-components-panel,
+.wc-block-components-sidebar .wc-block-components-panel,
+.wc-block-components-sidebar .wc-block-components-totals-coupon,
+.wc-block-components-sidebar .wc-block-components-totals-item {
+  padding: 0 12px;
+}
+
+.wp-block-woocommerce-checkout-order-summary-subtotal-block.wc-block-components-totals-wrapper {
+  padding-top: 16px;
+}
+
+.wc-block-components-order-summary
+  .wc-block-components-order-summary-item__description {
+  padding-left: 20px;
+}
+
+.wp-block-woocommerce-checkout-order-summary-block
+  .wc-block-components-checkout-order-summary__title
+  .wc-block-components-checkout-order-summary__title-text {
+  font-family: "Poiret One", sans-serif;
+  font-size: 16px;
+  color: rgba(5, 5, 5, 1);
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.wc-block-components-form .wc-block-components-text-input label,
+.wc-block-components-text-input label {
+  padding-left: 12px;
+}
+
+@media (max-width: 1100px) {
+  .wc-block-components-sidebar-layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .wc-block-components-sidebar {
+    width: 100%;
+  }
+
+  .wc-block-components-sidebar-layout .wc-block-components-main {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 730px) {
+  .wc-block-components-sidebar.wc-block-checkout__sidebar.wp-block-woocommerce-checkout-totals-block.is-sticky {
+    display: none;
+  }
+
+  .site-main {
+    margin-top: 76px;
+  }
+
+  .wp-block-woocommerce-checkout {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .wc-block-components-title.wc-block-components-title {
+    font-size: 18px;
+    padding-bottom: 16px;
+  }
+
+  .wc-block-checkout__shipping-fields .wc-block-components-address-form {
+    gap: 8px !important;
+  }
+
+  .wc-block-components-form .wc-block-components-text-input,
+  .wc-block-components-text-input {
+    margin-top: 0;
+  }
+
+  .wc-block-components-country-input {
+    margin-top: 0;
+  }
+
+  .wc-block-checkout__form .wc-blocks-components-select {
+    margin-top: 0;
+  }
+
+  .wc-blocks-components-select .wc-blocks-components-select__container {
+    height: 55px;
+  }
+
+  .wc-block-components-checkbox label {
+    font-size: 14px;
+  }
+
+  .wc-block-components-title.wc-block-components-title {
+    font-size: 18px;
+  }
+
+  .wc-block-components-checkout-step__heading {
+    margin-bottom: 16px;
+  }
+
+  .wc-block-components-radio-control--highlight-checked.wc-block-components-radio-control--highlight-checked--last-selected:after,
+  .wc-block-components-radio-control--highlight-checked.wc-block-components-radio-control--highlight-checked--first-selected:after {
+    margin: 0;
+  }
+
+  .wc-block-components-radio-control-accordion-option.wc-block-components-radio-control-accordion-option--checked-option-highlighted {
+    padding: 0;
+  }
+
+  .wc-block-checkout__payment-method
+    .wc-block-components-radio-control.disable-radio-control
+    .wc-block-components-radio-control__option {
+    padding: 8px 16px !important;
+  }
+
+  .wc-block-components-radio-control__label,
+  .wc-block-components-radio-control__secondary-label {
+    font-size: 18px;
+  }
+
+  .wc-block-checkout__payment-method
+    .wc-block-components-checkout-step__content {
+    padding-top: 0 !important;
+  }
+
+  .is-small .wc-block-components-form .wc-block-components-checkout-step {
+    margin-bottom: 20px !important;
+  }
+
+  .wc-block-checkout__terms.wc-block-checkout__terms--with-separator {
+    padding-top: 20px !important;
+    margin-bottom: 16px !important;
+    border-top: 0.5px solid rgba(218, 218, 218, 1) !important;
+  }
+
+  .wc-block-checkout__add-note .wc-block-components-textarea {
+    margin-top: 0 !important;
+  }
+
+  .wc-block-checkout__actions {
+    padding-top: 0px !important;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .wp-block-woocommerce-checkout-actions-block .wc-block-checkout__actions_row {
+    flex-direction: column-reverse;
+    gap: 16px !important;
+    margin-bottom: 40px;
+  }
+
+  .wp-block-woocommerce-checkout-actions-block
+    .wc-block-checkout__actions_row
+    .wc-block-components-checkout-place-order-button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .wp-block-woocommerce-checkout-order-summary-block {
+    padding: 0 !important;
+  }
+
+  .wc-block-components-totals-wrapper {
+    padding: 16px 0 !important;
+  }
+
+  .wp-block-woocommerce-checkout-order-summary-block.checkout-order-summary-block-fill-wrapper
+    .wc-block-components-order-summary {
+    padding: 0 !important;
+  }
+
+  .wp-block-woocommerce-checkout-order-summary-block.checkout-order-summary-block-fill-wrapper
+    .wc-block-components-checkout-step__heading {
+    margin-bottom: 0;
+  }
+
+  .wp-block-woocommerce-checkout-order-summary-block.checkout-order-summary-block-fill-wrapper
+    .wc-block-components-checkout-step__heading
+    h2 {
+    font-size: 14px;
+  }
+
+  .wp-block-woocommerce-checkout-order-summary-coupon-form-block.wc-block-components-totals-wrapper {
+    border-top: none !important;
+  }
+
+  .wc-block-components-order-summary {
+    border-bottom: 0.5px solid rgba(218, 218, 218, 1);
+    padding-bottom: 16px;
+  }
+
+  .wp-block-woocommerce-checkout-order-summary-block
+    .checkout-order-summary-block-fill
+    .wc-block-components-totals-wrapper:first-of-type {
+    padding-bottom: 0 !important;
+  }
+
+  .wp-block-woocommerce-checkout-order-summary-block
+    .checkout-order-summary-block-fill {
+    border: none !important;
+  }
+
+  .wp-block-woocommerce-checkout-order-summary-block.checkout-order-summary-block-fill-wrapper {
+    padding: 16px !important;
+    border: 0.5px solid rgba(218, 218, 218, 1);
+  }
+
+  .wc-block-components-order-summary
+    .wc-block-components-order-summary-item__description {
+    padding-left: 14px;
+  }
+
+  .wc-block-components-product-name {
+    font-size: 14px;
+  }
+
+  .wc-block-components-order-summary
+    .wc-block-components-order-summary-item__individual-prices {
+    font-size: 28px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px !important;
+  }
+
+  .wc-block-components-product-price__value.is-discounted {
+    margin-left: 0;
+  }
+
+  .wc-block-formatted-money-amount.wc-block-components-formatted-money-amount.wc-block-components-product-price__value {
+    font-size: 24px !important;
+  }
+
+  .wc-block-components-product-details.wc-block-components-product-details {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .wp-block-woocommerce-checkout-order-summary-block
+    .checkout-order-summary-block-fill
+    .wc-block-components-totals-coupon,
+  .wp-block-woocommerce-checkout-order-summary-block
+    .checkout-order-summary-block-fill
+    .wc-block-components-totals-item {
+    padding: 0 12px;
+  }
+
+  .wc-block-components-totals-item__label {
+    font-size: 16px;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 400;
+    color: rgba(5, 5, 5, 1);
+  }
+
+  .wp-block-woocommerce-checkout-order-summary-subtotal-block.wc-block-components-totals-wrapper
+    .wp-block-woocommerce-checkout-order-summary-block
+    .wc-block-components-formatted-money-amount {
+    color: rgba(5, 5, 5, 1);
+    font-size: 24px;
+    font-family: "Playfair Display", sans-serif;
+  }
+
+  .wc-block-components-totals-footer-item
+    .wc-block-components-totals-item__label {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .wc-block-components-totals-item.wc-block-components-totals-footer-item
+    .wp-block-woocommerce-checkout-order-summary-block
+    .wc-block-components-formatted-money-amount {
+    font-size: 28px;
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 600px) {
+  .is-small .wc-block-components-form .wc-block-components-checkout-step {
+    padding-top: 0 !important;
+  }
+}
