@@ -355,7 +355,62 @@ input::placeholder {
   padding-left: 12px !important;
 }
 
+.wc-block-checkout__form .wc-blocks-components-select {
+  margin-bottom: 16px;
+  margin-top: 0 !important;
+}
+
+.woocommerce-customer-details {
+  display: none !important;
+}
+
+.woocommerce-order-overview__payment-method.method {
+  display: none !important;
+}
+
+.woocommerce-order {
+  max-width: 1232px !important;
+  margin: 0 auto !important;
+  padding: 0 16px !important;
+  padding-bottom: 80px !important;
+  padding-top: 40px !important;
+  padding-right: 16px !important;
+  padding-left: 16px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received {
+  padding-bottom: 24px;
+  font-family: "Poiret One", sans-serif !important;
+  font-size: 28px !important;
+  color: rgba(5, 5, 5, 1) !important;
+  font-weight: 600 !important;
+  line-height: 100% !important;
+}
+
+.woocommerce ul.order_details li {
+  font-family: "Poiret One", sans-serif !important;
+}
+
+.woocommerce-order-details__title {
+  padding-bottom: 16px;
+}
+
+.woocommerce-table__product-name.product-name a {
+  color: rgba(5, 5, 5, 1) !important;
+}
+
+.woocommerce-order-details {
+  margin-bottom: 0 !important;
+}
+
 @media (max-width: 1100px) {
+  .site-main {
+    margin-top: 76px !important;
+  }
   .wc-block-components-sidebar-layout {
     flex-direction: column !important;
     gap: 40px !important;
@@ -372,12 +427,12 @@ input::placeholder {
 }
 
 @media (max-width: 730px) {
-  .wc-block-components-sidebar.wc-block-checkout__sidebar.wp-block-woocommerce-checkout-totals-block.is-sticky {
-    display: none !important;
+  .wc-block-components-address-form__country.wc-block-components-country-input {
+    margin-top: 16px !important;
   }
 
-  .site-main {
-    margin-top: 76px !important;
+  .wc-block-components-sidebar.wc-block-checkout__sidebar.wp-block-woocommerce-checkout-totals-block.is-sticky {
+    display: none !important;
   }
 
   .wp-block-woocommerce-checkout {
@@ -604,5 +659,20 @@ input::placeholder {
 @media (max-width: 600px) {
   .is-small .wc-block-components-form .wc-block-components-checkout-step {
     padding-top: 0 !important;
+  }
+
+  .woocommerce ul.order_details li {
+    font-size: 12px !important;
+    margin-right: 0 !important;
+    border: none !important;
+    text-align: center;
+  }
+
+  .woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received {
+    padding-bottom: 16px;
+  }
+
+  .woocommerce ul.order_details {
+    margin: 0 0 24px;
   }
 }

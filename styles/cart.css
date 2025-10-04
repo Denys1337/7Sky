@@ -239,6 +239,30 @@ body:not(.woocommerce-block-theme-has-button-styles)
   text-decoration: underline !important;
 }
 
+.wp-block-heading.has-text-align-center {
+  display: none;
+}
+
+.wp-block-heading.has-text-align-center.with-empty-cart-icon.wc-block-cart__empty-cart__title {
+  min-height: 80vh;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poiret One", sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  line-height: 100% !important;
+}
+
+.wp-block-separator.has-alpha-channel-opacity.is-style-dots {
+  display: none;
+}
+
+.wc-block-grid.wp-block-product-new.wp-block-woocommerce-product-new.wc-block-product-new.has-4-columns {
+  display: none;
+}
+
 @media (max-width: 1250px) {
   .site-main {
     margin-top: 76px !important;
