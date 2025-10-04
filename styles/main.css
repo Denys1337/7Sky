@@ -574,6 +574,8 @@ body {
   line-height: normal;
   margin-top: -16px;
   text-wrap: nowrap;
+  gap: 60px;
+  justify-content: start;
 }
 
 .priceMassage span {
