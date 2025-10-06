@@ -553,7 +553,8 @@ body {
   font-size: 24px;
 }
 
-.service-img img {
+.service-img img,
+.service-img video {
   max-width: 100%;
   border-radius: 12px;
   width: 100%;
@@ -1283,7 +1284,8 @@ body {
   gap: 24px;
 }
 
-.product-thumbs img {
+.product-thumbs img,
+.product-thumbs video {
   width: 146px;
   height: 146px;
   border-radius: 8px;
@@ -1454,7 +1456,8 @@ body {
   height: 486px;
 }
 
-.product-gallery .main-img img {
+.product-gallery .main-img img,
+.product-gallery .main-img video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1866,7 +1869,8 @@ body {
   width: 100% !important;
 }
 
-.my-sliderContactUs img {
+.my-sliderContactUs img,
+.my-sliderContactUs video {
   max-width: 100%;
   width: 100%;
   border-radius: 12px;
@@ -2326,7 +2330,8 @@ body {
   margin-top: 24px;
 }
 
-.gallery img {
+.gallery img,
+.gallery video {
   width: 100%;
   border-radius: 12px;
   height: 310px;
@@ -2603,7 +2608,8 @@ body {
   margin: auto;
 }
 
-.wrapperCerteficateInfo .product-image img {
+.wrapperCerteficateInfo .product-image img,
+.wrapperCerteficateInfo .product-image video {
   max-width: 588px;
   height: 358px;
   width: 588px;
@@ -2931,7 +2937,8 @@ body {
 }
 
 @media (max-width: 1060px) {
-  .wrapperCerteficateInfo .product-image img {
+  .wrapperCerteficateInfo .product-image img,
+  .wrapperCerteficateInfo .product-image video {
     width: 100%;
   }
 }
@@ -2952,7 +2959,8 @@ body {
     margin-bottom: 16px;
   }
 
-  .wrapperCerteficateInfo .product-image img {
+  .wrapperCerteficateInfo .product-image img,
+  .wrapperCerteficateInfo .product-image video {
     width: 343px;
     height: 343px;
     margin: 0 auto;
@@ -3158,7 +3166,8 @@ body {
   flex-wrap: wrap;
 }
 
-.wrapperImagesBlock img {
+.wrapperImagesBlock img,
+.wrapperImagesBlock video {
   width: 274px;
   height: 276px;
   object-fit: cover;
@@ -3380,7 +3389,8 @@ body {
     gap: 7px;
   }
 
-  .wrapperImagesBlock img {
+  .wrapperImagesBlock img,
+  .wrapperImagesBlock video {
     width: 151px;
     height: 152px;
   }
@@ -3469,7 +3479,8 @@ body {
 }
 
 @media (max-width: 375px) {
-  .wrapperCerteficateInfo .product-image img {
+  .wrapperCerteficateInfo .product-image img,
+  .wrapperCerteficateInfo .product-image video {
     width: 100%;
     height: 100%;
   }
