@@ -189,6 +189,15 @@ body {
   height: 100%;
 }
 
+.product-card h3 {
+  padding-top: 24px;
+  padding-bottom: 10px;
+  font-family: "Poiret One", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 1);
+}
+
 .product-card img {
   max-width: 100%;
   height: 282px;
@@ -219,6 +228,7 @@ body {
   font-size: 40px;
   font-family: "Playfair Display", sans-serif;
   color: #050505;
+  line-height: 100%;
 }
 
 .prices {
@@ -408,6 +418,10 @@ body {
   .wrapperServiceCard {
     flex-direction: column;
     gap: 16px;
+  }
+
+  .wrapperServiceCard .service-card {
+    width: 100%;
   }
 }
 
@@ -947,11 +961,12 @@ body {
   align-items: center;
   gap: 8px;
   border-bottom: 0.3px solid rgba(176, 134, 74, 1);
-  color: rgba(176, 134, 74, 1);
+  color: rgba(176, 134, 74, 1) !important;
   font-size: 18px;
   text-decoration: none;
   font-family: "Poiret One", sans-serif;
   max-width: fit-content;
+  padding-bottom: 0 !important;
 }
 
 .linkDetailsCard img {
@@ -1131,6 +1146,10 @@ body {
 .valueTime {
   cursor: pointer;
   white-space: nowrap;
+}
+
+.swiper-wrapper {
+  justify-content: center;
 }
 
 @media (max-width: 1231px) {
@@ -2403,7 +2422,8 @@ body {
   .my-slider-contacts {
     display: block !important;
   }
-  .my-slider-contacts img {
+  .my-slider-contacts img,
+  .my-slider-contacts video {
     height: 204px;
     width: 100%;
     object-fit: cover;

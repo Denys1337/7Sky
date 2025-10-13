@@ -670,3 +670,17 @@ document.querySelectorAll(".faq-question").forEach((item) => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector(".hero-background video.hero-image");
+  if (!video) return;
+
+  video.removeAttribute("controls");
+
+  video.setAttribute("autoplay", "");
+  video.setAttribute("loop", "");
+  video.muted = true;
+  video.play().catch(() => {
+    console.warn("Autoplay заблоковано користувачем");
+  });
+});
