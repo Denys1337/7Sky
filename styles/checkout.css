@@ -435,6 +435,16 @@ input::placeholder {
     display: none !important;
   }
 
+  table.wc-block-cart-items
+    .wc-block-cart-items__row
+    .wc-block-components-product-price__regular {
+    font-size: 25px !important;
+  }
+
+  .wc-block-components-product-price__value.is-discounted {
+    font-size: 25px !important;
+  }
+
   .wp-block-woocommerce-checkout {
     padding-top: 20px !important;
     padding-bottom: 40px !important;
@@ -674,5 +684,11 @@ input::placeholder {
 
   .woocommerce ul.order_details {
     margin: 0 0 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .is-small table.wc-block-cart-items .wc-block-cart-items__row {
+    grid-template-columns: auto !important;
   }
 }

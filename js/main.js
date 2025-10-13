@@ -684,3 +684,36 @@ document.addEventListener("DOMContentLoaded", () => {
     console.warn("Autoplay заблоковано користувачем");
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdownLinks = document.querySelectorAll(
+    ".nav-item.dropdown > .nav-link"
+  );
+
+  dropdownLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      if (window.innerWidth <= 991) {
+        e.preventDefault();
+
+        const parent = link.parentElement;
+        const dropdown = parent.querySelector(".dropdown-menu");
+
+        document
+          .querySelectorAll(".nav-item.dropdown.open")
+          .forEach((openItem) => {
+            if (openItem !== parent) {
+              openItem.classList.remove("open");
+            }
+          });
+
+        parent.classList.toggle("open");
+
+        if (dropdown) {
+          dropdown.style.maxHeight = parent.classList.contains("open")
+            ? dropdown.scrollHeight + "px"
+            : "0";
+        }
+      }
+    });
+  });
+});
