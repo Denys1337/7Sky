@@ -792,6 +792,10 @@ body {
     height: 55px;
   }
 
+  .oneMassageTimeSlot {
+    height: auto !important;
+  }
+
   .timeSlot span {
     font-size: 16px !important;
   }
@@ -946,6 +950,7 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .card span {
@@ -957,7 +962,7 @@ body {
 }
 
 .linkDetailsCard {
-  display: flex;
+  display: flex !important;
   align-items: center;
   gap: 8px;
   border-bottom: 0.3px solid rgba(176, 134, 74, 1);

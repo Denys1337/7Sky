@@ -686,6 +686,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector(".about-background video.about-image");
+  if (!video) return;
+
+  video.removeAttribute("controls");
+
+  video.setAttribute("autoplay", "");
+  video.setAttribute("loop", "");
+  video.muted = true;
+  video.play().catch(() => {
+    console.warn("Autoplay заблоковано користувачем");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   const dropdownLinks = document.querySelectorAll(
     ".nav-item.dropdown > .nav-link"
   );
