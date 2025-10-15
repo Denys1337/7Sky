@@ -731,3 +731,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const customSelects = document.querySelectorAll(".custom-select");
+
+  customSelects.forEach((select) => {
+    const optionsContainer = select.querySelector(".options");
+
+    if (optionsContainer) {
+      const labels = optionsContainer.querySelectorAll("label");
+
+      if (labels.length === 0) {
+        const noFiltersMsg = document.createElement("div");
+        noFiltersMsg.classList.add("no-filters");
+        noFiltersMsg.textContent = "Немає фільтрів";
+        optionsContainer.appendChild(noFiltersMsg);
+      }
+    }
+  });
+});

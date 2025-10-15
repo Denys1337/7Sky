@@ -1483,7 +1483,8 @@ body {
   border-radius: 8px;
 }
 
-.my-sliderMessage img {
+.my-sliderMessage img,
+.my-sliderMessage video {
   width: 343px;
   height: 343px;
   object-fit: cover;
@@ -3508,4 +3509,8 @@ body {
   .wrapperSelectsCheckbox {
     flex-direction: column;
   }
+}
+
+.containerCurses .swiper-wrapper {
+  justify-content: center;
 }
