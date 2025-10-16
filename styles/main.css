@@ -243,7 +243,7 @@ body {
   color: rgba(176, 134, 74, 1);
   font-family: "Playfair Display", sans-serif;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 20px;
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -253,6 +253,7 @@ body {
 .discount-price p {
   position: relative;
   display: inline-block;
+  font-size: 32px;
 }
 
 .discount-price p::after {
@@ -279,7 +280,6 @@ body {
 
 .productPrices {
   display: flex;
-  justify-content: space-between;
 }
 
 .btn {
@@ -585,7 +585,7 @@ body {
   line-height: normal;
   margin-top: -16px;
   text-wrap: nowrap;
-  justify-content: space-between;
+  gap: 60px;
 }
 
 .priceMassage span {
@@ -773,6 +773,7 @@ body {
 
   .priceMassage {
     font-size: 28px;
+    gap: 24px;
   }
 
   .priceMassage span {
