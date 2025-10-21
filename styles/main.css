@@ -254,6 +254,7 @@ body {
   position: relative;
   display: inline-block;
   font-size: 32px;
+  margin-top: -5px;
 }
 
 .discount-price p::after {
