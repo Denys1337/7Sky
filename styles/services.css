@@ -113,7 +113,6 @@
   
   .service-content {
     padding: 20px 40px;
-    margin: 12px;
   }
   
   .service-card:nth-child(2) .service-content,
@@ -146,7 +145,6 @@
   
   .service-content {
     padding: 16px 24px;
-    margin: 12px;
   }
   
   .service-card:nth-child(2) .service-content,

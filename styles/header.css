@@ -124,7 +124,7 @@
 .hamburger-line {
   width: 24px;
   height: 2px;
-  background-color: #050505;
+  background-color: rgba(176, 134, 74, 1);
   margin: 2px 0;
   transition: all 0.3s ease;
   transform-origin: center;
@@ -227,6 +227,8 @@
   transition: all 0.3s ease;
   text-align: center;
   width: 100%;
+  display: flex;
+  justify-content: end;
 }
 
 .nav.mobile-menu-open .nav-link:hover {
@@ -249,17 +251,83 @@
   gap: 10px;
   min-width: 150px;
   z-index: 1000;
+  margin-top: 5px;
 }
 
 .dropdown-menu a {
   color: black;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 18px;
   white-space: nowrap;
 }
 
 .dropdown:hover .dropdown-menu {
   display: flex;
+}
+
+/* Disable hover on mobile */
+@media (max-width: 1250px) {
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+}
+
+/* Mobile dropdown styles */
+@media (max-width: 1250px) {
+  .nav.mobile-menu-open .nav-item.dropdown {
+    position: static;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav.mobile-menu-open .dropdown {
+    position: static;
+    width: 100%;
+  }
+
+  .nav.mobile-menu-open .dropdown-menu {
+    position: static;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    background: transparent;
+    padding: 0;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    border-radius: 0;
+    min-width: auto;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    box-shadow: none;
+  }
+
+  .nav.mobile-menu-open .dropdown.open .dropdown-menu {
+    display: flex;
+    max-height: 500px;
+    padding-left: 20px;
+  }
+
+  .nav.mobile-menu-open .dropdown-menu a {
+    color: #050505;
+    font-size: 16px;
+    padding: 6px 0;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: end;
+    padding-right: 16px;
+  }
+
+  .nav.mobile-menu-open .dropdown-menu a:hover {
+    color: #b0864a;
+  }
+
+  .nav.mobile-menu-open .dropdown.open .nav-link svg {
+    transform: rotate(180deg);
+  }
 }
 
 @keyframes slideDown {

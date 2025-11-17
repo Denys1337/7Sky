@@ -27,10 +27,31 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    // Закрити меню при кліку на nav links
+    // Закрити меню при кліку на nav links (але не на dropdown parent links)
     const navLinks = nav.querySelectorAll(".nav-link");
     navLinks.forEach((link) => {
-      link.addEventListener("click", function () {
+      link.addEventListener("click", function (e) {
+        // Don't close menu if this is a dropdown parent link in mobile view
+        const isDropdownParent = link.parentElement.classList.contains("dropdown");
+        const isMobileMenuOpen = nav.classList.contains("mobile-menu-open");
+        
+        if (isDropdownParent && isMobileMenuOpen) {
+          // Let the dropdown handler manage this
+          return;
+        }
+        
+        mobileMenuToggles.forEach((toggle) =>
+          toggle.classList.remove("active")
+        );
+        nav.classList.remove("mobile-menu-open");
+        document.body.style.overflow = "";
+      });
+    });
+    
+    // Close menu when clicking on dropdown sub-items
+    const dropdownSubItems = nav.querySelectorAll(".dropdown-menu a");
+    dropdownSubItems.forEach((subItem) => {
+      subItem.addEventListener("click", function () {
         mobileMenuToggles.forEach((toggle) =>
           toggle.classList.remove("active")
         );
@@ -554,11 +575,18 @@ document.addEventListener("DOMContentLoaded", () => {
     "successMessageFeedback"
   );
 
+  function markError(input, hasError) {
+    if (hasError) input.classList.add("input-error");
+    else input.classList.remove("input-error");
+  }
+
   nameInputFeedback.addEventListener("input", () => {
     nameInputFeedback.value = nameInputFeedback.value.replace(
       /[^a-zA-Zа-яА-ЯїЇєЄіІґҐ\s]/g,
       ""
     );
+
+    markError(nameInputFeedback, nameInputFeedback.value.trim() === "");
   });
 
   surnameInputFeedback.addEventListener("input", () => {
@@ -566,6 +594,8 @@ document.addEventListener("DOMContentLoaded", () => {
       /[^a-zA-Zа-яА-ЯїЇєЄіІґҐ\s]/g,
       ""
     );
+
+    markError(surnameInputFeedback, surnameInputFeedback.value.trim() === "");
   });
 
   function formatPhoneMask(value) {
@@ -594,9 +624,9 @@ document.addEventListener("DOMContentLoaded", () => {
       .replace(/[^\d]/g, "")
       .replace(/^380/, "");
     phoneInputFeedback.value = formatPhoneMask(digitsFeedback);
-    if (phoneInputFeedback.value.length < 4) {
-      phoneInputFeedback.value = formatPhoneMask("");
-    }
+
+    const isInvalid = digitsFeedback.length !== 9;
+    markError(phoneInputFeedback, isInvalid);
   });
 
   phoneInputFeedback.addEventListener("keydown", (e) => {
@@ -614,43 +644,94 @@ document.addEventListener("DOMContentLoaded", () => {
     if (val.length > 5) val = val.slice(0, 5) + "." + val.slice(5);
     val = val.slice(0, 10);
     DateGoingFeedback.value = val;
+
+    markError(DateGoingFeedback, val.length !== 10);
   });
+
+  function isValidDateDDMMYYYY(str) {
+    if (!/^\d{2}\.\d{2}\.\d{4}$/.test(str)) return false;
+
+    const [ddStr, mmStr, yyyyStr] = str.split(".");
+    const day = parseInt(ddStr, 10);
+    const month = parseInt(mmStr, 10);
+    const year = parseInt(yyyyStr, 10);
+
+    if (month < 1 || month > 12) return false;
+    if (year < 1) return false;
+
+    const d = new Date(year, month - 1, day);
+    return (
+      d.getFullYear() === year &&
+      d.getMonth() === month - 1 &&
+      d.getDate() === day
+    );
+  }
 
   feedbackForm.addEventListener("submit", (e) => {
     e.preventDefault();
+
     const digits = phoneInputFeedback.value
       .replace(/[^\d]/g, "")
       .replace(/^380/, "");
     const dateVal = DateGoingFeedback.value;
     const messageVal = messageFeedback.value.trim();
+
     let valid = true;
     let errorMsg = "";
-    if (nameInputFeedback.value.trim() === "" || digits.length !== 9) {
+
+    if (nameInputFeedback.value.trim() === "") {
+      markError(nameInputFeedback, true);
       valid = false;
       errorMsg = "Будь ласка, заповніть всі поля коректно.";
-    } else if (!/^\d{2}\.\d{2}\.\d{4}$/.test(dateVal)) {
+    }
+
+    if (digits.length !== 9) {
+      markError(phoneInputFeedback, true);
       valid = false;
-      errorMsg = "Введіть дату у форматі ДД.ММ.РРРР.";
-    } else if (messageVal === "") {
+      errorMsg = "Будь ласка, заповніть всі поля коректно.";
+    }
+
+    if (!/^\d{2}\.\d{2}\.\d{4}$/.test(dateVal)) {
+      markError(DateGoingFeedback, true);
+      valid = false;
+      errorMsg = "Введіть дату у форматі ДД.MM.РРРР.";
+    } else if (!isValidDateDDMMYYYY(dateVal)) {
+      markError(DateGoingFeedback, true);
+      valid = false;
+      errorMsg = "Будь ласка, заповніть всі поля коректно.";
+    }
+
+    if (messageVal === "") {
+      markError(messageFeedback, true);
       valid = false;
       errorMsg = "Поле повідомлення обов'язкове.";
+    } else {
+      markError(messageFeedback, false);
     }
-    console.log(valid);
+
     if (valid) {
       successMessageFeedback.textContent = "Відгук відправлено";
       successMessageFeedback.style.display = "block";
       successMessageFeedback.style.color = "rgba(5, 5, 5, 1)";
+
       setTimeout(() => {
         nameInputFeedback.value = "";
+        surnameInputFeedback.value = "";
         phoneInputFeedback.value = formatPhoneMask("");
         DateGoingFeedback.value = "";
         messageFeedback.value = "";
+
+        document
+          .querySelectorAll(".input-error")
+          .forEach((el) => el.classList.remove("input-error"));
+
         successMessageFeedback.style.display = "none";
       }, 4000);
     } else {
       successMessageFeedback.textContent = errorMsg;
       successMessageFeedback.style.display = "block";
       successMessageFeedback.style.color = "red";
+
       setTimeout(() => {
         successMessageFeedback.style.display = "none";
       }, 4000);
@@ -706,26 +787,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
   dropdownLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
-      if (window.innerWidth <= 991) {
+      // Check if mobile menu is open (mobile view)
+      const nav = document.querySelector(".nav");
+      const isMobileMenuOpen = nav && nav.classList.contains("mobile-menu-open");
+      
+      if (isMobileMenuOpen || window.innerWidth <= 1250) {
         e.preventDefault();
+        e.stopPropagation();
 
         const parent = link.parentElement;
         const dropdown = parent.querySelector(".dropdown-menu");
 
+        // Close other open dropdowns
         document
           .querySelectorAll(".nav-item.dropdown.open")
           .forEach((openItem) => {
             if (openItem !== parent) {
               openItem.classList.remove("open");
+              const otherDropdown = openItem.querySelector(".dropdown-menu");
+              if (otherDropdown) {
+                otherDropdown.style.maxHeight = "0";
+              }
             }
           });
 
+        // Toggle current dropdown
         parent.classList.toggle("open");
 
         if (dropdown) {
-          dropdown.style.maxHeight = parent.classList.contains("open")
-            ? dropdown.scrollHeight + "px"
-            : "0";
+          if (parent.classList.contains("open")) {
+            dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+          } else {
+            dropdown.style.maxHeight = "0";
+          }
         }
       }
     });

@@ -85,7 +85,39 @@
   padding: 8px 16px !important;
   font-family: "Poiret One", sans-serif !important;
   border: 0.5px solid rgba(218, 218, 218, 1) !important;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
   font-size: 18px;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #ffffff !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.wc-block-components-form .wc-block-components-text-input input[type="email"]:focus,
+.wc-block-components-form .wc-block-components-text-input input[type="number"]:focus,
+.wc-block-components-form
+  .wc-block-components-text-input
+  input[type="password"]:focus,
+.wc-block-components-form .wc-block-components-text-input input[type="tel"]:focus,
+.wc-block-components-form .wc-block-components-text-input input[type="text"]:focus,
+.wc-block-components-form .wc-block-components-text-input input[type="url"]:focus,
+.wc-block-components-text-input input[type="email"]:focus,
+.wc-block-components-text-input input[type="number"]:focus,
+.wc-block-components-text-input input[type="password"]:focus,
+.wc-block-components-text-input input[type="tel"]:focus,
+.wc-block-components-text-input input[type="text"]:focus,
+.wc-block-components-text-input input[type="url"]:focus {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  border: 0.5px solid rgba(218, 218, 218, 1) !important;
 }
 
 input::placeholder {
@@ -94,8 +126,27 @@ input::placeholder {
 
 .wc-blocks-components-select .wc-blocks-components-select__select {
   border: 0.5px solid rgba(218, 218, 218, 1) !important;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
   font-family: "Poiret One", sans-serif !important;
   font-size: 18px !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #ffffff !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.wc-blocks-components-select .wc-blocks-components-select__select:focus {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  border: 0.5px solid rgba(218, 218, 218, 1) !important;
 }
 
 .wc-block-components-checkbox label {

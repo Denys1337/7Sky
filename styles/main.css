@@ -16,6 +16,77 @@ body {
   background-color: #ffffff;
 }
 
+/* Reset iOS styles for inputs, textareas, and selects */
+/* This prevents iOS from overriding custom styles */
+input,
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Remove iOS inner shadow and appearance */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+input[type="url"],
+input[type="search"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Ensure borders are visible on iOS and remove tap highlight */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="datetime-local"]:focus,
+textarea:focus,
+select:focus {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Fix for iOS date/time inputs - remove native controls */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  -webkit-appearance: none;
+  display: none;
+}
+
 .container {
   max-width: 1232px;
   margin: 0 auto;
@@ -338,7 +409,7 @@ body {
 
   .discount-price {
     font-size: 18px;
-    padding-top: 6px;
+    padding-top: 0px;
   }
 
   .discount-price span {
@@ -476,9 +547,27 @@ body {
   padding: 8px 16px;
   border: 0.5px solid rgba(218, 218, 218, 1);
   border-radius: 4px;
+  -webkit-border-radius: 4px;
   font-family: "Poiret One", sans-serif;
   font-size: 16px;
   font-weight: 400;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #ffffff;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+}
+
+#bookingForm input:focus {
+  border: 0.5px solid rgba(218, 218, 218, 1);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #bookingForm input::placeholder {
@@ -587,6 +676,8 @@ body {
   margin-top: -16px;
   text-wrap: nowrap;
   gap: 60px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .priceMassage span {
@@ -774,7 +865,7 @@ body {
 
   .priceMassage {
     font-size: 28px;
-    gap: 24px;
+    gap: 5px;
   }
 
   .priceMassage span {
@@ -848,6 +939,7 @@ body {
   width: 205px;
   padding: 8px 16px;
   gap: 10px;
+  margin-top: 4px;
 }
 
 .options label {
@@ -896,6 +988,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  margin-left: 40px;
 }
 
 .chip {
@@ -977,8 +1070,8 @@ body {
 }
 
 .linkDetailsCard img {
-  width: 16px;
-  height: 16px;
+  width: 16px !important;
+  height: 16px !important;
 }
 
 /* ---- Пагінація ---- */
@@ -1141,6 +1234,7 @@ body {
   border: 1px solid rgba(176, 134, 74, 1);
   background: rgba(176, 134, 74, 1);
   border-radius: 4px;
+  margin-bottom: 0px !important;
 }
 
 .Cosmetic-btn:hover {
@@ -1157,25 +1251,57 @@ body {
   margin: 0 auto;
 }
 
+.input-error {
+  border: 1px solid red !important;
+}
+
 @media (max-width: 1231px) {
+  .priceMassage {
+    font-size: 28px;
+  }
+  .price {
+    font-size: 28px !important;
+  }
+
+  .card p {
+    font-size: 28px !important;
+  }
+
+  .discount-price p {
+    font-size: 28px !important;
+    margin-top: 0px !important;
+  }
   .cosmeticFilterWrapper {
     justify-content: center;
     flex-direction: column;
   }
-}
 
-@media (max-width: 768px) {
   .cardCosmetic img {
-    width: 164px;
+    width: 100%;
     height: 164px;
+    object-fit: cover;
   }
 
   .cardsCosmetics {
-    grid-template-columns: repeat(auto-fill, 163px);
+    grid-template-columns: repeat(auto-fit, minmax(163px, 1fr));
     gap: 16px;
     margin: 0 auto;
   }
 
+  .cards {
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(163px, 1fr));
+  }
+
+  .card img {
+    width: 100%;
+    height: 164px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 768px) {
   .cosmeticFilterWrapper {
     justify-content: center;
     align-items: start;
@@ -1226,22 +1352,12 @@ body {
     width: 164px;
   }
 
-  .cards {
-    gap: 16px;
-    grid-template-columns: repeat(auto-fill, 163px);
-  }
-
   .card {
     gap: 8px;
   }
 
   .contentCard {
     gap: 8px;
-  }
-
-  .card img {
-    height: 164px;
-    border-radius: 8px;
   }
 
   .card span {
@@ -1558,12 +1674,15 @@ body {
 }
 
 @media (max-width: 768px) {
+  .discount-price p {
+    font-size: 28px;
+  }
   .wrapperheaderOneMassage p {
     width: 100%;
   }
 
   .discountPricePadding {
-    padding-top: 8px;
+    padding-top: 5px;
   }
   .product-price {
     font-size: 28px;
@@ -1612,6 +1731,8 @@ body {
   font-weight: 400;
   font-family: "Poiret One", sans-serif;
   color: rgba(38, 38, 38, 1);
+  max-height: 300px;
+  overflow: auto;
 }
 
 .employee-card__right {
@@ -2110,12 +2231,30 @@ body {
   padding: 8px 16px;
   border: 0.5px solid rgba(218, 218, 218, 1);
   border-radius: 4px;
+  -webkit-border-radius: 4px;
   color: rgba(5, 5, 5, 1);
   font-family: "Poiret One", sans-serif;
   font-size: 18px;
   font-weight: 400;
   box-sizing: border-box;
   outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #ffffff;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+#feedbackForm input:focus,
+#feedbackForm textarea:focus {
+  border: 0.5px solid rgba(218, 218, 218, 1);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #feedbackForm textarea::placeholder {
@@ -2535,6 +2674,8 @@ body {
 .product-price {
   font-size: 26px;
   margin: 10px 0;
+  display: flex;
+  gap: 24px;
 }
 
 .product-price span {
@@ -2662,7 +2803,7 @@ body {
 
 .wrapperCerteficateInfo .product-price {
   font-size: 40px;
-  color: rgba(5, 5, 5, 1);
+  color: rgba(5, 5, 5, 1) !important;
   font-family: "Playfair Display", sans-serif;
   font-weight: bold;
   margin-bottom: 24px;
