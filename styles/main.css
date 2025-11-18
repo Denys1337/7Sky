@@ -326,6 +326,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   display: inline-block;
   font-size: 32px;
   margin-top: -5px;
+  line-height: 100%;
 }
 
 .discount-price p::after {
@@ -1474,7 +1475,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   font-weight: 400;
   color: rgba(5, 5, 5, 1);
   margin-bottom: 36px;
-  line-height: normal;
+  line-height: 100%;
 }
 
 .product-price span {

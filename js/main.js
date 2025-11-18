@@ -619,14 +619,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  phoneInputFeedback.addEventListener("input", () => {
+  phoneInputFeedback.addEventListener("input", (e) => {
     let digitsFeedback = phoneInputFeedback.value
       .replace(/[^\d]/g, "")
       .replace(/^380/, "");
+    
+    // Форматуємо значення
     phoneInputFeedback.value = formatPhoneMask(digitsFeedback);
 
-    const isInvalid = digitsFeedback.length !== 9;
-    markError(phoneInputFeedback, isInvalid);
+    // Перевірка після форматування - якщо 9 цифр, поле валідне
+    // Використовуємо requestAnimationFrame для забезпечення оновлення DOM перед перевіркою
+    requestAnimationFrame(() => {
+      const currentDigits = phoneInputFeedback.value
+        .replace(/[^\d]/g, "")
+        .replace(/^380/, "");
+      const isInvalid = currentDigits.length !== 9;
+      markError(phoneInputFeedback, isInvalid);
+    });
   });
 
   phoneInputFeedback.addEventListener("keydown", (e) => {

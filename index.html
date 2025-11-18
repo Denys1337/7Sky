@@ -1064,59 +1064,63 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-      // Знаходимо слайдер з сертифікатами
-      const certificateSlider = document.querySelector("#certificates .my-slider");
-      
-      if (certificateSlider) {
-        // Функція для оновлення видимих крапок
-        function updatePaginationBullets(swiper) {
-          const pagination = swiper.pagination;
-          const bullets = pagination.bullets;
-          if (!bullets || bullets.length === 0) return;
-          
-          const totalSlides = swiper.slides.length;
-          const maxBullets = 3;
-          
-          // Якщо слайдів 3 або менше - показуємо всі
-          if (totalSlides <= maxBullets) {
-            bullets.forEach((bullet, index) => {
-              bullet.style.display = '';
-            });
-            return;
-          }
-          
-          const currentIndex = swiper.realIndex;
-          let bulletsToShow = [];
-          
-          // Визначаємо які крапки показувати
-          if (currentIndex === 0 || currentIndex === 1) {
-            bulletsToShow = [0, 1, 2];
-          } else if (currentIndex >= totalSlides - 2) {
-            bulletsToShow = [totalSlides - 3, totalSlides - 2, totalSlides - 1];
-          } else {
-            bulletsToShow = [currentIndex - 1, currentIndex, currentIndex + 1];
-          }
-          
-          // Приховуємо всі крапки, потім показуємо тільки потрібні
+      // Функція для оновлення видимих крапок (максимум 3)
+      function updatePaginationBullets(swiper) {
+        const pagination = swiper.pagination;
+        const bullets = pagination.bullets;
+        if (!bullets || bullets.length === 0) return;
+        
+        const totalSlides = swiper.slides.length;
+        const maxBullets = 3;
+        
+        // Якщо слайдів 3 або менше - показуємо всі
+        if (totalSlides <= maxBullets) {
           bullets.forEach((bullet, index) => {
-            if (bulletsToShow.includes(index)) {
-              bullet.style.display = '';
-            } else {
-              bullet.style.display = 'none';
-            }
+            bullet.style.display = '';
           });
+          return;
         }
         
-        const swiperCertificates = new Swiper(certificateSlider, {
+        const currentIndex = swiper.realIndex;
+        let bulletsToShow = [];
+        
+        // Визначаємо які крапки показувати
+        if (currentIndex === 0 || currentIndex === 1) {
+          bulletsToShow = [0, 1, 2];
+        } else if (currentIndex >= totalSlides - 2) {
+          bulletsToShow = [totalSlides - 3, totalSlides - 2, totalSlides - 1];
+        } else {
+          bulletsToShow = [currentIndex - 1, currentIndex, currentIndex + 1];
+        }
+        
+        // Приховуємо всі крапки, потім показуємо тільки потрібні
+        bullets.forEach((bullet, index) => {
+          if (bulletsToShow.includes(index)) {
+            bullet.style.display = '';
+          } else {
+            bullet.style.display = 'none';
+          }
+        });
+      }
+      
+      // Знаходимо всі слайдери з пагінацією
+      const allSliders = document.querySelectorAll(".my-slider");
+
+      allSliders.forEach((slider) => {
+        // Перевіряємо чи є пагінація у слайдера
+        const paginationEl = slider.querySelector(".swiper-pagination");
+        if (!paginationEl) return;
+        
+        const swiper = new Swiper(slider, {
           slidesPerView: "auto",
           spaceBetween: 20,
           loop: true,
           navigation: {
-            nextEl: certificateSlider.querySelector(".swiper-button-next"),
-            prevEl: certificateSlider.querySelector(".swiper-button-prev"),
+            nextEl: slider.querySelector(".swiper-button-next"),
+            prevEl: slider.querySelector(".swiper-button-prev"),
           },
           pagination: {
-            el: certificateSlider.querySelector(".swiper-pagination"),
+            el: paginationEl,
             clickable: true,
           },
           breakpoints: {
@@ -1130,32 +1134,6 @@
             },
             slideChange: function() {
               updatePaginationBullets(this);
-            },
-          },
-        });
-      }
-
-      // Інші слайдери (masters, reviews) без обмеження крапок
-      const otherSliders = document.querySelectorAll(
-        ".my-slider:not(#certificates .my-slider)"
-      );
-
-      otherSliders.forEach((slider) => {
-        const swiper = new Swiper(slider, {
-          slidesPerView: "auto",
-          spaceBetween: 20,
-          loop: true,
-          navigation: {
-            nextEl: slider.querySelector(".swiper-button-next"),
-            prevEl: slider.querySelector(".swiper-button-prev"),
-          },
-          pagination: {
-            el: slider.querySelector(".swiper-pagination"),
-            clickable: true,
-          },
-          breakpoints: {
-            0: {
-              // navigation: false,
             },
           },
         });

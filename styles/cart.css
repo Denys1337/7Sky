@@ -427,10 +427,16 @@ body:not(.woocommerce-block-theme-has-button-styles)
   .wc-block-cart__submit {
     margin: 0 !important;
   }
+  .wc-block-cart-items__row {
+    grid-template-columns: auto !important;
+  }
 }
 
 @media (max-width: 521px) {
   .is-small table.wc-block-cart-items .wc-block-cart-items__row {
+    grid-template-columns: auto !important;
+  }
+  .wc-block-cart-items__row {
     grid-template-columns: auto !important;
   }
 }
