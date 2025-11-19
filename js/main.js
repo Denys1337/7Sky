@@ -853,3 +853,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.location.href.includes("privacy-policy")) {
+    const header = document.querySelector("header");
+    const footer = document.querySelector("footer");
+
+    if (header && footer) {
+      const wrapper = document.createElement("div");
+      wrapper.className = "wrapperPolicy";
+
+      let currentElement = header.nextSibling;
+      const elementsToWrap = [];
+
+      while (currentElement && currentElement !== footer) {
+        const nextSibling = currentElement.nextSibling;
+        if (currentElement.nodeType === 1) {
+          elementsToWrap.push(currentElement);
+        }
+        currentElement = nextSibling;
+      }
+
+      elementsToWrap.forEach((element) => {
+        wrapper.appendChild(element);
+      });
+
+      header.parentNode.insertBefore(wrapper, footer);
+    }
+  }
+});
