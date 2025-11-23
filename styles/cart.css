@@ -440,16 +440,3 @@ body:not(.woocommerce-block-theme-has-button-styles)
     grid-template-columns: auto !important;
   }
 }
-
-.wrapperPolicy {
-  max-width: 1232px;
-  margin: 0 auto;
-  padding: 0 16px;
-  margin-top: 101px;
-}
-
-@media (max-width: 1250px) {
-  .wrapperPolicy {
-    margin-top: 73px;
-  }
-}

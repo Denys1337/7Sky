@@ -3658,3 +3658,17 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 .containerCurses .swiper-wrapper {
   justify-content: center;
 }
+
+
+.wrapperPolicy {
+  max-width: 1232px;
+  margin: 0 auto;
+  padding: 0 16px;
+  margin-top: 101px;
+}
+
+@media (max-width: 1250px) {
+  .wrapperPolicy {
+    margin-top: 73px;
+  }
+}
