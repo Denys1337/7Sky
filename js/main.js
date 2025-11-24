@@ -1,42 +1,33 @@
-// Smooth scrolling for navigation links
 document.addEventListener("DOMContentLoaded", function () {
-  // Mobile menu functionality
   const mobileMenuToggles = document.querySelectorAll(".mobile-menu-toggle");
   const nav = document.querySelector(".nav");
 
   if (mobileMenuToggles.length && nav) {
     mobileMenuToggles.forEach((toggle) => {
       toggle.addEventListener("click", function () {
-        // Перемикаємо клас активності для цього toggle
         toggle.classList.toggle("active");
 
-        // Відкриваємо/закриваємо меню
         nav.classList.toggle("mobile-menu-open");
 
-        // Блокування скролу
         document.body.style.overflow = nav.classList.contains(
           "mobile-menu-open"
         )
           ? "hidden"
           : "";
 
-        // Якщо потрібно, зняти активність з інших toggle
         mobileMenuToggles.forEach((otherToggle) => {
           if (otherToggle !== toggle) otherToggle.classList.remove("active");
         });
       });
     });
 
-    // Закрити меню при кліку на nav links (але не на dropdown parent links)
     const navLinks = nav.querySelectorAll(".nav-link");
     navLinks.forEach((link) => {
       link.addEventListener("click", function (e) {
-        // Don't close menu if this is a dropdown parent link in mobile view
         const isDropdownParent = link.parentElement.classList.contains("dropdown");
         const isMobileMenuOpen = nav.classList.contains("mobile-menu-open");
         
         if (isDropdownParent && isMobileMenuOpen) {
-          // Let the dropdown handler manage this
           return;
         }
         
@@ -48,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
     
-    // Close menu when clicking on dropdown sub-items
     const dropdownSubItems = nav.querySelectorAll(".dropdown-menu a");
     dropdownSubItems.forEach((subItem) => {
       subItem.addEventListener("click", function () {
@@ -60,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    // Закрити меню при кліку поза ним
     document.addEventListener("click", function (e) {
       if (
         !nav.contains(e.target) &&
@@ -92,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //   });
   // }
 
-  // Handle navigation clicks
   const navLinks = document.querySelectorAll('a[href^="#"]');
 
   navLinks.forEach((link) => {
@@ -132,25 +120,22 @@ document.addEventListener("DOMContentLoaded", function () {
   //   lastScrollTop = scrollTop;
   // });
 
-  // Cart functionality
   const cartBtn = document.querySelector(".cart-btn");
   const cartCount = document.querySelector(".cart-count");
   const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
 
-  let cartItems = 1; // Initial cart count
+  let cartItems = 1;
 
   addToCartBtns.forEach((btn) => {
     btn.addEventListener("click", function () {
       cartItems++;
       cartCount.textContent = cartItems;
 
-      // Add animation
       cartCount.style.transform = "scale(1.3)";
       setTimeout(() => {
         cartCount.style.transform = "scale(1)";
       }, 200);
 
-      // Show success message
       showNotification("Товар додано до кошика!");
     });
   });
@@ -163,7 +148,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //   });
   // }
 
-  // Carousel functionality
   const carouselControls = document.querySelectorAll(".carousel-controls");
 
   carouselControls.forEach((controls) => {
@@ -208,7 +192,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      // Update on window resize
       window.addEventListener("resize", () => {
         const newItemsPerView = getItemsPerView();
         const newMaxIndex = Math.max(0, items.length - newItemsPerView);
@@ -222,7 +205,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Intersection Observer for animations
   const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px",
@@ -237,7 +219,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }, observerOptions);
 
-  // Observe sections for scroll animations
   const sections = document.querySelectorAll("section");
   sections.forEach((section) => {
     section.style.opacity = "0";
@@ -246,15 +227,12 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(section);
   });
 
-  // Notification system
   function showNotification(message) {
-    // Remove existing notification
     const existingNotification = document.querySelector(".notification");
     if (existingNotification) {
       existingNotification.remove();
     }
 
-    // Create notification
     const notification = document.createElement("div");
     notification.className = "notification";
     notification.textContent = message;
@@ -276,12 +254,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.body.appendChild(notification);
 
-    // Animate in
     setTimeout(() => {
       notification.style.transform = "translateX(0)";
     }, 100);
 
-    // Animate out and remove
     setTimeout(() => {
       notification.style.transform = "translateX(100%)";
       setTimeout(() => {
@@ -301,7 +277,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //   });
   // });
 
-  // Lazy loading for images
   const images = document.querySelectorAll("img[src]");
   const imageObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -326,7 +301,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Utility functions
 function debounce(func, wait) {
   let timeout;
   return function executedFunction(...args) {
@@ -339,7 +313,6 @@ function debounce(func, wait) {
   };
 }
 
-// Handle window resize
 window.addEventListener(
   "resize",
   debounce(() => {
@@ -349,7 +322,6 @@ window.addEventListener(
       );
       const nav = document.querySelector(".nav");
 
-      // Закриваємо меню
       mobileMenuToggles.forEach((toggle) => toggle.classList.remove("active"));
 
       if (nav) {
@@ -413,7 +385,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const popup = document.getElementById("popup");
   const openBtns = document.querySelectorAll(".openPopup");
 
-  // Функція для скидання форми до початкового стану
   function resetFormMessages() {
     if (privacyMessage) {
       privacyMessage.style.display = "block";
@@ -499,11 +470,9 @@ document.addEventListener("DOMContentLoaded", () => {
         nameInput.value = "";
         phoneInput.value = formatPhoneMask("");
         successMessage.style.display = "none";
-        // Повертаємо повідомлення про політику конфіденційності
         resetFormMessages();
       }, 4000);
     } else {
-      // При помилці приховуємо повідомлення про політику і показуємо помилку
       if (privacyMessage) {
         privacyMessage.style.display = "none";
       }
@@ -512,7 +481,6 @@ document.addEventListener("DOMContentLoaded", () => {
       successMessage.style.color = "red";
       setTimeout(() => {
         successMessage.style.display = "none";
-        // Повертаємо повідомлення про політику конфіденційності
         resetFormMessages();
       }, 4000);
     }
@@ -605,7 +573,6 @@ document.addEventListener("DOMContentLoaded", () => {
     "privacyMessageFeedback"
   );
 
-  // Функція для скидання форми відгуків до початкового стану
   function resetFeedbackFormMessages() {
     if (privacyMessageFeedback) {
       privacyMessageFeedback.style.display = "block";
@@ -664,11 +631,8 @@ document.addEventListener("DOMContentLoaded", () => {
       .replace(/[^\d]/g, "")
       .replace(/^380/, "");
     
-    // Форматуємо значення
     phoneInputFeedback.value = formatPhoneMask(digitsFeedback);
 
-    // Перевірка після форматування - якщо 9 цифр, поле валідне
-    // Використовуємо requestAnimationFrame для забезпечення оновлення DOM перед перевіркою
     requestAnimationFrame(() => {
       const currentDigits = phoneInputFeedback.value
         .replace(/[^\d]/g, "")
@@ -780,11 +744,9 @@ document.addEventListener("DOMContentLoaded", () => {
           .forEach((el) => el.classList.remove("input-error"));
 
         successMessageFeedback.style.display = "none";
-        // Повертаємо повідомлення про політику конфіденційності
         resetFeedbackFormMessages();
       }, 4000);
     } else {
-      // При помилці приховуємо повідомлення про політику і показуємо помилку
       if (privacyMessageFeedback) {
         privacyMessageFeedback.style.display = "none";
       }
@@ -794,7 +756,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       setTimeout(() => {
         successMessageFeedback.style.display = "none";
-        // Повертаємо повідомлення про політику конфіденційності
         resetFeedbackFormMessages();
       }, 4000);
     }
@@ -849,7 +810,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   dropdownLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
-      // Check if mobile menu is open (mobile view)
       const nav = document.querySelector(".nav");
       const isMobileMenuOpen = nav && nav.classList.contains("mobile-menu-open");
       
@@ -860,7 +820,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const parent = link.parentElement;
         const dropdown = parent.querySelector(".dropdown-menu");
 
-        // Close other open dropdowns
         document
           .querySelectorAll(".nav-item.dropdown.open")
           .forEach((openItem) => {
@@ -873,7 +832,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
           });
 
-        // Toggle current dropdown
         parent.classList.toggle("open");
 
         if (dropdown) {

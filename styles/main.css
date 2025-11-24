@@ -808,6 +808,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   gap: 60px;
   justify-content: space-between;
   align-items: center;
+  max-width: max-content;
 }
 
 .priceMassage span {
@@ -931,6 +932,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   font-family: "Poiret One", sans-serif !important;
   font-size: 18px !important;
   color: rgba(5, 5, 5, 1);
+  line-height: 100%;
 }
 
 .oneMassageTimeSlot span {
@@ -943,6 +945,21 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 
 .my-sliderMessage {
   display: none !important;
+}
+
+@media (max-width: 1230px) {
+  .timeSlot {
+    gap: 5px;
+  }
+
+  .productPrices {
+    gap: 5px !important;
+    font-size: 25px !important;
+  }
+  .productPrices .discount-price {
+    font-size: 25px !important;
+  }
+  
 }
 
 @media (max-width: 1150px) {
@@ -1459,7 +1476,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 .Cosmetic-btn {
-  width: 100%;
+  width: 100% !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1531,7 +1548,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   }
 
   .cardsCosmetics {
-    grid-template-columns: repeat(auto-fit, minmax(163px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 16px;
     margin: 0 auto;
   }
@@ -1554,6 +1571,10 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     justify-content: center;
     align-items: start;
     flex-direction: column;
+  }
+
+  .cardsCosmetics {
+    grid-template-columns: repeat(auto-fit, minmax(163px, 1fr));
   }
 
   .cosmeticFilterWrapper .chips {
@@ -3164,6 +3185,8 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   font-weight: bold;
   margin-bottom: 24px;
   margin-top: 0;
+  display: flex;
+  align-items: flex-end;
 }
 
 .wrapperCerteficateInfo .discount {
@@ -3172,6 +3195,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   font-size: 24px;
   font-weight: 400;
   margin-left: 40px;
+  line-height: 100%;
 }
 
 .wrapperCerteficateInfo .selectors {
@@ -3380,6 +3404,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   font-family: "Playfair Display", sans-serif;
   color: rgba(5, 5, 5, 1) !important;
   font-weight: 400;
+  line-height: 100%;
 }
 
 .quantitySelect {
