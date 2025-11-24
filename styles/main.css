@@ -142,8 +142,31 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   min-height: 37px;
 }
 
+.cta-button:hover {
+  background-color: #9a7340;
+}
+
+.cta-button:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.cta-button:active {
+  background-color: #8b5e3c;
+  transform: scale(0.98);
+}
+
 .add-to-cart-btn:hover {
   background-color: #9a7340;
+}
+
+.add-to-cart-btn:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.add-to-cart-btn:active {
+  background-color: #8b5e3c;
 }
 
 .add-to-cart-btn {
@@ -178,6 +201,21 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   transform: translateX(4px);
 }
 
+.view-all-link:focus,
+.read-more-link:focus,
+.about-link:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.view-all-link:active,
+.read-more-link:active,
+.about-link:active {
+  color: #8b5e3c;
+  border-bottom-color: #8b5e3c;
+}
+
 .about-link {
   color: #f0e9df;
   border-bottom-color: #f0e9df;
@@ -186,6 +224,17 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 .about-link:hover {
   color: #e6dcc7;
   border-bottom-color: #e6dcc7;
+}
+
+.about-link:focus {
+  outline: 2px solid #f0e9df;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.about-link:active {
+  color: #ddd4c1;
+  border-bottom-color: #ddd4c1;
 }
 
 /* Carousel Controls */
@@ -213,6 +262,16 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 .carousel-btn:hover {
   background-color: #b0864a;
   color: #f0e9df;
+}
+
+.carousel-btn:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.carousel-btn:active {
+  background-color: #9a7340;
+  transform: scale(0.95);
 }
 
 /* Responsive Design */
@@ -289,6 +348,21 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   text-overflow: ellipsis;
   text-decoration: none;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.product-card a:hover {
+  color: rgba(176, 134, 74, 1);
+}
+
+.product-card a:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.product-card a:active {
+  color: #9a7340;
 }
 
 .card-content-product {
@@ -372,9 +446,19 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 
 .btn:hover {
   box-sizing: border-box;
-  background: none;
+  background: transparent;
   border: 1px solid rgba(176, 134, 74, 1);
   color: rgba(176, 134, 74, 1);
+}
+
+.btn:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.btn:active {
+  background-color: rgba(176, 134, 74, 0.1);
+  transform: scale(0.98);
 }
 
 @media (max-width: 768px) {
@@ -536,6 +620,24 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   right: 24px;
   cursor: pointer;
   font-size: 20px;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.popup-close:hover {
+  background-color: rgba(176, 134, 74, 0.1);
+  color: rgba(176, 134, 74, 1);
+}
+
+.popup-close:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.popup-close:active {
+  background-color: rgba(176, 134, 74, 0.2);
+  transform: scale(0.95);
 }
 
 #bookingForm {
@@ -563,11 +665,12 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 #bookingForm input:focus {
-  border: 0.5px solid rgba(218, 218, 218, 1);
+  border: 1px solid #b0864a;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
+  outline: 2px solid rgba(176, 134, 74, 0.2);
+  outline-offset: 0;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -708,8 +811,18 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 .btnMassage:hover {
-  background: #fff;
+  background: transparent;
   color: rgba(176, 134, 74, 1);
+}
+
+.btnMassage:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.btnMassage:active {
+  background-color: rgba(176, 134, 74, 0.1);
+  transform: scale(0.98);
 }
 
 .btn-outline {
@@ -727,8 +840,19 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 .btn-outline:hover {
-  color: #9c6e3b;
-  border-color: #9c6e3b;
+  color: #9a7340;
+  border-color: #9a7340;
+}
+
+.btn-outline:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.btn-outline:active {
+  color: #8b5e3c;
+  border-color: #8b5e3c;
 }
 
 .descriptionMassage {
@@ -922,6 +1046,20 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   align-items: center;
   font-size: 18px;
   border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.select-trigger:hover {
+  background-color: rgba(230, 220, 199, 1);
+}
+
+.select-trigger:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.select-trigger:active {
+  background-color: rgba(220, 210, 189, 1);
 }
 
 .select-trigger img {
@@ -950,6 +1088,18 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   justify-content: space-between;
   cursor: pointer;
   font-size: 18px;
+  transition: all 0.3s ease;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.options label:hover {
+  background-color: rgba(176, 134, 74, 0.05);
+}
+
+.options label:focus-within {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
 }
 
 .options input[type="checkbox"] {
@@ -960,6 +1110,17 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   background-color: rgba(240, 233, 223, 1);
   border: 0.5px solid rgba(5, 5, 5, 1);
   position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.options input[type="checkbox"]:hover {
+  border-color: #b0864a;
+}
+
+.options input[type="checkbox"]:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
 }
 
 .options input[type="checkbox"]:checked {
@@ -1068,6 +1229,24 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   font-family: "Poiret One", sans-serif;
   max-width: fit-content;
   padding-bottom: 0 !important;
+  transition: all 0.3s ease;
+}
+
+.linkDetailsCard:hover {
+  color: #9a7340 !important;
+  border-bottom-color: #9a7340;
+  transform: translateX(4px);
+}
+
+.linkDetailsCard:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.linkDetailsCard:active {
+  color: #8b5e3c !important;
+  border-bottom-color: #8b5e3c;
 }
 
 .linkDetailsCard img {
@@ -1097,6 +1276,23 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   color: rgba(176, 134, 74, 1);
   font-size: 18px;
   font-family: "Poiret One", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: rgba(176, 134, 74, 0.1);
+  border-color: #9a7340;
+  color: #9a7340;
+}
+
+.pagination button:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.pagination button:active {
+  background-color: rgba(176, 134, 74, 0.2);
+  transform: scale(0.95);
 }
 
 .pagination button.active {
@@ -1191,6 +1387,21 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.titleCosmetic:hover {
+  color: rgba(176, 134, 74, 1);
+}
+
+.titleCosmetic:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.titleCosmetic:active {
+  color: #9a7340;
 }
 
 .cardCosmetic {
@@ -1239,8 +1450,18 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 .Cosmetic-btn:hover {
-  background: #fff;
+  background: transparent;
   color: rgba(176, 134, 74, 1);
+}
+
+.Cosmetic-btn:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.Cosmetic-btn:active {
+  background-color: rgba(176, 134, 74, 0.1);
+  transform: scale(0.98);
 }
 
 .valueTime {
@@ -1428,6 +1649,25 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   height: 146px;
   border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-thumbs img:hover,
+.product-thumbs video:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.product-thumbs img:focus,
+.product-thumbs video:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.product-thumbs img:active,
+.product-thumbs video:active {
+  transform: scale(0.98);
+  opacity: 0.9;
 }
 
 .discountPricePadding {
@@ -1498,8 +1738,18 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 .add-to-cart:hover {
-  background: none;
+  background: transparent;
   color: rgba(176, 134, 74, 1);
+}
+
+.add-to-cart:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.add-to-cart:active {
+  background-color: rgba(176, 134, 74, 0.1);
+  transform: scale(0.98);
 }
 
 .tabs {
@@ -1516,6 +1766,21 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   font-family: "Poiret One", sans-serif;
   color: rgba(5, 5, 5, 1);
   position: relative;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  color: rgba(176, 134, 74, 1);
+}
+
+.tab:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.tab:active {
+  color: #9a7340;
 }
 
 .tab.active {
@@ -1890,7 +2155,17 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 .newsButtonPopup:hover {
   color: rgba(176, 134, 74, 1);
   border: 1px solid rgba(176, 134, 74, 1);
-  background: none;
+  background: transparent;
+}
+
+.newsButtonPopup:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.newsButtonPopup:active {
+  background-color: rgba(176, 134, 74, 0.1);
+  transform: scale(0.98);
 }
 
 @media (max-width: 970px) {
@@ -2131,7 +2406,18 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 .wrapperNoPage a:hover {
-  background: none;
+  background: transparent;
+  color: rgba(176, 134, 74, 1);
+}
+
+.wrapperNoPage a:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.wrapperNoPage a:active {
+  background-color: rgba(176, 134, 74, 0.1);
+  transform: scale(0.98);
 }
 
 @media (max-width: 768px) {
@@ -2250,11 +2536,12 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 
 #feedbackForm input:focus,
 #feedbackForm textarea:focus {
-  border: 0.5px solid rgba(218, 218, 218, 1);
+  border: 1px solid #b0864a;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
+  outline: 2px solid rgba(176, 134, 74, 0.2);
+  outline-offset: 0;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -2290,7 +2577,18 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 .feedbackButton:hover {
-  background: none;
+  background: transparent;
+  color: rgba(176, 134, 74, 1);
+}
+
+.feedbackButton:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.feedbackButton:active {
+  background-color: rgba(176, 134, 74, 0.1);
+  transform: scale(0.98);
 }
 
 .success-message {
@@ -2477,7 +2775,18 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 .wrapperContactButtons .btn:hover {
-  background: none;
+  background: transparent;
+  color: rgba(176, 134, 74, 1);
+}
+
+.wrapperContactButtons .btn:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.wrapperContactButtons .btn:active {
+  background-color: rgba(176, 134, 74, 0.1);
+  transform: scale(0.98);
 }
 
 .social-links img {
@@ -2628,6 +2937,16 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   color: rgba(5, 5, 5, 1);
 }
 
+.btnSignup:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.btnSignup:active {
+  background-color: #9a7340;
+  transform: scale(0.98);
+}
+
 .mobileButttonAdd {
   white-space: nowrap;
 }
@@ -2738,7 +3057,17 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 .add-to-cart button:hover {
-  background: #b2834a;
+  background: #9a7340;
+}
+
+.add-to-cart button:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.add-to-cart button:active {
+  background-color: #8b5e3c;
+  transform: scale(0.98);
 }
 
 .discount-info {
@@ -3087,8 +3416,22 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   fill: none;
 }
 
+.btnQuantity:hover {
+  opacity: 0.8;
+}
+
+.btnQuantity:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 .btnQuantity:active svg {
   transform: translateY(1px);
+}
+
+.btnQuantity:active {
+  background-color: rgba(176, 134, 74, 0.1);
 }
 
 .btnQuantity[tabindex] {
@@ -3238,6 +3581,20 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   border-radius: 4px;
   border: 0.5px solid rgba(240, 233, 223, 1);
   font-weight: 400;
+}
+
+.tab-btn:hover {
+  border-color: rgba(176, 134, 74, 1);
+  color: rgba(176, 134, 74, 1);
+}
+
+.tab-btn:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.tab-btn:active {
+  background-color: rgba(176, 134, 74, 0.1);
 }
 
 .tab-btn.active {
@@ -3422,6 +3779,20 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   background: none;
 }
 
+.faq-question:hover {
+  background-color: rgba(176, 134, 74, 0.05);
+}
+
+.faq-question:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+  background-color: rgba(176, 134, 74, 0.05);
+}
+
+.faq-question:active {
+  background-color: rgba(176, 134, 74, 0.1);
+}
+
 .toggle-icon {
   font-size: 40px;
   line-height: 20px;
@@ -3478,8 +3849,18 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 .curseRegister:hover {
-  background: none;
+  background: transparent;
   color: rgba(176, 134, 74, 1);
+}
+
+.curseRegister:focus {
+  outline: 2px solid #b0864a;
+  outline-offset: 2px;
+}
+
+.curseRegister:active {
+  background-color: rgba(176, 134, 74, 0.1);
+  transform: scale(0.98);
 }
 
 .timeSlotCurses .valueTime {
