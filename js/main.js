@@ -408,22 +408,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const nameInput = document.getElementById("nameBooking");
   const phoneInput = document.getElementById("phoneBooking");
   const successMessage = document.getElementById("successMessage");
+  const privacyMessage = document.getElementById("privacyMessage");
   const closeBtn = document.getElementById("popupClose");
   const popup = document.getElementById("popup");
   const openBtns = document.querySelectorAll(".openPopup");
 
+  // Функція для скидання форми до початкового стану
+  function resetFormMessages() {
+    if (privacyMessage) {
+      privacyMessage.style.display = "block";
+    }
+    if (successMessage) {
+      successMessage.style.display = "none";
+    }
+  }
+
   openBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
+      resetFormMessages();
       popup.classList.add("active");
     });
   });
 
   closeBtn.addEventListener("click", () => {
+    resetFormMessages();
     popup.classList.remove("active");
   });
 
   popup.addEventListener("click", (e) => {
     if (e.target === popup) {
+      resetFormMessages();
       popup.classList.remove("active");
     }
   });
@@ -471,6 +485,11 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     const digits = phoneInput.value.replace(/[^\d]/g, "").replace(/^380/, "");
     if (nameInput.value.trim() !== "" && digits.length === 9) {
+      // Приховуємо повідомлення про політику конфіденційності
+      if (privacyMessage) {
+        privacyMessage.style.display = "none";
+      }
+      // Показуємо повідомлення про успіх
       successMessage.innerHTML =
         "Ваш запис успішно прийнято.<br>Менеджер звяжеться з вами найближчим часом.";
       successMessage.style.display = "block";
@@ -480,13 +499,21 @@ document.addEventListener("DOMContentLoaded", () => {
         nameInput.value = "";
         phoneInput.value = formatPhoneMask("");
         successMessage.style.display = "none";
+        // Повертаємо повідомлення про політику конфіденційності
+        resetFormMessages();
       }, 4000);
     } else {
+      // При помилці приховуємо повідомлення про політику і показуємо помилку
+      if (privacyMessage) {
+        privacyMessage.style.display = "none";
+      }
       successMessage.textContent = "Будь ласка, заповніть всі поля коректно.";
       successMessage.style.display = "block";
       successMessage.style.color = "red";
       setTimeout(() => {
         successMessage.style.display = "none";
+        // Повертаємо повідомлення про політику конфіденційності
+        resetFormMessages();
       }, 4000);
     }
   });
@@ -574,6 +601,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const successMessageFeedback = document.getElementById(
     "successMessageFeedback"
   );
+  const privacyMessageFeedback = document.getElementById(
+    "privacyMessageFeedback"
+  );
+
+  // Функція для скидання форми відгуків до початкового стану
+  function resetFeedbackFormMessages() {
+    if (privacyMessageFeedback) {
+      privacyMessageFeedback.style.display = "block";
+    }
+    if (successMessageFeedback) {
+      successMessageFeedback.style.display = "none";
+    }
+  }
 
   function markError(input, hasError) {
     if (hasError) input.classList.add("input-error");
@@ -719,6 +759,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (valid) {
+      // Приховуємо повідомлення про політику конфіденційності
+      if (privacyMessageFeedback) {
+        privacyMessageFeedback.style.display = "none";
+      }
+      // Показуємо повідомлення про успіх
       successMessageFeedback.textContent = "Відгук відправлено";
       successMessageFeedback.style.display = "block";
       successMessageFeedback.style.color = "rgba(5, 5, 5, 1)";
@@ -735,14 +780,22 @@ document.addEventListener("DOMContentLoaded", () => {
           .forEach((el) => el.classList.remove("input-error"));
 
         successMessageFeedback.style.display = "none";
+        // Повертаємо повідомлення про політику конфіденційності
+        resetFeedbackFormMessages();
       }, 4000);
     } else {
+      // При помилці приховуємо повідомлення про політику і показуємо помилку
+      if (privacyMessageFeedback) {
+        privacyMessageFeedback.style.display = "none";
+      }
       successMessageFeedback.textContent = errorMsg;
       successMessageFeedback.style.display = "block";
       successMessageFeedback.style.color = "red";
 
       setTimeout(() => {
         successMessageFeedback.style.display = "none";
+        // Повертаємо повідомлення про політику конфіденційності
+        resetFeedbackFormMessages();
       }, 4000);
     }
   });
