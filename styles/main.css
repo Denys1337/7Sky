@@ -427,6 +427,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 
 .productPrices {
   display: flex;
+  padding-top: 10px;
 }
 
 .btn {
@@ -805,10 +806,9 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   line-height: normal;
   margin-top: -16px;
   text-wrap: nowrap;
-  gap: 60px;
   justify-content: space-between;
   align-items: center;
-  max-width: max-content;
+  max-width: 282px;
 }
 
 .priceMassage span {
@@ -950,6 +950,11 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 @media (max-width: 1230px) {
   .timeSlot {
     gap: 5px;
+    height: 55px;
+  }
+
+  .discountPricePadding {
+    padding-top: 0px !important;
   }
 
   .productPrices {
@@ -1475,6 +1480,10 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   color: rgba(5, 5, 5, 1);
 }
 
+.main-price {
+  line-height: 100%;
+}
+
 .Cosmetic-btn {
   width: 100% !important;
   display: flex;
@@ -1490,6 +1499,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   background: rgba(176, 134, 74, 1);
   border-radius: 4px;
   margin-bottom: 0px !important;
+  margin-top: 0px !important;
 }
 
 .Cosmetic-btn:hover {
@@ -1992,10 +2002,6 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   }
   .wrapperheaderOneMassage p {
     width: 100%;
-  }
-
-  .discountPricePadding {
-    padding-top: 5px;
   }
   .product-price {
     font-size: 28px;
